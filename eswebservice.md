@@ -37,7 +37,7 @@ class RESTClient extends \Core\Model
         file_put_contents($filename, self::$result);
     }
     
-   	static function extractCommon(&$buf, $object, $common, $start = 1)
+    static function extractCommon(&$buf, $object, $common, $start = 1)
     {
         $property = $common.$start;
         $value = $object->$property; 
@@ -51,7 +51,7 @@ class RESTClient extends \Core\Model
                 $value = "";
             }
         }
-	}
+    }
 	
     // Method: POST, PUT, GET etc
     // Data: array("param" => "value") ==> index.php?param=value
@@ -83,7 +83,7 @@ class RESTClient extends \Core\Model
             curl_setopt($curl, CURLOPT_USERPWD, self::$username.":".self::$password);
         }
 		
-		if($header){
+	if($header){
             curl_setopt($s,CURLOPT_HTTPHEADER, $header);
         }
     
