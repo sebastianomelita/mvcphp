@@ -101,7 +101,7 @@ class Users extends \Core\Controller
         //echo " (after)";
     }
 
-    // me
+    // Action di un form
     // metodo HTTP POST FORM ACTION
     public function doOneuserAction()
     {
@@ -131,7 +131,7 @@ class Users extends \Core\Controller
 		  ]);  
 	}
 	
-	// richiesta pagina web
+    // richiesta pagina web (metodo stub)
     public function oneuserAction()
     {
         $path = 'Users/oneuserform.html';
