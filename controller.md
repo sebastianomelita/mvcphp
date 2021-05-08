@@ -11,7 +11,7 @@ I metodi del controller si dividono intanto in due categorie:
 -Azioni. Un’azione è il metodo di un controller che è richiamato dal dispatcher (router) quando questo trova una corrispondenza tra quel metodo e una rotta all’interno della tabella delle rotte. Le azioni, in questo framework devono avere il nome che termina col suffisso Action. Ad es. pizzeAction() è il metodo del controller Prenotazioni ed è invocato, ad esempio, quando il dispatcher riconosce il prefisso di routing www.labottegadimario.com/delivery/prenotazioni/pizze/. 
 Le query string, cioè la parte dell’url dopo ? non partecipano al processo di routing e vengono rimosse prima che questo venga effettuato. I parametri contenuti nelle query string sono comunque accessibili con le apposite variabili globali fornite dal PHP e sono utilizzabili in qualunque metodo di un controller. 
  
-
+![pulsante](rotte1.png)
 
 
 Esistono delle convenzioni per i nomi di classi e metodi:
