@@ -2,14 +2,14 @@
 
 ## **Controller**
 
-Un controller è un collettore di metodi ai quali corrispondono altrettante invocazioni via HTTP realizzabili mediante un client. Ogni qual volta arriva una richiesta http questa viene esaminata (fase di store) e inoltrata verso il metodo di un certo controller (fase di dispaching). Il comportamento adesso descritto è quello tipico di un router. La direzione dell’inoltro è comandata dalla lettura di un indirizzo di livello applicativo che consiste in una porzione specifica del path della risorsa richiesta che d’ora in poi chiameremo prefisso di routing: ../nome_controller/nome_azione/ dove con i puntini indichiamo, per semplicità, la parte dell’url prima del prefisso di routing, cioè il percorso del progetto.  In base al prefisso di routing, stabilito nella tabella delle rotte, viene scelto il metodo di quell’oggetto controller che dovrà gestire la richiesta. 
+Un controller è un collettore di metodi ai quali corrispondono altrettante invocazioni via HTTP realizzabili mediante un client. Ogni qual volta arriva una richiesta http questa viene esaminata (fase di store) e inoltrata verso il metodo di un certo controller (fase di dispaching). Il comportamento adesso descritto è quello tipico di un router. La direzione dell’inoltro è comandata dalla lettura di un indirizzo di livello applicativo che consiste in una porzione specifica del path della risorsa richiesta che d’ora in poi chiameremo prefisso di routing: ```../nome_controller/nome_azione/``` dove con i puntini indichiamo, per semplicità, la parte dell’url prima del prefisso di routing, cioè il percorso del progetto.  In base al prefisso di routing, stabilito nella tabella delle rotte, viene scelto il metodo di quell’oggetto controller che dovrà gestire la richiesta. 
  ![router](controller.png)
 Il framework che adoperiamo non fa differenza tra i vari metodi http (GET,PUT,POST,DELETE) dato che sono trattati tuti allo stesso modo e possono essere mappati su un qualunque metodo di un qualsiasi controller. 
-La differenza tra i vari metodi è concentrata nei parametri delle richieste che, in un caso o nell’altro, devono essere recuperati da array associativi globali diversi. Ad esempio, per recuperare all’interno di un metodo un parametro POST, si adopera la variabile globale php $_POST["nomeParametro1"], mentre, per recuperare all’interno di un metodo un parametro GET, si adopera $_GET["nomeParametro1"].
+La differenza tra i vari metodi è concentrata nei parametri delle richieste che, in un caso o nell’altro, devono essere recuperati da array associativi globali diversi. Ad esempio, per recuperare all’interno di un metodo un parametro POST, si adopera la variabile globale php ```$_POST["nomeParametro1"]```, mentre, per recuperare all’interno di un metodo un parametro GET, si adopera ```$_GET["nomeParametro1"]```.
 
 I metodi del controller si dividono intanto in due categorie: 
 -	Metodi di servizio. Sono metodi che raggruppano alcune operazioni utilizzate da più azioni e che quindi è conveniente tenere a parte per poterle riutilizzare all’interno del codice di più action (azioni).
--Azioni. Un’azione è il metodo di un controller che è richiamato dal dispatcher (router) quando questo trova una corrispondenza tra quel metodo e una rotta all’interno della tabella delle rotte. Le azioni, in questo framework devono avere il nome che termina col suffisso Action. Ad es. pizzeAction() è il metodo del controller Prenotazioni ed è invocato, ad esempio, quando il dispatcher riconosce il prefisso di routing www.labottegadimario.com/delivery/prenotazioni/pizze/. 
+-       Azioni. Un’azione è il metodo di un controller che è richiamato dal dispatcher (router) quando questo trova una corrispondenza tra quel metodo e una rotta all’interno della tabella delle rotte. Le azioni, in questo framework devono avere il nome che termina col suffisso Action. Ad es. pizzeAction() è il metodo del controller Prenotazioni ed è invocato, ad esempio, quando il dispatcher riconosce il prefisso di routing www.labottegadimario.com/delivery/prenotazioni/pizze/. 
 
 Le query string, cioè la parte dell’url dopo ? non partecipano al processo di routing e vengono rimosse prima che questo venga effettuato. I parametri contenuti nelle query string sono comunque accessibili con le apposite variabili globali fornite dal PHP e sono utilizzabili in qualunque metodo di un controller. 
  
@@ -70,6 +70,7 @@ View::render ($path, [
 ```
 Si noti la la particolarità della modalità dell’invocazione dei metodi, tramite :: poiché render() e renderTempate() sono metodi statici della classe View.
 
+Esempio di controller che 
 ```PHP
 * PHP version 5.4
  */
@@ -100,9 +101,9 @@ class Users extends \Core\Controller
         //echo " (after)";
     }
 
-
+    // me
     // metodo HTTP POST FORM ACTION
-	public function doOneuserAction()
+    public function doOneuserAction()
     {
         if(isset($_GET['username'])){			 // Controlla se il form è stato sottomesso
     		$user = Login::test_input($_GET["username"]);
@@ -120,7 +121,7 @@ class Users extends \Core\Controller
     }
 
     // richiesta pagina web
-	public function allusersAction()
+    public function allusersAction()
     {
 	  $rows = User::getAllUsers();
 	  
@@ -137,8 +138,8 @@ class Users extends \Core\Controller
         View::renderTemplate($path);
 	}
 	
-	// richiesta pagina web
-	public function detailAction()
+    // richiesta pagina web
+    public function detailAction()
     {
 	  $rows = User::getAll();
 	  
