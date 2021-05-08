@@ -1,5 +1,5 @@
 
-## ** GESTIONE TRAMITE TOKEN**
+## **GESTIONE TRAMITE TOKEN**
 
 Il tracciamento degli accessi dell’utente può essere realizzato tramite un token di accesso che viene generato al momento della registrazione dell’utente. Il token viene generato su un server di autenticazione che, dopo aver riconosciuto (autenticato) l’utente, lo autorizza all’accesso di determinate risorse. Ogni volta che il client vuole accedere alle risorse autorizzate esibisce il token.
 Il token può essere memorizzato:
