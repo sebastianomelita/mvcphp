@@ -21,3 +21,8 @@ Ogni componente possiede vincoli specifici:
 
 Dopo avere esaminato il ruolo vediamo adesso il funzionamento interno dei vari componenti.
 
+## Arduino Bare Metal
+1. [Controller](controller.md)
+2. [Modello](model.md)
+3. [Vista](view.md)
+
