@@ -1,6 +1,7 @@
+>[Torna all'indice generale](main.md)   
 ## **MODELLO MVC**
 
-![mvcmaun](mvcmain.png)
+![mvcmain](mvcmain.png)
 
 E’ un design pattern, cioè un modello architetturale adatto alla gestione di sistemi web complessi caratterizzato da un basso accoppiamento tra le sue componenti, circostanza che permette un interscambiabilità delle stesse. Ad esempio è possibile mantenere inalterati controller e modello e modificare la view adattandola a dispositivi mobili, web app SPA (Single Page Application), lingue diverse, ecc…
 Una operazione analoga si può fare con il modello. Sia il modello che le view posseggono la proprietà di essere riutilizzabili da più controller contemporaneamente rendendo l’uso delle varie componenti molto flessibile.
@@ -26,3 +27,4 @@ Dopo avere esaminato il ruolo vediamo adesso il funzionamento interno dei vari c
 2. [Modello](model.md)
 3. [Vista](view.md)
 
+>[Torna all'indice generale](main.md)
