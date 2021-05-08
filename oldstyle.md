@@ -10,6 +10,8 @@ L’associazione tra clientID e la risorsa può essere memorizzata:
 3.	Sul DBMS all’interno delle tabelle che memorizzano i dati persistenti di una applicazione
 4.	In memoria RAM su un server di caching centralizzato che di solito memorizza i dati di accesso di molte applicazioni distribuite su più server. I server REDIS e MEMCACHED sono le soluzioni di caching più diffuse. La consultazione dei dati di accesso si esegue in RAM per velocizzare gli accessi. La persistenza su disco viene eventualmente gestita per aumentare l’affidabilità.
 
+![redis](redis.jpg)
+
 Il tracciamento degli accessi non sempre ha una connotazione negativa. Esso è necessario per realizzare la gestione dello stato di una navigazione tra pagine che sono correlate in qualche modo, cioè la gestione della cosiddetta sessione di una applicazione web (client/server). 
 
 Il nodo cruciale è la privatezza di queste informazioni.
