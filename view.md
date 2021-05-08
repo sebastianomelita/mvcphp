@@ -50,22 +50,24 @@ Esempio di template html dove si definiscono dei blocchi di template:
 ```
 Nel template precedente viene definito l’html della parte modificata di un template base di cui vengono implicitamente conservate le parti considerate immutabili.
 
-Il template base può avere questa forma:
+esempio di view realizzata mediante template corrispondente alla action :
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-    <nav>
-        <a href="/b_utente21/mvc/public/logins/login/">Home</a> |
-        <a href="/b_utente21/mvc/public/logins/logout/">Logout</a>
-    </nav>
-    {% block body %}{% endblock %}
-</body>
-</html> 
-{% block title %} e {% block body %} sono una sorta di metatag che indicano al motore di templating dove inserire i blocchi dei vari template componenti all’interno del template base. Ogni blocco si chiude con il corrispondente metatag di chiusura {% endblock %}.
+{% extends "base.html" %}
+
+{% block title %}Dettaglio utente {% endblock %}
+
+{% block body %}
+
+    <h2>Dettaglio utente {{ row.username }}</h2> 
+    <p>{{ row.id }}</p>
+    <p>{{ row.username }}</p>
+    <p>{{ row.password }}</p>
+    <p>{{ row.created_at }}</p>
+    
+    <a href='/b_utente21/mvc/public/Home/index/'>Torna indietro</a>
+
+{% endblock %}
 ```
+```{% block title %}``` e ```{% block body %}``` sono una sorta di metatag che indicano al motore di templating dove inserire i blocchi dei vari template componenti all’interno del template base. Ogni blocco si chiude con il corrispondente metatag di chiusura ```{% endblock %}```.
+
 >[Torna a MVC](mvcindex.md) 
