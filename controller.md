@@ -1,3 +1,4 @@
+>[Torna a MVC](mvc.md) 
 
 ## **Controller**
 
@@ -68,4 +69,5 @@ View::render ($path, [
 ]);  
 ```
 Si noti la la particolarità della modalità dell’invocazione dei metodi, tramite :: poiché render() e renderTempate() sono metodi statici della classe View.
+>[Torna a MVC](mvc.md) 
 
