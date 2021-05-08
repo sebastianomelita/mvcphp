@@ -93,6 +93,8 @@ protected function before()
     }
 ```
 
+**Esempio completo**
+
 Esempio di controller che definisce alcune funzioni di gestione degli utenti
 ```PHP
 /*
