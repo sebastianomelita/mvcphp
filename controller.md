@@ -72,8 +72,9 @@ Si noti la la particolarità della modalità dell’invocazione dei metodi, tram
 
 Esempio di controller che 
 ```PHP
+/*
 * PHP version 5.4
- */
+*/
 class Users extends \Core\Controller
 {
 
@@ -131,7 +132,7 @@ class Users extends \Core\Controller
 		  ]);  
 	}
 	
-    // richiesta pagina web (metodo stub)
+    // richiesta pagina di un form (metodo stub)
     public function oneuserAction()
     {
         $path = 'Users/oneuserform.html';
