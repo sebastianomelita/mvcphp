@@ -31,7 +31,7 @@ Esempio di view “mista”:
 Si noti l’utilizzo dei : per segnalare l’inizio di un blocco di istruzioni PHP come alternativa compatta alle tradizionali parentesi graffe aperte.
 
 Esempio di template html dove si definiscono dei blocchi di template:
-```PHP
+```html
 {% extends "base.html" %}
 {% block title %}Portata del giorno{% endblock %
 {% block body %}
@@ -50,7 +50,7 @@ Esempio di template html dove si definiscono dei blocchi di template:
 Nel template precedente viene definito l’html della parte modificata di un template base di cui vengono implicitamente conservate le parti considerate immutabili.
 
 Il template base può avere questa forma:
-```PHP
+```html
 <!DOCTYPE html>
 <html>
 <head>
