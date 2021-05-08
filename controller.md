@@ -72,6 +72,25 @@ View::render ($path, [
 ```
 Si noti la la particolarità della modalità dell’invocazione dei metodi, tramite :: poiché render() e renderTempate() sono metodi statici della classe View.
 
+**Check delle sessioni**
+
+Le variabili di sessione possono essere controllate prima del caricamento di qualsiasi action in maniera tale da consentire il filtro di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama before() e deve restituire true per continuare e false per bloccare:
+
+```PHP
+protected function before()
+    {
+		$logged = false;
+		session_start();
+		if (isset($_SESSION['username'])) {
+			$logged = true;
+		}else{
+			//Redirect to login page
+			View::renderTemplate('Login/login.html');
+		}
+		return $logged;
+    }
+```
+
 Esempio di controller che definisce alcune funzioni di gestione degli utenti
 ```PHP
 /*
