@@ -1,4 +1,5 @@
 >[Torna a Model](model.md) 
+
 Esempio di modello con funzioni utili per la gestione degli utenti:
 ```PHP 
 <?php
