@@ -9,7 +9,8 @@ Le pagine web tradizionali si possono dividere in pagine scorrelate e pagine cor
 L’associazione tra clientID e la risorsa può essere memorizzata:
 1.	Sul client, in questo caso viene memorizzata insieme al cookie che identifica il browser dell’utente.
 2.	Sul server dell’applicazione, in questo caso viene memorizzata su un file del modulo che genera le pagine lato server (PHP, Python, ecc.). Sono le sessioni propriamente dette.
-3.	Sul DBMS all’interno delle tabelle che memorizzano i dati persistenti di una applicazione4.	In memoria RAM su un server di caching centralizzato che di solito memorizza i dati di accesso di molte applicazioni distribuite su più server. I server REDIS e MEMCACHED sono le soluzioni di caching più diffuse. La consultazione dei dati di accesso si esegue in RAM per velocizzare gli accessi. La persistenza su disco viene eventualmente gestita per aumentare l’affidabilità.
+3.	Sul DBMS all’interno delle tabelle che memorizzano i dati persistenti di una applicazione
+4.	In memoria RAM su un server di caching centralizzato che di solito memorizza i dati di accesso di molte applicazioni distribuite su più server. I server REDIS e MEMCACHED sono le soluzioni di caching più diffuse. La consultazione dei dati di accesso si esegue in RAM per velocizzare gli accessi. La persistenza su disco viene eventualmente gestita per aumentare l’affidabilità.
 
 ![redis](redis.jpg)
 
