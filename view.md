@@ -1,3 +1,4 @@
+>[Torna a MVC](mvcindex.md) 
 ## **Viste**
 Le view possono essere di due tipi: 
 -	HTML per pagine web tradizionali. Seguono un approccio THIN CLIENT con un minimo carico di elaborazione sul client per quanto riguarda la struttura e la organizzazione dei contenuti in tag HTML.
@@ -67,3 +68,4 @@ Il template base può avere questa forma:
 </html> 
 {% block title %} e {% block body %} sono una sorta di metatag che indicano al motore di templating dove inserire i blocchi dei vari template componenti all’interno del template base. Ogni blocco si chiude con il corrispondente metatag di chiusura {% endblock %}.
 ```
+>[Torna a MVC](mvcindex.md) 
