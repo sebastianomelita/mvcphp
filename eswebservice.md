@@ -1,3 +1,6 @@
+>[Torna a Model](model.md) 
+
+
 ```PHP 
 <?php
 namespace App\Models;
@@ -99,3 +102,6 @@ class RESTClient extends \Core\Model
     }
 }
 ```
+
+>[Torna a Model](model.md) 
+
