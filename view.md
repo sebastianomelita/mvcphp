@@ -50,6 +50,9 @@ Esempio di template html dove si definiscono dei blocchi di template:
 ```
 Nel template precedente viene definito l’html della parte modificata di un template base di cui vengono implicitamente conservate le parti considerate immutabili.
 
+```{% block title %}``` e ```{% block body %}``` sono una sorta di metatag che indicano al motore di templating dove inserire i blocchi dei vari template componenti all’interno del template base. Ogni blocco si chiude con il corrispondente metatag di chiusura ```{% endblock %}```.
+
+
 Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction()``` del controller ```Users```:
 ```html
 {% extends "base.html" %}
@@ -68,6 +71,5 @@ Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction
 
 {% endblock %}
 ```
-```{% block title %}``` e ```{% block body %}``` sono una sorta di metatag che indicano al motore di templating dove inserire i blocchi dei vari template componenti all’interno del template base. Ogni blocco si chiude con il corrispondente metatag di chiusura ```{% endblock %}```.
 
 >[Torna a MVC](mvcindex.md) 
