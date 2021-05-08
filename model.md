@@ -1,3 +1,4 @@
+>[Torna a MVC](mvcindex.md) 
 ## **Model**
 
 I modelli che consideriamo noi sono sostanzialmente due: 
@@ -17,3 +18,4 @@ Le proprietà statiche sono dichiarate anteponendo il qualificatore static davan
 ```PHP 
 private static $result = "";
 ```
+>[Torna a MVC](mvcindex.md) 
