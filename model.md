@@ -18,6 +18,8 @@ Le proprietà statiche sono dichiarate anteponendo il qualificatore static davan
 ```PHP 
 private static $result = "";
 ```
+**Esempi completi**
+
 - [Modello per gestione accesso ad un DB](esmodeluser.md)
 - [Modello per gestione accesso ad un webservice](eswebservice.md)
 
