@@ -70,7 +70,7 @@ View::render ($path, [
 ```
 Si noti la la particolarità della modalità dell’invocazione dei metodi, tramite :: poiché render() e renderTempate() sono metodi statici della classe View.
 
-Esempio di controller che 
+Esempio di controller che definisce alcune funzioni di gestione degli utenti
 ```PHP
 /*
 * PHP version 5.4
