@@ -52,7 +52,7 @@ Nel template precedente viene definito l’html della parte modificata di un tem
 
 ```{% block title %}``` e ```{% block body %}``` sono una sorta di metatag che indicano al motore di templating dove inserire i blocchi dei vari template componenti all’interno del template base. Ogni blocco si chiude con il corrispondente metatag di chiusura ```{% endblock %}```.
 
-
+**Esempio completo**
 Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction()``` del controller ```Users```:
 ```html
 {% extends "base.html" %}
