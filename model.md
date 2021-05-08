@@ -12,7 +12,7 @@ Tutti i modelli ereditano da una classe padre l’accesso al database recuperabi
 ```PHP 
 $db = static::getDB();
 ```
-Occorre precisare che le classi del modello sono tutte statiche nels senso che possiedono metodi statici e proprietà statiche. I metodi statici sono dichiarati anteponendo il qualificatore static davanti il nome del metodo, ad es:
+Occorre precisare che le classi del modello sono tutte statiche nel senso che possiedono metodi statici e proprietà statiche. I metodi statici sono dichiarati anteponendo il qualificatore static davanti il nome del metodo, ad es:
 static function getHashedPsw($username,&$authlevel){
 Le proprietà statiche sono dichiarate anteponendo il qualificatore static davanti il nome della proprietà:
 ```PHP 
