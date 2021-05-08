@@ -1,10 +1,10 @@
-##**Model**
+## **Model**
 
 I modelli che consideriamo noi sono sostanzialmente due: 
 -	accesso al DB per leggere o scrivere. Serve a recuperare, mediante una query SQL, quelle informazioni che devono essere organizzate in strutture PHP adatte ad una loro visualizzazione in una pagina o a alla composizione di una stringa JSON.
 -	accesso a web service multipli per filtraggio dei campi JSON e per la loro aggregazione in strutture PHP adatte ad una loro visualizzazione in una pagina o a alla composizione di una stringa JSON.
  
-
+![model](model.md)
 
 
 Tutti i modelli ereditano da una classe padre l’accesso al database recuperabile con la chiamata 
