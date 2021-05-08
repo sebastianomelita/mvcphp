@@ -10,8 +10,8 @@ Le viste possono essere preparate nel modello sostanzialmente in due maniere:
 -	PHP puro. In questo caso il codice della pagina HTML viene creato dinamicamente sul server da istruzioni PHP. In particolare si utilizza in maniera più compatta possibile la funzione echo(). La pagina non è più solamente HTML ma composta da codice misto HTL-PHP ed ha estensione .php.
 -	Templating. In questo caso si usa un middleware di templating che modifica in maniera quasi trasparente un template statico scritto in codice HTML puro e quindi con estensione .html.
 
-```html
 Esempio di view “mista”:
+```html
 <!DOCTYPE html>
 <html>
 <head>
