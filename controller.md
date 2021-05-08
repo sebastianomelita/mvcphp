@@ -64,8 +64,8 @@ Se si sceglie l’opzione di utilizzare una pagina PHP senza template twig allor
 $path = 'Pub/index0.html';
 View::render ($path, [
      'drinkIngredients' => $drinkIngredients, // array associativo
-     'drinkTitle' => $drinkTitle,  // stringa
-     'drinkImg' => $drinkImg	      // stringa
+     'drinkTitle' => $drinkTitle,             // stringa
+     'drinkImg' => $drinkImg	              // stringa
 ]);  
 ```
 Si noti la la particolarità della modalità dell’invocazione dei metodi, tramite :: poiché render() e renderTempate() sono metodi statici della classe View.
