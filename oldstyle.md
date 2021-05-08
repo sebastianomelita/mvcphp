@@ -1,3 +1,5 @@
+>[Torna a stato](state.md)
+
 ## **PAGINE WEB TRADIZIONALI** 
 
 Le pagine web tradizionali si possono dividere in pagine scorrelate e pagine correlate. 
@@ -7,8 +9,7 @@ Le pagine web tradizionali si possono dividere in pagine scorrelate e pagine cor
 L’associazione tra clientID e la risorsa può essere memorizzata:
 1.	Sul client, in questo caso viene memorizzata insieme al cookie che identifica il browser dell’utente.
 2.	Sul server dell’applicazione, in questo caso viene memorizzata su un file del modulo che genera le pagine lato server (PHP, Python, ecc.). Sono le sessioni propriamente dette.
-3.	Sul DBMS all’interno delle tabelle che memorizzano i dati persistenti di una applicazione
-4.	In memoria RAM su un server di caching centralizzato che di solito memorizza i dati di accesso di molte applicazioni distribuite su più server. I server REDIS e MEMCACHED sono le soluzioni di caching più diffuse. La consultazione dei dati di accesso si esegue in RAM per velocizzare gli accessi. La persistenza su disco viene eventualmente gestita per aumentare l’affidabilità.
+3.	Sul DBMS all’interno delle tabelle che memorizzano i dati persistenti di una applicazione4.	In memoria RAM su un server di caching centralizzato che di solito memorizza i dati di accesso di molte applicazioni distribuite su più server. I server REDIS e MEMCACHED sono le soluzioni di caching più diffuse. La consultazione dei dati di accesso si esegue in RAM per velocizzare gli accessi. La persistenza su disco viene eventualmente gestita per aumentare l’affidabilità.
 
 ![redis](redis.jpg)
 
@@ -20,3 +21,4 @@ Nella gestione delle sessioni propriamente dette essa è abbastanza elevata perc
 Nella gestione delle informazioni di navigazione (sessioni) tramite cookies le associazioni tra clientID e risorse utilizzate sono un file memorizzato all’interno del browser con cui si è acceduto ad esse. La privatezza in questo caso è quella del browser. Il browser di norma dovrebbe consentire la lettura dei cookies via codice client (ad es. javascript) solo da parte della pagina del client che accede la risorsa. L’accesso indiretto da parte di altre pagine, o da parte da altre applicazioni oltre il browser dovrebbe essere interdetto. Un accesso indiretto comporta in qualche modo la violazione delle misure di sicurezza a protezione del client.
 
 Nella gestione delle informazioni di navigazione (sessioni) tramite server di caching come REDIS o MEMCACHED le associazioni tra clientID e risorse utilizzate sono memorizzate all’interno di un server centralizzato potenzialmente comune a moltissime applicazioni. L’accesso non è automaticamente compartimentato e la sicurezza dipende sia da come l’applicazione memorizza le associazioni sia da come è progettato l’isolamento complessivo del server (cifratura degli accessi, firewalls, privilegi, ecc.). Un accesso dei dati di un utente da parte di un altro utente è dovuto in qualche modo o alla violazione delle misure di sicurezza a protezione del server o ad una cattiva progettazione dello storage delle associazioni.
+>[Torna a stato](state.md)
