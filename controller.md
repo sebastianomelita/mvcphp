@@ -44,7 +44,7 @@ use \Core\Error;
 **Parametri delle richieste http**
 I parametri si possono acquisire all’interno di un controller sostanzialmente in due modi: 
 -	dal path della action che deve essere costruita così: ../ controller/ azione/ parametro. In questo caso il valore del parametro si recupera da una variabile di istanza del controller con il nome "id"
--	da una query string, metto cioè il parametri dopo il punto interrogativo con coppie nome valore del tipo ?param1=val1&param2=val2. Questo metodo è usato dalle action dei form, e può essere usato anche da un tag ancora. I valori si recuperano nel controller dalle variabili blobali standard del php $_POST["param1"] o $_GET["param2"]
+-	da una query string, metto cioè il parametri dopo il punto interrogativo con coppie nome valore del tipo ?param1=val1&param2=val2. Questo metodo è usato dalle action dei form, e può essere usato anche da un tag ancora. I valori si recuperano nel controller dalle variabili blobali standard del php ```$_POST["param1"] o $_GET["param2"]```
 
 Il controller invoca anche i modelli per comandare la visualizzazione dei dati che lui ha elaborato/raccolto dal modello.
 
