@@ -18,7 +18,7 @@ Le proprietà statiche sono dichiarate anteponendo il qualificatore static davan
 ```PHP 
 private static $result = "";
 ```
-Esempio di modello 
+Esempio di modello con funzioni utili per la gestione degli utenti:
 ```PHP 
 <?php
 
