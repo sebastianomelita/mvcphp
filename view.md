@@ -50,7 +50,7 @@ Esempio di template html dove si definiscono dei blocchi di template:
 ```
 Nel template precedente viene definito l’html della parte modificata di un template base di cui vengono implicitamente conservate le parti considerate immutabili.
 
-esempio di view realizzata mediante template corrispondente alla action :
+Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction()``` del controller ```Users```:
 ```html
 {% extends "base.html" %}
 
