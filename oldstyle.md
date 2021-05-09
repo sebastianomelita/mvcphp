@@ -8,6 +8,8 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 ![cookie](cookie.png)
 
+**Ogni messaggio**, sia di richiesta che di risposta, sarà contrasseggnato con un ID di sessione che **identifica il client** presso il server.
+
 **L’associazione** tra clientID e la risorsa può essere **memorizzata**:
 1.	Sul **client**, in questo caso viene memorizzata **insieme al cookie** che identifica il browser dell’utente.
 2.	Sul **server** dell’applicazione, in questo caso viene memorizzata **su un file** del modulo che genera le pagine lato server (PHP, Python, ecc.). Sono le **sessioni** propriamente dette.
