@@ -20,6 +20,8 @@ Ogni componente possiede vincoli specifici:
 -	**Modello**. Parla **solo se interrogato** dal controller e comunica solo con lui. Non può parlare con la vista.
 -	**Vista**. Parla **solo se interrogato** dal controller e comunica solo con lui. Non può parlare con il modello.
 
+![mvccomm](mvccomm.png)
+
 Dopo avere esaminato il **ruolo** vediamo adesso il **funzionamento interno** dei vari componenti:
 
 1. [Controller](controller.md)
