@@ -47,7 +47,7 @@ Le viste possono essere organizzate in gruppi che gestiscono l’interazione con
 Una volta noto lo schema ER dei dati si può passare allo sviluppo del modello logico e alla implementazione delle tabelle sul DBMS. Noto lo schema definitivo delle tabelle relative al blocco funzionale in questione è possibile progettare le query SQL che costituiscono parte del motore funzionale dell’interazione. I modelli sono file php che contengono una singola classe che deriva (per estensione di ereditarietà) dalla classe core del modello. La **classe del modello** è sempre **statica** per cui **per accedere** a proprietà e metodi della medesima classe bisogna usare la notazione ```::```
 
 ```PHP
-self::nome_proprietà``` 
+self::nome_proprietà
 self::nome_metodo
 ```
 
