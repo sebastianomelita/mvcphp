@@ -10,9 +10,13 @@ La **differenza** tra i vari metodi è concentrata nei parametri delle richieste
 
 **Oggetti del controller**
 
-Un controller è un oggetto che è instanziato al momento dell'arrivo di una richiesta HTTP ed è l'istanza di una classe che deriva dalla classe base Controller posta dentro la cartella Core. Le classi derivate si definiscono dentro la cartella Controller in App.
+Un controller è un oggetto che **è instanziat** al momento dell'**arrivo di una richiesta** HTTP ed è l'istanza di una classe che **deriv** dalla classe base Controller posta dentro la cartella Core. Le classi derivate si definiscono dentro la cartella Controller in App.
 
 ![gerarchiacontroller](gerarchiacontroller.png)
+
+**Generazione** dell'oggetto istanza di un controller:
+
+![istanzacontroller.png](istanzacontroller.png)
 
 I **metodi del controller** si dividono intanto in due categorie: 
 - **Metodi di servizio**. Sono metodi che raggruppano alcune operazioni utilizzate da più azioni e che quindi è conveniente tenere a parte per poterle riutilizzare all’interno del codice di più action (azioni).
