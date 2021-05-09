@@ -25,6 +25,7 @@ Una volta stabiliti i requisiti funzionali si può pensare di progettare un’in
 
    -	**Richiesta/risposta**. Viene inviata una richiesta http in seguito alla quale viene ricevuta dal server una risposta che può essere o un’altra pagina web o una informazione in formato JSON da utilizzare in seno alla pagina aggiornandola (mediante azione del javascript sul DOM della pagina).
    -	**Pubblicazione/Sottoscrizione**. Sono possibili due ruoli per la pagina di essere un client (spesso assunti insieme):
+ 
        - **Publisher**. Pubblica informazioni che devono aggiornare lo stato del server in particolare ma di tutti i client subscriber in generale.
        - **Subscriber**. Riceve notifica asincrona (in istanti non prevedibili) di dati che possono modificare lo stato o il contenuto delle informazioni visualizzate dalla pagina.
      
