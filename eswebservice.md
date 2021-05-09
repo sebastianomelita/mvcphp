@@ -23,7 +23,6 @@ Metodo per eseguire il **filtro** dei figli di un nodo della risposta json. I fi
 ```PHP
 $json->drinks[0]   //selezione del nodo padre dall'albero json completo memorizzato in $json
 
-// $method: GET, POST,PUT,
 // $object: rappresentazione ad oggetti PHP del nodo padre
 // $common: stringa con la radice comune dei vari campi (drink di drink1, drink2, drink3, ecc).
 // $start: numerazione del suffisso della radice da cui partire (default 1, ad es. drink1)
@@ -74,6 +73,9 @@ class RESTClient extends \Core\Model
         file_put_contents($filename, self::$result);
     }
     
+    // $object: rappresentazione ad oggetti PHP del nodo padre
+    // $common: stringa con la radice comune dei vari campi (drink di drink1, drink2, drink3, ecc).
+    // $start: numerazione del suffisso della radice da cui partire (default 1, ad es. drink1)
     static function extractCommon(&$buf, $object, $common, $start = 1)
     {
         $property = $common.$start;
@@ -93,7 +95,10 @@ class RESTClient extends \Core\Model
     // Method: POST, PUT, GET etc
     // Data: array("param" => "value") ==> index.php?param=value
 	// Header: array("Accept" => "application/json", "Content-Type" => "multipart/form-data"); 
-
+	
+    // $method: GET, POST,PUT,
+    // $param: array asociativo con i parametri della richiesta (coppie nome, valore). Di default nessun parametro.
+    // $param: array asociativo con i campi dell'header (coppie nome, valore). Di default nessun parametro.
     static function callAPI($method, $url, $param = false, $header = false)
     {
         $curl = curl_init();
