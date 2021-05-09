@@ -2,6 +2,39 @@
 
 ## Controller che comunica con un modello webservice
 
+Il metodo 
+```PHP
+ getJSONResponse()
+```
+Restituisce la rappresentazione ad oggetti PHP della stringa JSON ricevuta. Questa può essere navigata per selezionare un nodo specifico da elaborare:
+```PHP
+$json = RESTClient::getJSONResponse();		//albero json completo memorizzato in $json
+$drinkTitle = $json->drinks[0]->strDrink;       //selezione del nodo figlio strDrink dall'albero   
+$drinkImg = $json->drinks[0]->strDrinkThumb;	//selezione del nodo figlio strDrinkThumb dall'albero
+```
+Il metodo di seguito esegue una **richiesta HTTP** e restituisce il JSON della risposta:
+
+```PHP
+// $method: GET, POST,PUT,
+// $param: array asociativo con i parametri della richiesta (coppie nome, valore). Di default nessun parametro.
+// $param: array asociativo con i campi dell'header (coppie nome, valore). Di default nessun parametro.
+static function callAPI($method, $url, $param = false, $header = false)
+```
+Metodo per eseguire il **filtro** dei figli di un nodo della risposta json. I figli selezionati sono quelli con una radice comune nel nome del campo json.
+
+```PHP
+// $object: rappresentazione ad oggetti PHP del nodo padre
+// $common: stringa con la radice comune dei vari campi (drink di drink1, drink2, drink3, ecc).
+// $start: numerazione del suffisso della radice da cui partire (default 1, ad es. drink1)
+static function extractCommon(&$buf, $object, $common, $start = 1)
+```
+Esempio di invocazione del filtro:
+```PHP
+$json->drinks[0]   //selezione del nodo padre dall'albero json completo memorizzato in $json
+RESTClient::extractCommon($drinkIngredients, $json->drinks[0], "strIngredient");
+```
+
+
 ```PHP
 <?php
 
