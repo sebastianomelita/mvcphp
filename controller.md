@@ -18,21 +18,21 @@ Le **query string**, cioè la parte dell’url dopo ? non partecipano al process
 
 Esistono delle **convenzioni** per i nomi di **classi e metodi**:
 -	Il nome di una **classe** in PHP va indicato sempre in **forma maiuscolata** (capitalized) cioè inizia sempre e comunque con una maiuscola. Se il nome è composto, ogni sua parte inizia sempre, a sua volta, con una maiuscola (convenzione **Studly Caps**). 
--	Il nome di un metodo di una classe in PHP va sempre indicato in minuscolo se singolo. Se però il metodo ha un nome composto (doppio, triplo, ecc.), tutti i caratteri iniziali di ogni sua parte sono maiuscolati, eccetto il primo, poiché in PHP i metodi cominciano sempre in minuscolo.  
+-	Il nome di un **metodo** di una classe in PHP va sempre indicato in minuscolo se singolo. Se però il metodo ha un nome composto (doppio, triplo, ecc.), tutti i caratteri iniziali di ogni sua parte sono maiuscolati, eccetto il primo, poiché in PHP i metodi **cominciano** sempre in minuscolo.  
  
  ![routing](routing.png)
  
-Esistono delle convenzioni anche per i nomi di controller e azione all’interno dell’url. Sia il nome del controller che quello di una azione sono sempre in minuscolo e devono essere in forma Camel Case se i nomi delle classi o delle azioni corrispondenti sono composti da più parti. In sostanza ad una classe con nome composto corrisponde nell’url il nome del controller in camel case cioè con un trattino tra ogni sua parte. Lo stesso accade per ogni metodo con nome composto.
+Esistono delle **convenzioni** anche per i nomi di **controller e azione** all’interno dell’url. Sia il nome del controller che quello di una azione sono sempre in minuscolo e devono essere in forma **Camel Case** se i nomi delle classi o delle azioni corrispondenti sono composti da più parti. In sostanza ad una classe con nome composto corrisponde nell’url il **nome del controller** in camel case cioè con un **trattino** tra ogni sua parte. Lo stesso accade per ogni **metodo** con nome composto.
 
-A loro volta possiamo organizzare le azioni secondo il seguente criterio:
--	Chiamate REST. Cioè azioni richiamabili direttamente nella barra degli indirizzi o indirettamente da una ancora in un link. Queste di norma hanno invocazioni in formato REST per cui i parametri sono anch’essi nella forma analoga a quella degli altri path cioè un elenco di parametri separati da “/”. Ad es. calcolatrice/somma/3/4/ esegue la somma di due numeri forniti come parametro. In questo caso il metodo può avere un nome qualsiasi, nello specifico Calcolatrice.somma().
--	Action di un form. Azioni richiamabili da un form alla sua sottomissione premendo il tasto submit. In questo caso i parametri vengono inviati in formato REST ma in formato query string. In questo caso il metodo è opportuno abbia la forma doNome_metodoAction. Cioè si prepone il prefisso do al nome del metodo.
+A loro volta possiamo organizzare le **azioni** secondo il seguente criterio:
+-	**Chiamate REST.** Cioè azioni richiamabili direttamente nella barra degli indirizzi o indirettamente da una ancora in un link. Queste di norma hanno invocazioni in **formato REST** per cui i parametri sono anch’essi nella forma analoga a quella degli altri path cioè un elenco di parametri separati da “/”. Ad es. ```calcolatrice/somma/3/4/``` esegue la somma di due numeri forniti come parametro. In questo caso il metodo può avere un nome qualsiasi, nello specifico ```Calcolatrice.somma()```.
+-	**Action di un form.** Azioni richiamabili da un form alla sua sottomissione premendo il tasto submit. In questo caso i parametri vengono inviati in formato REST ma in formato query string. In questo caso il metodo è opportuno abbia la forma doNome_metodoAction. Cioè si prepone il **prefisso do** al nome del **metodo**.
 
-A loro volta le action REST sono sostanzialmente di due tipi: 
--	Azioni vere e proprie. Quelle che chiamano un metodo per fare qualcosa (invocano il modello) e visualizzare il risultato (invocano la view)
--	Stub. Quelle che sono semplicemente stub di una view, cioè invocano una view e basta. L'ultimo caso è tipico di un form o di una pagina index iniziale con dei menu con ancore.
+A loro volta le **action REST** sono sostanzialmente di due tipi: 
+-	**Azioni vere e proprie.** Quelle che chiamano un metodo **per fare qualcosa** (invocano il modello) e visualizzare il risultato (invocano la view)
+-	**Stub.** Quelle che sono semplicemente stub di una view, cioè **invocano una view e basta**. L'ultimo caso è tipico di un form o di una pagina index iniziale con dei menu con ancore.
 
-All’interno di un controller bisogna poi avere cura di includere le librerie dei modelli utilizzati da quel controller, inserendo la direttiva use subito dopo la definizione dell’interfaccia del controller, ad es:
+All’interno di un controller bisogna poi avere cura di **includere le librerie dei modelli** utilizzati da quel controller, inserendo la direttiva use subito dopo la definizione dell’interfaccia del controller, ad es:
 
 ```PHP
 namespace App\Controllers;
@@ -45,14 +45,14 @@ use \Core\Error;
 **Parametri delle richieste http**
 
 I parametri si possono acquisire all’interno di un controller sostanzialmente in due modi: 
--	dal path della action che deve essere costruita così: ../ controller/ azione/ parametro. In questo caso il valore del parametro si recupera da una variabile di istanza del controller con il nome "id"
--	da una query string, metto cioè il parametri dopo il punto interrogativo con coppie nome valore del tipo ?param1=val1&param2=val2. Questo metodo è usato dalle action dei form, e può essere usato anche da un tag ancora. I valori si recuperano nel controller dalle variabili blobali standard del php ```$_POST["param1"] o $_GET["param2"]```
+-	**dal path della action** che deve essere costruita così: ```../ controller/ azione/ parametro```. In questo caso il valore del parametro si recupera da una variabile di istanza del controller con il nome "id"
+-	**da una query string**, metto cioè il parametri dopo il punto interrogativo con coppie nome valore del tipo ?```param1=val1&param2=val2```. Questo metodo è usato dalle action dei form, e può essere usato anche da un tag ancora. I valori si recuperano nel controller dalle variabili blobali standard del php ```$_POST["param1"] o $_GET["param2"]```
 
 **Invocazione delle viste**
 
 Il controller invoca anche i modelli per comandare la visualizzazione dei dati che lui ha elaborato/raccolto dal modello.
 
-Il controller comanda anche la visualizzazione dei dati ricevuti dal modello all’interno di una vista. I dati da visualizzare nella view per essere utilizati con il template twig si deve chiamare la funzione renderTemplate():
+Il **controller** comanda anche la **visualizzazione** dei dati ricevuti dal modello all’interno di una vista. I dati da visualizzare nella view per essere utilizati con il template **twig** si deve chiamare la funzione **```renderTemplate()```**:
 ```PHP
 $path = 'Pub/index0.html';
 View::renderTemplate($path, [
@@ -61,9 +61,9 @@ View::renderTemplate($path, [
      'drinkImg' => $drinkImg	      // stringa
 ]);  
 ```
-```$path``` è il percorso del template nella cartella Models che li raccoglie tutti. I template sono organizzati in cartelle con lo steso nome del modello.
+```$path``` è il **percorso** del template nella cartella Models che li raccoglie tutti. I template sono organizzati in cartelle con lo steso nome del modello.
 
-Se si sceglie l’opzione di utilizzare una pagina PHP senza template twig allora si esegue una operazione analoga con la funzione render():
+Se si sceglie l’opzione di utilizzare una pagina PHP senza template twig allora si esegue una operazione analoga con la funzione ```render()```:
 ```PHP
 $path = 'Pub/index0.html';
 View::render ($path, [
@@ -72,11 +72,11 @@ View::render ($path, [
      'drinkImg' => $drinkImg	              // stringa
 ]);  
 ```
-Si noti la la particolarità della modalità dell’invocazione dei metodi, tramite :: poiché render() e renderTempate() sono metodi statici della classe View.
+Si noti la la particolarità della **modalità dell’invocazione** dei metodi, tramite :: poiché render() e renderTempate() sono **metodi statici** della classe **View**.
 
 **Check delle sessioni**
 
-Le variabili di sessione possono essere controllate prima del caricamento di qualsiasi action in maniera tale da consentire il filtro di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama before() e deve restituire true per continuare e false per bloccare:
+Le variabili di **sessione** possono essere controllate **prima** del caricamento di qualsiasi action in maniera tale da consentire il **filtro** di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama ```before()``` e deve restituire ```true``` per **continuare** e ```fals```e per **bloccare**:
 
 ```PHP
 protected function before()
