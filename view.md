@@ -1,12 +1,12 @@
 >[Torna a MVC](mvcindex.md) 
 ## **Viste**
-Le view possono essere di due tipi: 
+Le **view** possono essere di due tipi: 
 -	**HTML** per pagine web tradizionali. Seguono un approccio THIN CLIENT con un minimo carico di elaborazione sul client per quanto riguarda la struttura e la organizzazione dei contenuti in tag HTML.
 -	**JSON** per web app dinamiche lato client. FAT CLIENT con carico di elaborazione sul client sia per quanto riguarda la creazione della struttura dei contenuti in tag HTML che per il rendering della stessa (CSS).
 
 Si prepara un **array associativo** che contiene tutte le informazioni che devono essere visualizzate, eventualmente **annidando** in uno o più campi dell’array altri array associativi. Si possono anche preparare più array associativi **paralleli**.
 
-Le viste possono essere **codificate** nel modello sostanzialmente in due maniere:
+Le viste possono essere **codificate** nel modello sostanzialmente in **due maniere**:
 -	**PHP puro**. In questo caso il codice della pagina HTML viene creato **dinamicamente** sul server da istruzioni PHP. In particolare si utilizza in maniera più compatta possibile la funzione echo(). La pagina non è più solamente HTML ma composta da **codice misto HTL-PHP** ed ha **estensione .php**.
 -	**Templating**. In questo caso si usa un middleware di templating che modifica in maniera quasi trasparente un template **statico** scritto in codice **HTML puro** e quindi con **estensione .html**.
 
