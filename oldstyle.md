@@ -18,6 +18,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 ![session](session-php.gif)
 
+![redis2](redis2.png)
 
 ![redis](redis.jpg)
 
