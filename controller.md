@@ -14,7 +14,7 @@ Un controller è un oggetto che **è instanziato** al momento dell'**arrivo di u
 
 ![gerarchiacontroller](gerarchiacontroller.png)
 
-**Generazione** dell'oggetto istanza di un controller:
+**Generazione** di una istanza della classe controller derivata Home:
 
 ![istanzacontroller.png](istanzacontroller.png)
 
