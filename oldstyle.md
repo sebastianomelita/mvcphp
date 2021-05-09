@@ -20,9 +20,10 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 5.	In **memoria RAM** su un **server di caching centralizzato** che di solito memorizza i dati di accesso di **molte applicazioni distribuite** su più server. I server **REDIS** e **MEMCACHED** sono le soluzioni di caching più diffuse. La consultazione dei dati di accesso si esegue in RAM per velocizzare gli accessi. La persistenza su disco viene eventualmente gestita per aumentare l’affidabilità.
 
 
-**Confronto** REDIS vs MEMCACHED:
 
 ![redis2](redis2.png)
+
+**Confronto** REDIS vs MEMCACHED:
 
 ![redis](redis.jpg)
 
