@@ -1,6 +1,6 @@
 >[Torna a MVC](mvcindex.md) 
 ## **Viste**
-Le **view** possono essere di due tipi: 
+Le **view** possono essere di due **tipi**: 
 -	**HTML** per pagine web tradizionali. Seguono un approccio THIN CLIENT con un minimo carico di elaborazione sul client per quanto riguarda la struttura e la organizzazione dei contenuti in tag HTML.
 -	**JSON** per web app dinamiche lato client. FAT CLIENT con carico di elaborazione sul client sia per quanto riguarda la creazione della struttura dei contenuti in tag HTML che per il rendering della stessa (CSS).
 
