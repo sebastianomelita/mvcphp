@@ -34,6 +34,7 @@ $json->drinks[0]   //selezione del nodo padre dall'albero json completo memorizz
 RESTClient::extractCommon($drinkIngredients, $json->drinks[0], "strIngredient");
 ```
 
+Esempio **completo**:
 
 ```PHP
 <?php
