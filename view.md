@@ -1,14 +1,14 @@
 >[Torna a MVC](mvcindex.md) 
 ## **Viste**
 Le view possono essere di due tipi: 
--	HTML per pagine web tradizionali. Seguono un approccio THIN CLIENT con un minimo carico di elaborazione sul client per quanto riguarda la struttura e la organizzazione dei contenuti in tag HTML.
--	JSON per web app dinamiche lato client. FAT CLIENT con carico di elaborazione sul client sia per quanto riguarda la creazione della struttura dei contenuti in tag HTML che per il rendering della stessa (CSS).
+-	**HTML** per pagine web tradizionali. Seguono un approccio THIN CLIENT con un minimo carico di elaborazione sul client per quanto riguarda la struttura e la organizzazione dei contenuti in tag HTML.
+-	**JSON** per web app dinamiche lato client. FAT CLIENT con carico di elaborazione sul client sia per quanto riguarda la creazione della struttura dei contenuti in tag HTML che per il rendering della stessa (CSS).
 
-Si prepara un array associativo che contiene tutte le informazioni che devono essere visualizzate, eventualmente annidando in uno o più campi dell’array altri array associativi. Si possono anche preparare più array associativi paralleli.
+Si prepara un **array associativo** che contiene tutte le informazioni che devono essere visualizzate, eventualmente **annidando** in uno o più campi dell’array altri array associativi. Si possono anche preparare più array associativi **paralleli**.
 
-Le viste possono essere preparate nel modello sostanzialmente in due maniere:
--	PHP puro. In questo caso il codice della pagina HTML viene creato dinamicamente sul server da istruzioni PHP. In particolare si utilizza in maniera più compatta possibile la funzione echo(). La pagina non è più solamente HTML ma composta da codice misto HTL-PHP ed ha estensione .php.
--	Templating. In questo caso si usa un middleware di templating che modifica in maniera quasi trasparente un template statico scritto in codice HTML puro e quindi con estensione .html.
+Le viste possono essere **codificate** nel modello sostanzialmente in due maniere:
+-	**PHP puro**. In questo caso il codice della pagina HTML viene creato **dinamicamente** sul server da istruzioni PHP. In particolare si utilizza in maniera più compatta possibile la funzione echo(). La pagina non è più solamente HTML ma composta da **codice misto HTL-PHP** ed ha **estensione .php**.
+-	**Templating**. In questo caso si usa un middleware di templating che modifica in maniera quasi trasparente un template **statico** scritto in codice **HTML puro** e quindi con **estensione .html**.
 
 Esempio di view “mista”:
 ```html
@@ -29,9 +29,9 @@ Esempio di view “mista”:
 </body>
 </html>
 ```
-Si noti l’utilizzo dei : per segnalare l’inizio di un blocco di istruzioni PHP come alternativa compatta alle tradizionali parentesi graffe aperte.
+Si noti l’utilizzo dei ```:``` per segnalare l’inizio di un **blocco di istruzioni PHP** come alternativa compatta alle tradizionali parentesi graffe aperte.
 
-Esempio di template html dove si definiscono dei blocchi di template:
+Esempio di template html dove si definiscono dei **blocchi di template**:
 ```html
 {% extends "base.html" %}
 {% block title %}Portata del giorno{% endblock %
@@ -48,9 +48,9 @@ Esempio di template html dove si definiscono dei blocchi di template:
     <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
 {% endblock %}
 ```
-Nel template precedente viene definito l’html della parte modificata di un template base di cui vengono implicitamente conservate le parti considerate immutabili.
+Nel template precedente viene definito il codice html della sola **parte modificata** di un template base in cui vengono implicitamente conservate le parti della pagina considerate **immutabili** tra una pagina e l'altra.
 
-```{% block title %}``` e ```{% block body %}``` sono una sorta di metatag che indicano al motore di templating dove inserire i blocchi dei vari template componenti all’interno del template base. Ogni blocco si chiude con il corrispondente metatag di chiusura ```{% endblock %}```.
+```{% block title %}``` e ```{% block body %}``` sono una sorta di metatag che indicano al motore di templating **dove** inserire i **blocchi** dei vari template **componenti** all’interno del template base. Ogni blocco si chiude con il corrispondente **metatag di chiusura** ```{% endblock %}```.
 
 **Esempio completo**
 
