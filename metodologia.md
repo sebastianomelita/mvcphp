@@ -18,7 +18,7 @@ Ogni **ciclo di fasi** può essere **incrementale**, nel senso che si può appli
 
 Per una applicazione web, dal punto di vista strettamente informatico, prevale l’analisi dei requisiti funzionali. Vanno ricercate tutte quelle operazioni che il sistema deve svolgere per conto dell’attore umano e in collaborazione con esso. L’azione del sistema è complementare a quella dell’utente umano che l’adopera e l’interazione con esso va studiata con cura. 
 
-Prodotto di questa fase è una descrizione scritta o visuale, grossolana o dettagliata degli use case del sistema da parte degli attori che lo adoperano (generalmente tanti quanti i ruoli aziendali). Come risultato notevole di questa fase c’è lo schema ER del database che guiderà da un lato lo sviluppo dell’autenticazione, dall’altro quello del modello.
+**Prodotto** di questa fase è una descrizione scritta o visuale, grossolana o dettagliata degli use case del sistema da parte degli attori che lo adoperano (generalmente tanti quanti i ruoli aziendali). Come risultato notevole di questa fase c’è lo **schema ER** del database che guiderà da un lato lo sviluppo dell’autenticazione, dall’altro quello del modello.
 
 ## 2)	**Progettazione delle viste.**
 Una volta stabiliti i requisiti funzionali si può pensare di progettare un’interazione accessibile e gradevole con cui un’utente può usufruirne. Si tratta di progettare l’interfaccia grafica organizzando il “cruscotto” con cui sono organizzati i punti di accesso al sistema. Una volta sottomessi il tipo di interazione con cui si possono scambiare i dati è generalmente di due tipi:
