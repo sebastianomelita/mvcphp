@@ -10,7 +10,9 @@ Ci si propone di suggerire una metodologia adatta, più che altro, ad uno svilup
 
 Suddividiamo il lavoro **in fasi**. 
 
-Ogni **ciclo di fasi** può essere **incrementale**, nel senso che si può applicare sviluppando fino alla fine un **set limitato di funzioni** coese tra loro, provarle e poi passare allo sviluppo di un altro set di funzioni. Il set di funzioni che conviene **sviluppare per primo** in maniera completa è quello che riguarda l’**autenticazione** degli utenti (chi sono) e l’**autorizzazione** degli utenti (quale risorsa possono vedere) nel sistema. L’**autorizzazione** può essere gestita **a livelli** a cui corrisponde un gruppo via via crescente di diritti di accesso alle risorse (diventano più numerose all’aumentare del livello).
+Ogni **ciclo di fasi** può essere **incrementale**, nel senso che si può applicare sviluppando fino alla fine un **set limitato di funzioni** coese tra loro, provarle e poi passare allo sviluppo di un altro set di funzioni. 
+
+Il set di funzioni che conviene **sviluppare per primo** in maniera completa è quello che riguarda l’**autenticazione** degli utenti (chi sono) e l’**autorizzazione** degli utenti (quale risorsa possono vedere) nel sistema. L’**autorizzazione** può essere gestita **a livelli** a cui corrisponde un gruppo via via crescente di diritti di accesso alle risorse (diventano più numerose all’aumentare del livello).
 
 ## **Metodologia proposta:**
 
