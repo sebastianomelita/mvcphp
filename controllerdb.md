@@ -2,6 +2,11 @@
 
 ## Controller che comunica con un modello DB
 
+Tutti i modelli ereditano da una classe padre l’accesso al database che nelle **classi figlie** è recuperabile con la chiamata:
+```PHP 
+$db = static::getDB();
+```
+
 Esempio di controller che definisce alcune funzioni di gestione degli utenti prelevate da un DB:
 
 ```PHP
