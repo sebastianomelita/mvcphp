@@ -27,7 +27,8 @@ L’**aggregazione** dei microservizi avviene sul server:
 -	Possibilità di aggregare servizi provenienti da **dominii differenti**.
 
 
-Il gateway potrebbe anche gestire le informazioni di sessione di tutte le app utilizzando il servizio offerto da un server di cachind (ad es. REDIS o MEMCACHED)
+Il gateway potrebbe anche gestire le informazioni di sessione di tutte le app utilizzando il servizio offerto da un server di cachind (ad es. REDIS o MEMCACHED):
+
 ![redis](caching-in-a-cloud-native-app.png)
 
 >[Torna all'indice generale](main.md)
