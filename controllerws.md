@@ -50,18 +50,8 @@ class Pubs extends \Core\Controller
         //echo " (after)";
     }
 
-    /**
-     * Show the index page
-     *
-     * @return void
-     */
-    public function indexAction()
-    {
-	  $path = 'Home/index'.$_SESSION['level'].'.html';
-	  View::renderTemplate($path);  
-	}
-	
-	public function portatedelgiornoAction()
+    // interrogazione di due webservice	
+    public function portatedelgiornoAction()
     {
         $drinkTitle = "";
         $drinkImg = "";
@@ -110,7 +100,8 @@ class Pubs extends \Core\Controller
         }
 	}
 	
-	public function drinkAction()
+    // interrogazione di un webservice (drinks)
+    public function drinkAction()
     {
         $abc = $this->route_params["id"];
         
@@ -144,7 +135,8 @@ class Pubs extends \Core\Controller
     	}
 	}
 	
-	public function mealAction()
+    // interrogazione di un webservice (meals)
+    public function mealAction()
     {
         $abc = $this->route_params["id"];
 
@@ -178,6 +170,7 @@ class Pubs extends \Core\Controller
         }
 	}
 	
+	// metodo stub che visualizza il menu dei drink
 	public function drinksmenuAction(){
 	    $range = range('A','Z');
 	    $path = 'Pub/drinksmenu.html';
@@ -186,6 +179,7 @@ class Pubs extends \Core\Controller
             ]); 
 	}
 	
+	// metodo stub che visualizza il menu dei meals
 	public function mealsmenuAction(){
 	    $range = range('A','Z');
 	    $path = 'Pub/mealsmenu.html';
