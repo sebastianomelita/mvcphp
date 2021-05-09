@@ -25,20 +25,20 @@ Una volta stabiliti i requisiti funzionali si può pensare di progettare un’in
 
    -	**Richiesta/risposta**. Viene inviata una richiesta http in seguito alla quale viene ricevuta dal server una risposta che può essere o un’altra pagina web o una informazione in formato JSON da utilizzare in seno alla pagina aggiornandola (mediante azione del javascript sul DOM della pagina).
    -	**Pubblicazione/Sottoscrizione**. Sono possibili due ruoli per la pagina di essere un client (spesso assunti insieme):
-   -	**Publisher**. Pubblica informazioni che devono aggiornare lo stato del server in particolare ma di tutti i client subscriber in generale.
-   -	**Subscriber**. Riceve notifica asincrona (in istanti non prevedibili) di dati che possono modificare lo stato o il contenuto delle informazioni visualizzate dalla pagina.
+       - **Publisher**. Pubblica informazioni che devono aggiornare lo stato del server in particolare ma di tutti i client subscriber in generale.
+       - **Subscriber**. Riceve notifica asincrona (in istanti non prevedibili) di dati che possono modificare lo stato o il contenuto delle informazioni visualizzate dalla pagina.
      
-Entrambi i modelli di interazione web possono essere svolti in modalità SPA (Single Page Application) utilizzando plugins Javascript e protocolli opportuni.
+Entrambi i **modelli di interazione web** possono essere svolti in modalità SPA (Single Page Application) utilizzando plugins Javascript e protocolli opportuni.
 
-L’input della pagina è quindi suddivisibile in zone:
+**L’input** della pagina è quindi suddivisibile in **zone**:
 
 -	Aree in cui si concentra la **reportistica** dei risultati ottenuti, spesso organizzata in righe successive (tabelle).
 -	Aree in cui si concentra **l’input** di una richiesta http per ottenere una nuova pagina o l’aggiornamento di quella corrente
 -	Aree in cui si concentrano gli elementi soggetti ad aggiornamenti a seguito di **notifiche asincrone** da parte del server, cioè le **comunicazioni iniziate** dal server (che assume temporaneamente il ruolo di client) e non dalla pagina
 
-La suddivisione in aree e solo in linea di principio perché le varie porzioni potrebbero sovrapporsi.
+La **suddivisione in aree** e solo in **linea di principio** perché le varie porzioni potrebbero sovrapporsi.
 
-Le viste possono essere sviluppate in PHP o in con template HTML con il framework TWIG. Il templating permette un riuso semplice delle porzioni immutabili di una pagina web, cioè quelle parti che rimangono invariate tra una pagina web e l’altra. 
+Le viste possono essere sviluppate in PHP o in con template HTML con il framework TWIG. Il **templating** permette un **riuso semplice** delle **porzioni immutabili** di una pagina web, cioè quelle parti che rimangono invariate tra una pagina web e l’altra. 
 
 Le viste possono essere **organizzate in gruppi** che gestiscono l’interazione con parti del sistema che svolgono funzioni simili o fortemente correlate. Nel **framework in uso** sono **organizzate in cartelle** che raccolgono **file** con estensione **.php** o **.htm**. Si propone la **convenzione** di nominare le cartelle con lo stesso nome del controller che le gestirà oppure con la versione al singolare di quel nome.
 
