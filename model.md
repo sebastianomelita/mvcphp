@@ -2,19 +2,19 @@
 ## **Model**
 
 I modelli che consideriamo noi sono sostanzialmente due: 
--	accesso al DB per leggere o scrivere. Serve a recuperare, mediante una query SQL, quelle informazioni che devono essere organizzate in strutture PHP adatte ad una loro visualizzazione in una pagina o a alla composizione di una stringa JSON.
--	accesso a web service multipli per filtraggio dei campi JSON e per la loro aggregazione in strutture PHP adatte ad una loro visualizzazione in una pagina o a alla composizione di una stringa JSON.
+-	**accesso al DB** per leggere o scrivere. Serve a recuperare, mediante una query SQL, quelle informazioni che devono essere organizzate in strutture PHP adatte ad una loro visualizzazione in una pagina o a alla composizione di una stringa JSON.
+-	**accesso a web service** multipli per filtraggio dei campi JSON e per la loro aggregazione in strutture PHP adatte ad una loro visualizzazione in una pagina o a alla composizione di una stringa JSON.
  
 ![model](model.png)
 
 
-Tutti i modelli ereditano da una classe padre l’accesso al database recuperabile con la chiamata 
+Tutti i modelli ereditano da una classe padre l’accesso al database che nelle **classi figlie** è recuperabile con la chiamata:
 ```PHP 
 $db = static::getDB();
 ```
-Occorre precisare che le classi del modello sono tutte statiche nel senso che possiedono metodi statici e proprietà statiche. I metodi statici sono dichiarati anteponendo il qualificatore static davanti il nome del metodo, ad es:
-static function getHashedPsw($username,&$authlevel){
-Le proprietà statiche sono dichiarate anteponendo il qualificatore static davanti il nome della proprietà:
+Occorre precisare che le classi del modello sono **tutte statiche** nel senso che possiedono **metodi statici** e **proprietà statiche**. I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
+static ```function getHashedPsw($username,&$authlevel){```
+Le **proprietà statiche** sono dichiarate anteponendo il qualificatore ```static``` davanti il nome della proprietà:
 ```PHP 
 private static $result = "";
 ```
