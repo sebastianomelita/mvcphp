@@ -7,9 +7,13 @@ Un controller è un collettore di metodi ai quali corrispondono altrettante invo
  ![router](controller.png)
 Il **framework** che adoperiamo non fa differenza tra i vari metodi http (GET,PUT,POST,DELETE) dato che sono trattati tuti allo stesso modo e possono essere mappati su un qualunque metodo di un qualsiasi controller. 
 La **differenza** tra i vari metodi è concentrata nei parametri delle richieste che, in un caso o nell’altro, devono essere recuperati da **array associativi globali** diversi. Ad esempio, per recuperare all’interno di un metodo un **parametro POST**, si adopera la variabile globale php ```$_POST["nomeParametro1"]```, mentre, per recuperare all’interno di un metodo **un parametro GET**, si adopera ```$_GET["nomeParametro1"]```.
+
 **Oggetti del controller**
+
 Un controller è un oggetto che è instanziato al momento dell'arrivo di una richiesta HTTP ed è l'istanza di una classe che deriva dalla classe base Controller posta dentro la cartella Core. Le classi derivate si definiscono dentro la cartella Controller in App.
+
 ![gerarchiacontroller](gerarchiacontroller.png)
+
 I **metodi del controller** si dividono intanto in due categorie: 
 - **Metodi di servizio**. Sono metodi che raggruppano alcune operazioni utilizzate da più azioni e che quindi è conveniente tenere a parte per poterle riutilizzare all’interno del codice di più action (azioni).
 - **Azioni**. Un’azione è il metodo di un controller che è richiamato dal dispatcher (router) quando questo trova una corrispondenza tra quel metodo e una rotta all’interno della tabella delle rotte. Le azioni, in questo framework devono avere il nome che termina col suffisso Action. Ad es. pizzeAction() è il metodo del controller Prenotazioni ed è invocato, ad esempio, quando il dispatcher riconosce il prefisso di routing www.labottegadimario.com/delivery/prenotazioni/pizze/. 
