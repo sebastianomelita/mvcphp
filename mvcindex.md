@@ -20,9 +20,8 @@ Ogni componente possiede vincoli specifici:
 -	**Modello**. Parla **solo se interrogato** dal controller e comunica solo con lui. Non può parlare con la vista.
 -	**Vista**. Parla **solo se interrogato** dal controller e comunica solo con lui. Non può parlare con il modello.
 
-Dopo avere esaminato il **ruolo** vediamo adesso il **funzionamento interno** dei vari componenti.
+Dopo avere esaminato il **ruolo** vediamo adesso il **funzionamento interno** dei vari componenti:
 
-## Arduino Bare Metal
 1. [Controller](controller.md)
 2. [Modello](model.md)
 3. [Vista](view.md)
