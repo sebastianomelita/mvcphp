@@ -33,7 +33,7 @@ Nella gestione delle informazioni di navigazione (sessioni) **tramite server di 
 
 Un utilizzo comune dei **servizi di caching** avviene in tutte quelle situazioni in cui **richieste successive** legate ad una **stessa sessione** potrebbero essere servite da **mecchine diverse**. 
 
-Ciò può accadere perchè durante una **sessione** di navigazione:
+Ciò può accadere perchè durante una **sessione** di navigazione perchè:
 - servizi ed informazioni sono **frammentati su più server** 
 - i servizi potrebbero essere **replicati su un pool di macchine** dietro un **bilanciatore di carico** che seleziona la macchina che, in un certo istante, è **più scarica**.
 
