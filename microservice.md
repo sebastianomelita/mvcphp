@@ -26,4 +26,8 @@ L’**aggregazione** dei microservizi avviene sul server:
 -	Possibile anche l’architettura di tipo **thin client** tipica di una applicazione web tradizionale in cui tutto il contenuto della pagina viene **costruito** lato server e inviato in formato HTML. 
 -	Possibilità di aggregare servizi provenienti da **dominii differenti**.
 
+
+Il gateway potrebbe anche gestire le informazioni di sessione di tutte le app utilizzando il servizio offerto da un server di cachind (ad es. REDIS o MEMCACHED)
+![redis](caching-in-a-cloud-native-app.png)
+
 >[Torna all'indice generale](main.md)
