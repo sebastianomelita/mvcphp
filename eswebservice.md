@@ -4,7 +4,7 @@ Il metodo
 ```PHP
  getJSONResponse()
 ```
-Restituisce la rappresentazione ad oggetti PHP della stringa JSON ricevuta. Questa può essere navigata per selezionare un noso specifico da elaborare:
+Restituisce la rappresentazione ad oggetti PHP della stringa JSON ricevuta. Questa può essere navigata per selezionare un nodo specifico da elaborare:
 ```PHP
 $json = RESTClient::getJSONResponse();		//albero json completo memorizzato in $json
 $drinkTitle = $json->drinks[0]->strDrink;       //selezione del nodo figlio strDrink dall'albero   
