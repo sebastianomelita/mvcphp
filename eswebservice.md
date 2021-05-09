@@ -21,8 +21,6 @@ static function callAPI($method, $url, $param = false, $header = false)
 Metodo per eseguire il **filtro** dei figli di un nodo della risposta json. I figli selezionati sono quelli con una radice comune nel nome del campo json.
 
 ```PHP
-$json->drinks[0]   //selezione del nodo padre dall'albero json completo memorizzato in $json
-
 // $object: rappresentazione ad oggetti PHP del nodo padre
 // $common: stringa con la radice comune dei vari campi (drink di drink1, drink2, drink3, ecc).
 // $start: numerazione del suffisso della radice da cui partire (default 1, ad es. drink1)
@@ -30,6 +28,7 @@ static function extractCommon(&$buf, $object, $common, $start = 1)
 ```
 Esempio di invocazione del filtro:
 ```PHP
+$json->drinks[0]   //selezione del nodo padre dall'albero json completo memorizzato in $json
 RESTClient::extractCommon($drinkIngredients, $json->drinks[0], "strIngredient");
 ```
 
