@@ -2,7 +2,7 @@
 
 ## Controller che comunica con un modello DB
 
-![modeldb](modeldb.md) 
+![modeldb](modeldb.png) 
 
 Tutti i modelli ereditano da una classe padre l’accesso al database che nelle **classi figlie** è recuperabile con la chiamata:
 ```PHP 
