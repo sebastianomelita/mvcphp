@@ -6,6 +6,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 -	**Nelle prime** il servizio offerto dalla pagina è contenuto tutto al suo interno e pertanto non c’è motivo di caricare altre pagine oppure il caricamento delle pagine successive è del tutto indipendente da quello delle precedenti. La navigazione ha un comportamento stateless cioè senza stato. 
 -	Nel **secondo caso**, pagine correlate, caricata la prima pagina, cioè una volta entrati nel sistema informatico, **l’accesso del client** viene in qualche modo **identificato, registrato** e successivamente **tracciato**. Il tracciamento si ottiene generalmente tramite **cookies** o, alternativamente, tramite **tokens**. Il **cookie** è un numeretto che **serve ad identificare univocamente il client tramite un clientID** ed è memorizzato **all’interno del browser** con cui accede alla risorsa. **Il clientID** è associato **allo stato dell'applicazione nell'accesso ad una risorsa** contenuta sul server.
 ![cookie](cookie.png)
+
 **L’associazione** tra clientID e la risorsa può essere **memorizzata**:
 1.	Sul **client**, in questo caso viene memorizzata **insieme al cookie** che identifica il browser dell’utente.
 2.	Sul **server** dell’applicazione, in questo caso viene memorizzata **su un file** del modulo che genera le pagine lato server (PHP, Python, ecc.). Sono le **sessioni** propriamente dette.
