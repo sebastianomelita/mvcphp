@@ -34,6 +34,7 @@ Esempio di invocazione del filtro:
 RESTClient::extractCommon($drinkIngredients, $json->drinks[0], "strIngredient");
 ```
 
+Esempio completo del modello HTTPClient:
 ```PHP 
 <?php
 namespace App\Models;
