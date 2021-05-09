@@ -9,7 +9,7 @@ Una operazione analoga si può fare con il modello. Sia il modello che le view p
 Ogni componente possiede **responsabilità** specifiche:
 -	**Controller**. Viene invocato alla ricezione di una chiamata http e, il suo codice, può invocare sia modello che view. Il **ciclo di vita** di una **richiesta** prevede in successione:
     1.	acquisizione dei parametri della richiesta http 
-    2.	accesso ai dati del modello in lettura o scrittura **eseguendo un filtraggio** dei dati che il **modello mette a disposizione** o mediante una query o mediante una condizione di filtraggio che hanno per parametri i parametri della richiesta http
+    2.	accesso ai dati del modello in lettura o scrittura **eseguendo un filtraggio** dei dati che il **modello mette a disposizione**, o mediante una query o mediante una condizione di filtraggio che abbiano per parametri i parametri della richiesta http
     3.	**generazione** del **risultato** tramite **elaborazione** dei parametri e dei dati del modello
     4.	accesso in scrittura sulla vista per la **stampa del risultato**
 -	**Modello**. Rappresenta un connettore del sistema MVC con una o più fonti dei dati. Tipicamente è il punto di accesso ad un database. Potrebbe anche essere il punto di accesso a servizi in rete esposti mediante webservice, in questo caso l’accesso è realizzato mediante un client http (curl).
