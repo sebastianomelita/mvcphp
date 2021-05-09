@@ -10,7 +10,7 @@ La **differenza** tra i vari metodi è concentrata nei parametri delle richieste
 
 **Oggetti del controller**
 
-Un controller è un oggetto che **è instanziat** al momento dell'**arrivo di una richiesta** HTTP ed è l'istanza di una classe che **deriv** dalla classe base Controller posta dentro la cartella Core. Le classi derivate si definiscono dentro la cartella Controller in App.
+Un controller è un oggetto che **è instanziato** al momento dell'**arrivo di una richiesta** HTTP ed è l'istanza di una classe che **deriv** dalla classe base Controller posta dentro la cartella Core. Le classi derivate si definiscono dentro la cartella Controller in App.
 
 ![gerarchiacontroller](gerarchiacontroller.png)
 
