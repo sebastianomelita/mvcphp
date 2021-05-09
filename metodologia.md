@@ -42,7 +42,7 @@ La **suddivisione in aree** e solo in **linea di principio** perché le varie po
 
 Le viste possono essere sviluppate in PHP o in con template HTML con il framework TWIG. Il **templating** permette un **riuso semplice** delle **porzioni immutabili** di una pagina web, cioè quelle parti che rimangono invariate tra una pagina web e l’altra. 
 
-Le viste possono essere **organizzate in gruppi** che gestiscono l’interazione con parti del sistema che svolgono funzioni simili o fortemente correlate. Nel **framework in uso** sono **organizzate in cartelle** che raccolgono **file** con estensione **.php** o **.htm**. Si propone la **convenzione** di nominare le cartelle con lo stesso nome del controller che le gestirà oppure con la versione al singolare di quel nome.
+Le viste possono essere **organizzate in gruppi** che gestiscono l’interazione con parti del sistema che svolgono funzioni simili o fortemente correlate. Nel **framework in uso** sono **organizzate in cartelle** che raccolgono **file** con estensione **.php** o **.htm**. Si propone la **convenzione** di **nominare le cartelle** con lo stesso nome del controller che le gestirà oppure con la **versione al singolare** di quel nome.
 
 ## 3)	**Progettazione del modello.** 
 
