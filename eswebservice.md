@@ -29,6 +29,10 @@ $json->drinks[0]   //selezione del nodo padre dall'albero json completo memorizz
 // $start: numerazione del suffisso della radice da cui partire (default 1, ad es. drink1)
 static function extractCommon(&$buf, $object, $common, $start = 1)
 ```
+Esempio di invocazione del filtro:
+```PHP
+RESTClient::extractCommon($drinkIngredients, $json->drinks[0], "strIngredient");
+```
 
 ```PHP 
 <?php
