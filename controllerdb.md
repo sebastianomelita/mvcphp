@@ -7,7 +7,7 @@ Tutti i modelli ereditano da una classe padre l’accesso al database che nelle 
 $db = static::getDB();
 ```
 
-Esempio di controller che definisce alcune funzioni di gestione degli utenti prelevate da un DB:
+Esempio **completo** di controller che definisce alcune funzioni di gestione degli utenti prelevate da un DB:
 
 ```PHP
 /*
