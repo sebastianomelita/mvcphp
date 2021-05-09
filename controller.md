@@ -26,7 +26,7 @@ Esistono delle **convenzioni** anche per i nomi di **controller e azione** all�
 
 A loro volta possiamo organizzare le **azioni** secondo il seguente criterio:
 -	**Chiamate REST.** Cioè azioni richiamabili direttamente nella barra degli indirizzi o indirettamente da una ancora in un link. Queste di norma hanno invocazioni in **formato REST** per cui i parametri sono anch’essi nella forma analoga a quella degli altri path cioè un elenco di parametri separati da “/”. Ad es. ```calcolatrice/somma/3/4/``` esegue la somma di due numeri forniti come parametro. In questo caso il metodo può avere un nome qualsiasi, nello specifico ```Calcolatrice.somma()```.
--	**Action di un form.** Azioni richiamabili da un form alla sua sottomissione premendo il tasto submit. In questo caso i parametri vengono inviati in formato REST ma in formato query string. In questo caso il metodo è opportuno abbia la forma doNome_metodoAction. Cioè si prepone il **prefisso do** al nome del **metodo**.
+-	**Action di un form.** Azioni richiamabili da un form alla sua sottomissione premendo il tasto submit. In questo caso i parametri non vengono inviati in formato REST ma in formato query string. In questo caso il metodo è opportuno abbia la forma doNome_metodoAction. Cioè si prepone il **prefisso do** al nome del **metodo**.
 
 A loro volta le **action REST** sono sostanzialmente di due tipi: 
 -	**Azioni vere e proprie.** Quelle che chiamano un metodo **per fare qualcosa** (invocano il modello) e visualizzare il risultato (invocano la view)
