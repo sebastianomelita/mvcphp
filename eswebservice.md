@@ -1,6 +1,15 @@
 >[Torna a Model](model.md) 
 
 
+
+```PHP
+static function callAPI($method, $url, $param = false, $header = false)
+```
+
+```PHP
+static function extractCommon(&$buf, $object, $common, $start = 1)
+```
+
 ```PHP 
 <?php
 namespace App\Models;
