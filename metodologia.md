@@ -44,7 +44,14 @@ Le viste possono essere organizzate in gruppi che gestiscono l’interazione con
 
 ## 3)	**Progettazione del modello.** 
 
-Una volta noto lo schema ER dei dati si può passare allo sviluppo del modello logico e alla implementazione delle tabelle sul DBMS. Noto lo schema definitivo delle tabelle relative al blocco funzionale in questione è possibile progettare le query SQL che costituiscono parte del motore funzionale dell’interazione. I modelli sono file php che contengono una singola classe che deriva (per estensione di ereditarietà) dalla classe core del modello. La classe del modello è sempre statica per cui per accedere a proprietà e metodi della medesima classe bisogna usare la notazione ```self::nome_proprietà``` o ```self::nome_metodo```. Come approccio pratico si suggerisce di copiare una classe di un modello già esistente e di incollarla sulla cartella del modello da implementare. Successivamente si modifica il vecchio modello iniziando a cambiare il nome, passando poi a modificare le proprietà e per ultimi i metodi.
+Una volta noto lo schema ER dei dati si può passare allo sviluppo del modello logico e alla implementazione delle tabelle sul DBMS. Noto lo schema definitivo delle tabelle relative al blocco funzionale in questione è possibile progettare le query SQL che costituiscono parte del motore funzionale dell’interazione. I modelli sono file php che contengono una singola classe che deriva (per estensione di ereditarietà) dalla classe core del modello. La **classe del modello** è sempre **statica** per cui **per accedere** a proprietà e metodi della medesima classe bisogna usare la notazione ```::```
+
+```PHP
+self::nome_proprietà``` 
+self::nome_metodo
+```
+
+Come **approccio pratico** si suggerisce di copiare una classe di un modello già esistente e di incollarla sulla cartella del modello da implementare. Successivamente si modifica il vecchio modello iniziando a cambiare il nome, passando poi a modificare le proprietà e per ultimi i metodi.
 
 ## 4)	**Progettazione del controller.**
 
@@ -52,14 +59,15 @@ Il controller raccoglie i metodi associati agli eventi generati dall’utente du
 
 Sono files PHP contenuti in cartelle dentro la cartella Controllers. Possiamo darci la convenzione di nominarli al plurale con lo stesso nome di modello e vista. 
 
-I controller sono oggetti istanziati dinamicamente al momento dell’arrivo di una richiesta http, per cui per accedere a proprietà e metodi della medesimo controller bisogna usare la notazione: 
+I controller sono oggetti **istanziati dinamicamente** al momento dell’arrivo di una richiesta http, per cui per accedere a proprietà e metodi della medesimo controller bisogna usare la notazione ```->```: 
+
 ```PHP
 $this->nome_proprietà
 $this->nome_metodo
 ```
-Come approccio pratico si suggerisce di copiare una oggetto di un controller già esistente e di incollarlo sulla cartella del controller da implementare. Successivamente si modifica il vecchio controller iniziando a cambiare il nome, passando poi a modificare le proprietà e per ultimi i metodi.Una accortezza particolare bisogna riporre nella modifica delle inclusioni delle librerie dato che un controller potrebbe utilizzare modelli diversi. 
+Come **approccio pratico** si suggerisce di **copiare** una oggetto di un controller già esistente e di **incollarlo** sulla cartella del controller da implementare. Successivamente si **modifica il vecchio** controller iniziando a **cambiare il nome**, passando poi a modificare le **proprietà** e, per ultimi, **i metodi**. Una accortezza particolare bisogna riporre nella **modifica delle inclusioni** delle librerie dato che un controller potrebbe utilizzare modelli diversi. 
 
-Un esempio di inclusione è:
+Un esempio di **inclusione** è:
 ```PHP
 use App\Models\Login;
 ```
