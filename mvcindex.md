@@ -15,7 +15,7 @@ Ogni componente possiede **responsabilità** specifiche:
 -	**Modello**. Rappresenta un connettore del sistema MVC con una o più fonti dei dati. Tipicamente è il punto di accesso ad un database. Potrebbe anche essere il punto di accesso a servizi in rete esposti mediante webservice, in questo caso l’accesso è realizzato mediante un client http (curl).
 -	**Vista**. Sono i contenuti che devono essere inviati al client web. A seconda del **modello di servizio** adottato è possibile inviare o dati grezzi in formato JSON, realizzando di fatto un webservice, oppure pagine HTML complete realizzate tutte o in parte sul lato server. La gestione può essere semplificata con l’adozione di un framework di templating che ha il beneficio di promuovere il **riuso** delle pagine web.
 
-Ogni componente possiede vincoli specifici:
+Ogni componente possiede **vincoli specifici**:
 -	**Controller**. È l’unico componente che **parla con tutti** ed è l’unico che possiede il privilegio di poter **iniziare la comunicazione** con gli altri componenti.
 -	**Modello**. Parla **solo se interrogato** dal controller e comunica solo con lui. Non può parlare con la vista.
 -	**Vista**. Parla **solo se interrogato** dal controller e comunica solo con lui. Non può parlare con il modello.
