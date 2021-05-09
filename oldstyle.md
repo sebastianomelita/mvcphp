@@ -30,4 +30,12 @@ Nella gestione delle **sessioni propriamente dette** essa è abbastanza elevata 
 Nella gestione delle informazioni di navigazione (sessioni) **tramite cookies** le associazioni tra clientID e risorse utilizzate sono un file memorizzato all’interno del browser con cui si è acceduto ad esse. La privatezza in questo caso è quella del browser. Il browser di norma dovrebbe consentire la lettura dei cookies via codice client (ad es. javascript) solo da parte della pagina del client che accede la risorsa. L’accesso indiretto da parte di altre pagine, o da parte da altre applicazioni oltre il browser dovrebbe essere interdetto. Un accesso indiretto comporta in qualche modo la **violazione** delle **misure di sicurezza** a protezione del **client**.
 
 Nella gestione delle informazioni di navigazione (sessioni) **tramite server di caching** come REDIS o MEMCACHED le associazioni tra clientID e risorse utilizzate sono memorizzate all’interno di un **server centralizzato** potenzialmente **comune** a moltissime applicazioni. L’accesso non è automaticamente compartimentato e la sicurezza dipende sia da **come** l’applicazione **memorizza** le associazioni sia da come è progettato **l’isolamento** complessivo del server (cifratura degli accessi, firewalls, privilegi, ecc.). Un accesso dei dati di un utente da parte di un altro utente è dovuto in qualche modo o alla **violazione** delle **misure di sicurezza** a protezione del **server** o ad una cattiva progettazione dello storage delle associazioni.
+
+Un utilizzo comune dei **servizi di caching** avviene in tutte quelle situazioni in cui **richieste successive** legate ad una **stessa sessione** potrebbero essere servite da **mecchine diverse**. 
+Ciò può accadere perchè durante una **sessione** di navigazione:
+- servizi ed informazioni sono **frammentati su più server** 
+- i servizi potrebbero essere **replicati su un pool di macchine** dietro un **bilanciatore di carico** che seleziona la macchina che, in un certo istante, è **più scarica**.
+
+![redis3](deprecs-2.png)
+
 >[Torna a stato](state.md)
