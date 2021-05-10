@@ -29,7 +29,7 @@ Un controller è un oggetto che **è instanziato** al momento dell'**arrivo di u
 
 **Generazione** di una istanza della classe controller derivata Home:
 
-![istanzacontroller.png](istanzacontroller.png)
+<img src="istanzacontroller.png" width="600">
 
 I **metodi del controller** si dividono intanto in due categorie: 
 - **Metodi di servizio**. Sono metodi che raggruppano alcune operazioni utilizzate da più azioni e che quindi è conveniente tenere a parte per poterle riutilizzare all’interno del codice di più action (azioni).
