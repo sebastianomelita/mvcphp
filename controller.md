@@ -55,7 +55,7 @@ A loro volta le **action REST** sono sostanzialmente di due tipi:
 -	**Azioni vere e proprie.** Quelle che chiamano un metodo **per fare qualcosa** (invocano il modello) e visualizzare il risultato (invocano la view)
 -	**Stub.** Quelle che sono semplicemente stub di una view, cioè **invocano una view e basta**. L'ultimo caso è tipico di un form o di una pagina index iniziale con dei menu con ancore.
 
- ![Metodi_controller.jpg](Metodi_controller.jpg)
+ ![Metodi_controller.jpg](Metodi_controller.jpg =250x)
 
 All’interno di un controller bisogna poi avere cura di **includere le librerie dei modelli** utilizzati da quel controller, inserendo la direttiva use subito dopo la definizione dell’interfaccia del controller, ad es:
 
