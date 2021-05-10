@@ -20,6 +20,9 @@ Le **proprietà statiche** sono dichiarate anteponendo il qualificatore ```stati
 ```PHP 
 private static $result = "";
 ```
+
+Conviene concentrare **la logica** dell'accesso alle **risorse** (database o webservice) **dentro il modello** organizzandola in un **set di funzioni** in grado di restituire tutti i dati necessari al controller per le sue leaborazioni (in genere la visualizzazione). Ogni **funzione** si occuèa di fare una **interrogazione** ben precisa, parametrica o meno, che restituisce un **singolo dato** oppure un **array associativo di dati** da utilizzare nel **controller**.
+
 **Esempi completi**
 
 - [Modello per gestione accesso ad un DB](esmodeluser.md)
