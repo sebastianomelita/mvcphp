@@ -24,7 +24,8 @@ $_GET["nomeParametro1"]
 
 Un controller è un oggetto che **è instanziato** al momento dell'**arrivo di una richiesta** HTTP ed è l'istanza di una **classe** che deriva dalla classe base **Controller** posta dentro la cartella **Core**. Le **classi derivate** si definiscono dentro la cartella **Controller** in **App**.
 
-![gerarchiacontroller](gerarchiacontroller.png)
+
+<img src="gerarchiacontroller.png" width="1000">
 
 **Generazione** di una istanza della classe controller derivata Home:
 
