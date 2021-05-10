@@ -18,7 +18,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 4.	Sul **DBMS** all’interno delle tabelle che memorizzano i dati persistenti di una applicazione
 5.	In **memoria RAM** su un **server di caching centralizzato** che di solito memorizza i dati di accesso di **molte applicazioni distribuite** su più server. I server **REDIS** e **MEMCACHED** sono le soluzioni di caching più diffuse. La consultazione dei dati di accesso si esegue in RAM per velocizzare gli accessi. La persistenza su disco viene eventualmente gestita per aumentare l’affidabilità.
-6.	su campi nascosti di un form
+6.	su campi nascosti di un form. L'associazione ID Utente - risorsa viene memorizzato nel codice stesso della pagina html sotto forma di valore (proprietà value) di un input di una casella di testo nascosta (dichiarata hidden). Il vallore arriva al client che alla pressione di un submit lo reinvia di nuovo al server che, ritrovando l'associazione assegnata preventivamente (nella vecchia richiesta) nella nuova richiesta. è in grado di servire correttamente il client. E' un metodo scomodo, che inoltre pone problemi di privacy ed è pertanto ormai deprecato.  
 7.	mediante riscrittura dell'url
 
 
