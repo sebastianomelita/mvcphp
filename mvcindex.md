@@ -11,7 +11,7 @@ Ogni componente possiede **responsabilità** specifiche:
     1.	acquisizione dei parametri della richiesta http 
     2.	accesso ai dati del modello in lettura o scrittura **eseguendo un filtraggio** dei dati che il **modello mette a disposizione**, o mediante una query o mediante una condizione di filtraggio che abbiano per parametri i parametri della richiesta http
     3.	**generazione** del **risultato** tramite **elaborazione** dei parametri e dei dati del modello
-    4.	accesso in scrittura sulla vista per la **stampa del risultato**
+    4.	accesso alla vista per la **stampa del risultato**
 -	**Modello**. Rappresenta un connettore del sistema MVC con una o più fonti dei dati. Tipicamente è il punto di accesso ad un database. Potrebbe anche essere il punto di accesso a servizi in rete esposti mediante webservice, in questo caso l’accesso è realizzato mediante un client http (curl).
 -	**Vista**. Sono i contenuti che devono essere inviati al client web. A seconda del **modello di servizio** adottato è possibile inviare o dati grezzi in formato JSON, realizzando di fatto un webservice, oppure pagine HTML complete realizzate tutte o in parte sul lato server. La gestione può essere semplificata con l’adozione di un framework di templating che ha il beneficio di promuovere il **riuso** delle pagine web.
 
