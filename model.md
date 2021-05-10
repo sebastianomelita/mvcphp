@@ -21,7 +21,7 @@ Le **proprietà statiche** sono dichiarate anteponendo il qualificatore ```stati
 private static $result = "";
 ```
 
-Conviene concentrare **la logica** dell'accesso alle **risorse** (database o webservice) **dentro il modello** organizzandola in un **set di funzioni** in grado di restituire tutti i dati necessari al controller per le sue leaborazioni (in genere la visualizzazione). Ogni **funzione** si occuperà di fare una **interrogazione** ben precisa, parametrica o meno, che restituisce un **singolo dato** oppure un **array associativo di dati** da utilizzare nel **controller**.
+Conviene concentrare **la logica** dell'accesso alle **risorse** (database o webservice) **dentro il modello** organizzandola in un **set di funzioni** in grado di restituire tutti i dati necessari al controller per le sue elaborazioni (in genere la visualizzazione). Ogni **funzione** si occuperà di fare una **interrogazione** ben precisa, parametrica o meno, che restituisce un **singolo dato** oppure un **array associativo di dati** da utilizzare nel **controller**.
 
 **Esempi completi**
 
