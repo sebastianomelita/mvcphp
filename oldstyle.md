@@ -23,7 +23,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 
 
->![redis2](1_su5hMgVdmRa8QXnq10I-VA.png)
+![redis2](1_su5hMgVdmRa8QXnq10I-VA.png)
 
 **Confronto** REDIS vs MEMCACHED:
 
