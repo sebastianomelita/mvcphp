@@ -23,7 +23,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 
 
-<img src="istanzacontroller.png" width="600">
+<img src="1_su5hMgVdmRa8QXnq10I-VA.png" width="600">
 
 **Confronto** REDIS vs MEMCACHED:
 
