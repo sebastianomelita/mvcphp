@@ -34,7 +34,7 @@ Un controller è un oggetto che **è instanziato** al momento dell'**arrivo di u
 I **metodi del controller** si dividono intanto in due categorie: 
 - **Metodi di servizio**. Sono metodi che raggruppano alcune operazioni utilizzate da più azioni e che quindi è conveniente tenere a parte per poterle riutilizzare all’interno del codice di più action (azioni).
 - **Azioni**. Un’azione è il metodo di un controller che è richiamato dal dispatcher (router) quando questo trova una corrispondenza tra quel metodo e una rotta all’interno della tabella delle rotte. Le azioni, in questo framework devono avere il nome che termina col suffisso Action. Ad es. pizzeAction() è il metodo del controller Prenotazioni ed è invocato, ad esempio, quando il dispatcher riconosce il prefisso di routing www.labottegadimario.com/delivery/prenotazioni/pizze/. 
-
+```
 Le **query string**, cioè la parte dell’url dopo ? non partecipano al processo di routing e vengono rimosse prima che questo venga effettuato. I **parametri** contenuti nelle query string sono comunque accessibili con le apposite **variabili globali** fornite dal PHP e sono utilizzabili in **qualunque metodo** di un controller. 
  
 ![rotte1](rotte1.png)
@@ -50,7 +50,7 @@ Esistono delle **convenzioni** anche per i nomi di **controller e azione** all�
 
 A loro volta possiamo organizzare le **azioni** secondo il seguente criterio:
 -	**Chiamate REST.** Cioè azioni richiamabili direttamente nella barra degli indirizzi o indirettamente da una ancora in un link. Queste di norma hanno invocazioni in **formato REST** per cui i parametri sono anch’essi nella forma analoga a quella degli altri path cioè un elenco di parametri separati da “/”. Ad es. ```calcolatrice/somma/3/4/``` esegue la somma di due numeri forniti come parametro. In questo caso il metodo può avere un nome qualsiasi, nello specifico ```Calcolatrice.somma()```.
--	**Action di un form.** Azioni richiamabili da un form alla sua sottomissione premendo il tasto submit. In questo caso i parametri non vengono inviati in formato REST ma in formato **query string**. In questo caso il metodo è opportuno abbia la forma ```doNome_metodoAction```. Cioè si prepone il **prefisso do** al nome del **metodo**.
+-	**Action di un form.** Azioni richiamabili da un form alla sua sottomissione premendo il tasto submit. In questo caso i parametri non vengono inviati in formato REST ma in formato **query string**. In questo caso il metodo è opportuno abbia la forma ```doNome_metodoAction()```. Cioè si prepone il **prefisso do** al nome del **metodo**.
 
 A loro volta le **action REST** sono sostanzialmente di due tipi: 
 -	**Azioni vere e proprie.** Quelle che chiamano un metodo **per fare qualcosa** (invocano il modello) e visualizzare il risultato (invocano la view)
