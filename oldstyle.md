@@ -8,7 +8,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 **Ogni messaggio**, sia di richiesta che di risposta, sarà contrasseggnato con un ID di sessione che **identifica il client** presso il server.
 
-![cookie](cookie.png)
+<img src="cookie.png" width="600">
 
 **L’associazione** tra clientID e la risorsa può essere **memorizzata**:
 1.	Sul **client**, in questo caso viene memorizzata **insieme al cookie** che identifica il browser dell’utente.
