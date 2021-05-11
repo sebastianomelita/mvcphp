@@ -34,114 +34,78 @@ RESTClient::extractCommon($drinkIngredients, $json->drinks[0], "strIngredient");
 
 Esempio completo del modello HTTPClient:
 ```PHP 
+
 <?php
+
 namespace App\Models;
 
-class RESTClient extends \Core\Model
-{
-    private static $result = "";
-    private static $username = "";
-    private static $password = "";
-    private static $curlerror = "";
-    
-    // Restituisce la rappresentazione sotto forma di stringa della risposta ricevuta
-    static function  getResponse(){
-        return self::$result;
-    }
-    
-    // Restituisce la rappresentazione ad oggetti PHP della stringa XML ricevuta
-    static function  getXMLResponse(){
-        return new SimpleXMLElement(self::$result);
-    }
-    
-    // Restituisce la rappresentazione ad oggetti PHP della stringa JSON ricevuta
-    static function  getJSONResponse(){
-        return json_decode(self::$result);
-    }
-    
-    static function  getRequestError(){
-        return self::$curlerror;
-    }
-    
-    static function  setAuth($user, $psw){
-        $username = $user;
-        $password = $psw;
-    }
-    
-	static function  saveResponseOnFile($filename){
-        file_put_contents($filename, self::$result);
-    }
-    
-    // $object: rappresentazione ad oggetti PHP del nodo padre
-    // $common: stringa con la radice comune dei vari campi (drink di drink1, drink2, drink3, ecc).
-    // $start: numerazione del suffisso della radice da cui partire (default 1, ad es. drink1)
-    static function extractCommon(&$buf, $object, $common, $start = 1)
-    {
-        $property = $common.$start;
-        $value = $object->$property; 
-        while($value != "" && !is_null($value)){
-            array_push($buf, $value);
-            $start++;
-            $property = $common.$start;
-            if(isset($object->$property)){
-                $value = $object->$property; 
-            }else{
-                $value = "";
-            }
-        }
-    }
-	
-    // Method: POST, PUT, GET etc
-    // Data: array("param" => "value") ==> index.php?param=value
-	// Header: array("Accept" => "application/json", "Content-Type" => "multipart/form-data"); 
-	
-    // $method: GET, POST,PUT,
-    // $param: array asociativo con i parametri della richiesta (coppie nome, valore). Di default nessun parametro.
-    // $param: array asociativo con i campi dell'header (coppie nome, valore). Di default nessun parametro.
-    static function callAPI($method, $url, $param = false, $header = false)
-    {
-        $curl = curl_init();
-    
-        switch ($method)
-        {
-            case "POST":
-                curl_setopt($curl, CURLOPT_POST, 1);
-    
-                if ($param)
-                    curl_setopt($curl, CURLOPT_POSTFIELDS, $param);
-                break;
-            case "PUT":
-                curl_setopt($curl, CURLOPT_PUT, 1);
-                break;
-            default:
-                if ($param)
-                    $url = sprintf("%s?%s", $url, http_build_query($param));
-        }
-        
-        if (self::$username){
-            // Optional Authentication:
-            curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-            curl_setopt($curl, CURLOPT_USERPWD, self::$username.":".self::$password);
-        }
-		
-	if($header){
-            curl_setopt($s,CURLOPT_HTTPHEADER, $header);
-        }
-    
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER , false);
-        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
-        
-        self::$result = curl_exec($curl);
-    
-        $status_code = @curl_getinfo($curl, CURLINFO_HTTP_CODE);
-        self::$curlerror = "Errore: ". curl_error($curl)." - Codice errore: ".curl_errno($curl)." - Status code: ".$status_code;
+use \Core\View;
+use App\Models\Animal;
+use \Core\Error;
 
-        curl_close($curl);
-        return self::$result;
-    }
+/**
+ * Home controller
+ *
+ * PHP version 5.4
+ */
+class Animal extends \Core\Model
+{
+	static function gatti()
+    {
+        $rc = static::getRESTClient();
+        
+        if(!$rc->callAPI("GET","https://api.thecatapi.com/v1/images/search")){
+                $message = $rc->getRequestError();
+                Error::errorHandler(1, $message, "", 0);
+        }
+        $json = $rc->getJSONResponse();
+        
+        $out = [
+                    'image' => $json[0]->url,
+                    'title' => "Gatti"
+                ];
+
+        return $out;
+	}
+	
+	static function cani()
+    {
+        $rc = static::getRESTClient();
+        
+        if(!$rc->callAPI("GET","https://dog.ceo/api/breeds/image/random")){
+                $message = $rc->getRequestError();
+                Error::errorHandler(1, $message, "", 0);
+        }
+        $json = $rc->getJSONResponse();
+        
+        $out = [
+                    'image' => $json->message,
+                    'title' => "Cani"
+                ];
+
+        return $out;
+	}
+	
+	static function volpi()
+    {
+        $rc = static::getRESTClient();
+        
+        if(!$rc->callAPI("GET","https://randomfox.ca/floof")){
+                $message = $rc->getRequestError();
+                Error::errorHandler(1, $message, "", 0);
+        }
+        $json = $rc->getJSONResponse();
+        
+        $out = [
+                    'image' => $json->image,
+                    'title' => "Volpi"
+                ];
+
+        return $out;
+	}
 }
+
+
 ```
 
 >[Torna a Model](model.md) 
