@@ -18,18 +18,20 @@ Le **proprietà statiche** sono dichiarate anteponendo il qualificatore ```stati
 ```PHP 
 private static $result = "";
 ```
-Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. L'unica differenza è che vengono chiamate **col nome della classe** piuttosto che con quello dell'oggetto. Gli oggetti **che restituiscono** sono però **dinamici** per cui ad essi si accede come al solito mediante l'operatore -> avente davanti il **nome dell'oggetto**:
+Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**.
 
-Tutti i modelli ereditano dalla classe padre l’**accesso al database** che nelle **classi figlie** è recuperabile con la chiamata:
+Infatti tutti modelli ereditano dalla classe padre l’**accesso all'oggetto database** che nelle **classi figlie** è recuperabile con la chiamata:
 
 ```PHP 
 $db = static::getDB();
 ```
-Tutti i modelli ereditano dalla classe padre l’**accesso ad un client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
+Inoltre, utti i modelli ereditano dalla classe padre l’**accesso ad un oggetto client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
 
 ```PHP 
 $rc = static::getRESTClient(); 
 ```
+
+Gli oggetti restituiti, essendo **dinamici**, sono accessibili come al solito, mediante l'operatore -> avente davanti il **nome dell'oggetto**:
 
 ```PHP 
 $result = $db -> query($sql);
