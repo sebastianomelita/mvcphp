@@ -57,7 +57,7 @@ Le variabili oggetto che per lo più si adoperano dentro il modello sono però *
 
 ```PHP
 $this->nome_proprietà          // accesso ad una proprietà (variabile di istanza)
-$nome_variabile->nome_metodo   // accesso ad una variabile locale ad un metodo
+$nome_variabile->nome_metodo   // accesso ad un oggetto locale ad un metodo
 ```
 
 Come **approccio pratico** si suggerisce di copiare una classe di un modello già esistente e di incollarla sulla cartella del modello da implementare. Successivamente si modifica il vecchio modello iniziando a cambiare il nome, passando poi a modificare le proprietà e per ultimi i metodi.
