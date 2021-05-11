@@ -8,6 +8,15 @@ I modelli che consideriamo noi sono sostanzialmente due:
 
 <img src="model.png" width="300">
 
+I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
+```PHP
+static function getHashedPsw($username,&$authlevel){
+```
+Le **proprietà statiche** sono dichiarate anteponendo il qualificatore ```static``` davanti il nome della proprietà:
+```PHP 
+private static $result = "";
+```
+
 
 Tutti i modelli ereditano da una classe padre l’**accesso al database** che nelle **classi figlie** è recuperabile con la chiamata:
 
@@ -33,16 +42,6 @@ restituisce un array associativo risultato di una qyery SQL, mentre
 $json = $rc->getJSONResponse();
 ```
 restituisce una stringa JSON risultato di una richiesta HTTP.
-
-
-I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
-```PHP
-static function getHashedPsw($username,&$authlevel){
-```
-Le **proprietà statiche** sono dichiarate anteponendo il qualificatore ```static``` davanti il nome della proprietà:
-```PHP 
-private static $result = "";
-```
 
 Conviene concentrare **la logica** dell'accesso alle **risorse** (database o webservice) **dentro il modello** organizzandola in un **set di funzioni** in grado di restituire tutti i dati necessari al controller per le sue elaborazioni (in genere la visualizzazione). Ogni **funzione** si occuperà di fare una **interrogazione** ben precisa, parametrica o meno, che restituisca un **singolo dato** oppure un **array associativo di dati** da utilizzare nel **controller**.,
 
