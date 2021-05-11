@@ -20,12 +20,12 @@ private static $result = "";
 ```
 Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. L'unica differenza è che vengono chiamate **col nome della classe** piuttosto che con quello dell'oggetto. Gli oggetti **che restituiscono** sono però **dinamici** per cui ad essi si accede come al solito mediante l'operatore -> avente davanti il **nome dell'oggetto**:
 
-Tutti i modelli ereditano da una classe padre l’**accesso al database** che nelle **classi figlie** è recuperabile con la chiamata:
+Tutti i modelli ereditano dalla classe padre l’**accesso al database** che nelle **classi figlie** è recuperabile con la chiamata:
 
 ```PHP 
 $db = static::getDB();
 ```
-Tutti i modelli ereditano da una classe padre l’**accesso ad un client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
+Tutti i modelli ereditano dalla classe padre l’**accesso ad un client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
 
 ```PHP 
 $rc = static::getRESTClient(); 
