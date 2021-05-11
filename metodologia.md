@@ -56,8 +56,8 @@ self::nome_metodo
 Le variabili oggetto che per lo più si adoperano dentro il modello sono però **dinamiche**, alle quali si accede con la notazione usuale con ```->```:
 
 ```PHP
-$this->nome_proprietà          //proprietà (variabile di istanza)
-$nome_variabile->nome_metodo   // variabile locale ad un metodo
+$this->nome_proprietà          // accesso ad una proprietà (variabile di istanza)
+$nome_variabile->nome_metodo   // accesso ad una variabile locale ad un metodo
 ```
 
 Come **approccio pratico** si suggerisce di copiare una classe di un modello già esistente e di incollarla sulla cartella del modello da implementare. Successivamente si modifica il vecchio modello iniziando a cambiare il nome, passando poi a modificare le proprietà e per ultimi i metodi.
