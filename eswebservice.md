@@ -150,7 +150,6 @@ class Pub extends \Core\Model
         return $out;
 	}
 	
-		
     static function drink($abc)
     {
         $rc = static::getRESTClient();
