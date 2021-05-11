@@ -63,7 +63,7 @@ class Animal extends \Core\Model
                 ];
 
         return $out;
-	}
+    }
 	
     static function cani()
     {
@@ -81,7 +81,7 @@ class Animal extends \Core\Model
                 ];
 
         return $out;
-	}
+    }
 	
     static function volpi()
     {
@@ -99,7 +99,7 @@ class Animal extends \Core\Model
                 ];
 
         return $out;
-	}
+     }
 }
 
 
@@ -148,7 +148,7 @@ class Pub extends \Core\Model
         ]; 
         
         return $out;
-	}
+    }
 	
     static function drink($abc)
     {
@@ -177,7 +177,7 @@ class Pub extends \Core\Model
         $out =$drinks; 
         
         return $out;
-	}
+     }
 }
 ```
 >[Torna a Model](model.md) 
