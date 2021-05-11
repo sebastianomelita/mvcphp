@@ -50,7 +50,7 @@ use \Core\Error;
  */
 class Animal extends \Core\Model
 {
-	static function gatti()
+    static function gatti()
     {
         $rc = static::getRESTClient();
         
@@ -68,7 +68,7 @@ class Animal extends \Core\Model
         return $out;
 	}
 	
-	static function cani()
+    static function cani()
     {
         $rc = static::getRESTClient();
         
@@ -86,7 +86,7 @@ class Animal extends \Core\Model
         return $out;
 	}
 	
-	static function volpi()
+    static function volpi()
     {
         $rc = static::getRESTClient();
         
