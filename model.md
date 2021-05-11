@@ -13,6 +13,10 @@ Tutti i modelli ereditano da una classe padre l’accesso al database che nelle 
 ```PHP 
 $db = static::getDB();
 ```
+Tutti i modelli ereditano da una classe padre l’accesso ad un client HTTP che nelle **classi figlie** è recuperabile con la chiamata:
+```PHP 
+$rc = static::getRESTClient();
+```
 Occorre precisare che le classi del modello sono **tutte statiche** nel senso che possiedono **metodi statici** e **proprietà statiche**. I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
 ```PHP
 static function getHashedPsw($username,&$authlevel){
