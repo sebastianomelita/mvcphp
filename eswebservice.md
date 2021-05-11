@@ -104,7 +104,7 @@ class Animal extends \Core\Model
 
 
 ```
-
+Esempio che illustra l'utilizzo della funzione ```extractCommon()```:
 
 ```PHP
 <?php
