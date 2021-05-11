@@ -74,7 +74,7 @@ I **parametri** si possono acquisire all’interno di un controller sostanzialme
 
 **Check delle sessioni**
 
-Le variabili di **sessione** possono essere controllate **prima** del caricamento di qualsiasi action in maniera tale da consentire il **filtro** di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama ```before()``` e deve restituire ```true``` per **continuare** e ```false```e per **bloccare**:
+Le variabili di **sessione**, accessibili attraverso la variabile globale ```$SESSION["nome_variabile"] ```, possono essere controllate **prima** del caricamento di qualsiasi action in maniera tale da consentire il **filtro** di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama ```before()``` e deve restituire ```true``` per **continuare** e ```false```e per **bloccare**:
 
 ```PHP
 protected function before()
