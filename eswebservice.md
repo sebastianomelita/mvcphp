@@ -117,7 +117,7 @@ use \Core\Error;
 
 class Pub extends \Core\Model
 {
-	static function drinkdelgiorno()
+    static function drinkdelgiorno()
     {
         $rc = static::getRESTClient();
         
@@ -151,7 +151,7 @@ class Pub extends \Core\Model
 	}
 	
 		
-	static function drink($abc)
+    static function drink($abc)
     {
         $rc = static::getRESTClient();
         
