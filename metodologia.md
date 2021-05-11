@@ -53,7 +53,7 @@ Una volta noto lo schema ER dei dati si può passare allo sviluppo del modello l
 ```PHP
 self::nome_metodo
 ```
-Le variabili oggetto che per lo più si adoperano dentro il modello sono però **dinamiche**, alle quali si accede con la notazione usuale con ```->```:
+Le **variabili oggetto** che per lo più si adoperano dentro il modello sono però **dinamiche**, alle quali si accede con la notazione usuale con ```->```:
 
 ```PHP
 $this->nome_proprietà          // accesso ad una proprietà (variabile di istanza)
