@@ -50,9 +50,9 @@ Le viste possono essere **organizzate in gruppi** che gestiscono l’interazione
 
 Una volta noto lo schema ER dei dati si può passare allo sviluppo del modello logico e alla implementazione delle tabelle sul DBMS. Noto lo schema definitivo delle tabelle relative al blocco funzionale in questione è possibile progettare le query SQL che costituiscono parte del motore funzionale dell’interazione. I modelli sono file php che contengono una singola classe che deriva (per estensione di ereditarietà) dalla classe core del modello. 
 
-I metodi del modello sono statici e vengono dichiarati con la parola chiave static. Per accedere a un metodo statico si utilizza il nome della classe, i due punti doppi (::) e il nome del metodo.
+I **metodi del modello** sono statici e vengono dichiarati con la **parola chiave static**. Per accedere a un metodo statico si utilizza il nome della classe, i due punti doppi (::) e il nome del metodo.
 
-Le **variabili oggetto** che per lo più si adoperano dentro il modello sono però **dinamiche**, alle quali si accede con la notazione usuale con 
+Le **variabili oggetto** che **per lo più** si adoperano dentro il modello sono però **dinamiche**, alle quali si accede con la notazione usuale con 
 ```->```:
 
 ```PHP
