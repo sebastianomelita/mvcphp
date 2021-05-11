@@ -31,7 +31,8 @@ Inoltre, utti i modelli ereditano dalla classe padre l’**accesso ad un oggetto
 $rc = static::getRESTClient(); 
 ```
 
-Gli oggetti restituiti, essendo **dinamici**, sono accessibili come al solito, mediante l'operatore -> avente davanti il **nome dell'oggetto**:
+Gli oggetti restituiti, essendo **dinamici**, sono accessibili come al solito, mediante l'operatore -> avente davanti il **nome dell'oggetto**.
+Ad esempio:
 
 ```PHP 
 $result = $db -> query($sql);
