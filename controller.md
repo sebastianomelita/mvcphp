@@ -29,10 +29,6 @@ Un controller è un oggetto che **è instanziato** al momento dell'**arrivo di u
 
 <img src="gerarchiacontroller.png" width="600">
 
-**Generazione** di una istanza della classe controller derivata Home:
-
-<img src="istanzacontroller.png" width="600">
-
 I **metodi del controller** si dividono intanto in due categorie: 
 - **Metodi di servizio**. Sono metodi che raggruppano alcune operazioni utilizzate da più azioni e che quindi è conveniente tenere a parte per poterle riutilizzare all’interno del codice di più action (azioni).
 - **Azioni**. Un’azione è il metodo di un controller che è richiamato dal dispatcher (router) quando questo trova una corrispondenza tra quel metodo e una rotta all’interno della tabella delle rotte. Le azioni, in questo framework devono avere il nome che termina col suffisso Action. Ad es. pizzeAction() è il metodo del controller Prenotazioni ed è invocato, ad esempio, quando il dispatcher riconosce il prefisso di routing www.labottegadimario.com/delivery/prenotazioni/pizze/. 
