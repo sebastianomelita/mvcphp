@@ -17,7 +17,7 @@ Tutti i modelli ereditano da una classe padre l’**accesso ad un client HTTP** 
 ```PHP 
 $rc = static::getRESTClient();
 ```
-Occorre precisare che le classi del modello sono **tutte statiche** nel senso che possiedono **metodi statici** e **proprietà statiche**. I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
+Occorre precisare che le classi del modello sono **tutte statiche** nel senso che possiedono **metodi statici** che, in quanto tali, possono accedere solo **proprietà statiche**. I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
 ```PHP
 static function getHashedPsw($username,&$authlevel){
 ```
