@@ -6,7 +6,9 @@ Il metodo
 ```
 Restituisce la rappresentazione ad oggetti PHP della stringa JSON ricevuta. Questa può essere navigata per selezionare un nodo specifico da elaborare:
 ```PHP
-$json = RESTClient::getJSONResponse();		//albero json completo memorizzato in $json
+$rc = static::getRESTClient();
+$rc->callAPI("GET","https://api.thecatapi.com/v1/images/search");
+$json = $rc->getJSONResponse();		//albero json completo memorizzato in $json
 $drinkTitle = $json->drinks[0]->strDrink;       //selezione del nodo figlio strDrink dall'albero   
 $drinkImg = $json->drinks[0]->strDrinkThumb;	//selezione del nodo figlio strDrinkThumb dall'albero
 ```
