@@ -15,9 +15,21 @@ $db = static::getDB();
 ```
 Tutti i modelli ereditano da una classe padre l’**accesso ad un client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
 ```PHP 
-$rc = static::getRESTClient();
+$rc = static::getRESTClient(); 
+Occorre precisare che le classi del modello possiedono solo **metodi statici** che, in quanto tali, possono accedere soltanto a **proprietà statiche**. 
+
+Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. L'unica differenza è che vengono chiamate **col nome della classe** piuttosto che con quello dell'oggetto. Gli oggetti **che restituiscono** sono però **dinamici** per cui ad essi si accede come al solito mediante l'operatore -> avente davanti il **nome dell'oggetto**:
+
+```PHP 
+$db = static::getDB();
 ```
-Occorre precisare che le classi del modello sono **tutte statiche** nel senso che possiedono **metodi statici** che, in quanto tali, possono accedere solo **proprietà statiche**. I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
+```PHP 
+$json = $rc->getJSONResponse();
+```
+recupera una stringa JSON risultato di una richiesta HTTP.
+
+
+I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
 ```PHP
 static function getHashedPsw($username,&$authlevel){
 ```
