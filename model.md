@@ -10,8 +10,6 @@ I modelli che consideriamo noi sono sostanzialmente due:
 
 Occorre precisare che le classi del modello possiedono solo **metodi statici** che, in quanto tali, possono accedere soltanto a **proprietà statiche**. 
 
-Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. L'unica differenza è che vengono chiamate **col nome della classe** piuttosto che con quello dell'oggetto. Gli oggetti **che restituiscono** sono però **dinamici** per cui ad essi si accede come al solito mediante l'operatore -> avente davanti il **nome dell'oggetto**:
-
 I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
 ```PHP
 static function getHashedPsw($username,&$authlevel){
@@ -20,7 +18,7 @@ Le **proprietà statiche** sono dichiarate anteponendo il qualificatore ```stati
 ```PHP 
 private static $result = "";
 ```
-
+Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. L'unica differenza è che vengono chiamate **col nome della classe** piuttosto che con quello dell'oggetto. Gli oggetti **che restituiscono** sono però **dinamici** per cui ad essi si accede come al solito mediante l'operatore -> avente davanti il **nome dell'oggetto**:
 
 Tutti i modelli ereditano da una classe padre l’**accesso al database** che nelle **classi figlie** è recuperabile con la chiamata:
 
