@@ -9,11 +9,11 @@ I modelli che consideriamo noi sono sostanzialmente due:
 <img src="model.png" width="300">
 
 
-Tutti i modelli ereditano da una classe padre l’accesso al database che nelle **classi figlie** è recuperabile con la chiamata:
+Tutti i modelli ereditano da una classe padre l’**accesso al database** che nelle **classi figlie** è recuperabile con la chiamata:
 ```PHP 
 $db = static::getDB();
 ```
-Tutti i modelli ereditano da una classe padre l’accesso ad un client HTTP che nelle **classi figlie** è recuperabile con la chiamata:
+Tutti i modelli ereditano da una classe padre l’**accesso ad un client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
 ```PHP 
 $rc = static::getRESTClient();
 ```
