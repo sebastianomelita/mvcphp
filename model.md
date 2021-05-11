@@ -23,7 +23,8 @@ Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. 
 ```PHP 
 $result = $db -> query($sql);
 ```
-restituisce un array associativo risultato di una qyery SQL
+restituisce un array associativo risultato di una qyery SQL, mentre
+
 ```PHP 
 $json = $rc->getJSONResponse();
 ```
