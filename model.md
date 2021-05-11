@@ -10,12 +10,16 @@ I modelli che consideriamo noi sono sostanzialmente due:
 
 
 Tutti i modelli ereditano da una classe padre l’**accesso al database** che nelle **classi figlie** è recuperabile con la chiamata:
+
 ```PHP 
 $db = static::getDB();
 ```
 Tutti i modelli ereditano da una classe padre l’**accesso ad un client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
+
 ```PHP 
 $rc = static::getRESTClient(); 
+```
+
 Occorre precisare che le classi del modello possiedono solo **metodi statici** che, in quanto tali, possono accedere soltanto a **proprietà statiche**. 
 
 Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. L'unica differenza è che vengono chiamate **col nome della classe** piuttosto che con quello dell'oggetto. Gli oggetti **che restituiscono** sono però **dinamici** per cui ad essi si accede come al solito mediante l'operatore -> avente davanti il **nome dell'oggetto**:
