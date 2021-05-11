@@ -72,6 +72,25 @@ I **parametri** si possono acquisire all’interno di un controller sostanzialme
 -	**dal path della action** che deve essere costruita così: ```../ controller/ azione/ parametro```. In questo caso il valore del parametro si recupera da una variabile di istanza del controller con il nome "id"
 -	**da una query string**, metto cioè il parametri dopo il punto interrogativo con coppie nome valore del tipo ?```param1=val1&param2=val2```. Questo metodo è usato dalle action dei form, e può essere usato anche da un tag ancora. I valori si recuperano nel controller dalle variabili blobali standard del php ```$_POST["param1"] o $_GET["param2"]```
 
+**Check delle sessioni**
+
+Le variabili di **sessione** possono essere controllate **prima** del caricamento di qualsiasi action in maniera tale da consentire il **filtro** di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama ```before()``` e deve restituire ```true``` per **continuare** e ```false```e per **bloccare**:
+
+```PHP
+protected function before()
+    {
+		$logged = false;
+		session_start();
+		if (isset($_SESSION['username'])) {
+			$logged = true;
+		}else{
+			//Redirect to login page
+			View::renderTemplate('Login/login.html');
+		}
+		return $logged;
+    }
+```
+
 **Invocazione delle viste**
 
 Il controller invoca anche i modelli per comandare la visualizzazione dei dati che lui ha elaborato/raccolto dal modello.
@@ -98,24 +117,6 @@ View::render ($path, [
 ```
 Si noti la la particolarità della **modalità dell’invocazione** dei metodi, tramite :: poiché render() e renderTempate() sono **metodi statici** della classe **View**.
 
-**Check delle sessioni**
-
-Le variabili di **sessione** possono essere controllate **prima** del caricamento di qualsiasi action in maniera tale da consentire il **filtro** di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama ```before()``` e deve restituire ```true``` per **continuare** e ```false```e per **bloccare**:
-
-```PHP
-protected function before()
-    {
-		$logged = false;
-		session_start();
-		if (isset($_SESSION['username'])) {
-			$logged = true;
-		}else{
-			//Redirect to login page
-			View::renderTemplate('Login/login.html');
-		}
-		return $logged;
-    }
-```
 
 **Esempi completi**
 - [Controller e modello DB](controllerdb.md)
