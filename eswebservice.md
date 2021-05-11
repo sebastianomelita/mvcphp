@@ -45,11 +45,6 @@ use \Core\View;
 use App\Models\Animal;
 use \Core\Error;
 
-/**
- * Home controller
- *
- * PHP version 5.4
- */
 class Animal extends \Core\Model
 {
     static function gatti()
@@ -110,5 +105,81 @@ class Animal extends \Core\Model
 
 ```
 
+
+```PHP
+<?php
+
+namespace App\Models;
+
+use \Core\View;
+use App\Models\Pub;
+use \Core\Error;
+
+class Pub extends \Core\Model
+{
+	static function drinkdelgiorno()
+    {
+        $rc = static::getRESTClient();
+        
+        if(!$rc->callAPI("GET","www.thecocktaildb.com/api/json/v1/1/random.php")){
+                $message = $rc->getRequestError();
+                Error::errorHandler(1, $message, "", 0);
+        }
+        $drinkIngredients = Array();
+        $json = $rc->getJSONResponse();
+        $drinkTitle = $json->drinks[0]->strDrink;
+        $drinkImg = $json->drinks[0]->strDrinkThumb;
+        $rc->extractCommon($drinkIngredients, $json->drinks[0], "strIngredient");
+    	
+        if(!$rc->callAPI("GET","https://www.themealdb.com/api/json/v1/1/random.php")){
+            $message = $rc->getRequestError();
+            Error::errorHandler(1, "$message", "", 0);
+        }
+        $mealIngredients = Array();
+        $json = $rc->getJSONResponse();
+        $mealTitle = $json->meals[0]->strMeal;
+        $mealImg = $json->meals[0]->strMealThumb;
+        $rc->extractCommon($mealIngredients, $json->meals[0], "strIngredient");
+        
+        $out = [
+            'drinkIngredients' => $drinkIngredients,
+            'drinkTitle' => $drinkTitle,
+            'drinkImg' => $drinkImg
+        ]; 
+        
+        return $out;
+	}
+	
+		
+	static function drink($abc)
+    {
+        $rc = static::getRESTClient();
+        
+        $drinks = array();
+ 	    if(!$rc->callAPI("GET","https://www.thecocktaildb.com/api/json/v1/1/search.php?f=".$abc)){
+            $message = $rc->getRequestError();
+            Error::errorHandler(1, $message, "", 0);
+        }
+        $json = $rc->getJSONResponse();
+        if($json->drinks){
+            foreach($json->drinks as $drink){
+                $drinkIngredients = array();
+                $drinkTitle = $drink->strDrink;
+                $drinkImg = $drink->strDrinkThumb;
+                $rc->extractCommon($drinkIngredients, $drink, "strIngredient");
+                $value = [
+                    'drinkIngredients' => $drinkIngredients,
+                    'drinkTitle' => $drinkTitle,
+                    'drinkImg' => $drinkImg
+                ];
+                array_push($drinks, $value);
+            }
+        }
+        $out =$drinks; 
+        
+        return $out;
+	}
+}
+```
 >[Torna a Model](model.md) 
 
