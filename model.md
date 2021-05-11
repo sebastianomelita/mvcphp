@@ -24,7 +24,7 @@ private static $result = "";
 
 Conviene concentrare **la logica** dell'accesso alle **risorse** (database o webservice) **dentro il modello** organizzandola in un **set di funzioni** in grado di restituire tutti i dati necessari al controller per le sue elaborazioni (in genere la visualizzazione). Ogni **funzione** si occuperà di fare una **interrogazione** ben precisa, parametrica o meno, che restituisca un **singolo dato** oppure un **array associativo di dati** da utilizzare nel **controller**.,
 
-Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di una media, è bene che siano svolte **nel modello**. Il modello è il luogo deputato a:
+Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di una media, è bene che siano anch'esse svolte **nel modello**. Il modello è il luogo deputato a:
 - **recupero dei dati** dal **database** o dalla rete (**webservice**)
 - elaborazione della **logica applicativa** (ad esempio calcolo della contabilità)
 
