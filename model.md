@@ -21,12 +21,13 @@ Occorre precisare che le classi del modello possiedono solo **metodi statici** c
 Nonostante ciò le **classi statiche** possono restituire **oggetti dinamici**. L'unica differenza è che vengono chiamate **col nome della classe** piuttosto che con quello dell'oggetto. Gli oggetti **che restituiscono** sono però **dinamici** per cui ad essi si accede come al solito mediante l'operatore -> avente davanti il **nome dell'oggetto**:
 
 ```PHP 
-$db = static::getDB();
+$result = $db -> query($sql);
 ```
+restituisce un array associativo risultato di una qyery SQL
 ```PHP 
 $json = $rc->getJSONResponse();
 ```
-recupera una stringa JSON risultato di una richiesta HTTP.
+restituisce una stringa JSON risultato di una richiesta HTTP.
 
 
 I metodi statici sono dichiarati anteponendo il qualificatore **static** davanti il nome del metodo, ad es:
