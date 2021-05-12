@@ -56,8 +56,12 @@ Nel template precedente viene definito il codice html della sola **parte modific
 
 Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction()``` del controller ```Users```.
 
-Partendo da **```$row = $result->fetch_assoc();```** che nel **modello** ha costruito un **array associativo** che **contiene** i campi di **una riga** [].
-
+Partendo da **```$row = $result->fetch_assoc();```** che nel **modello** ha costruito un **array associativo** che **contiene** i campi di **una riga** []. E' chiamato nel controller con:
+```PHP
+ View::renderTemplate($path, [
+                	'row' => $row
+                  ]);  
+```
 ```html
 {% extends "base.html" %}
 
