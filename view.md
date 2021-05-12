@@ -54,6 +54,8 @@ Nel template precedente viene definito il codice html della sola **parte modific
 
 **Esempio completo**
 
+Partendo da
+
 Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction()``` del controller ```Users```:
 ```html
 {% extends "base.html" %}
@@ -68,6 +70,25 @@ Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction
     <p>{{ row.password }}</p>
     <p>{{ row.created_at }}</p>
     
+    <a href='/b_utente21/mvc/public/Home/index/'>Torna indietro</a>
+
+{% endblock %}
+```
+Partendo da
+```html
+{% extends "base.html" %}
+
+{% block title %}Posts{% endblock %}
+
+{% block body %}
+
+    <h2>Lista degli utenti registrati:</h2> 
+
+    <ol>
+        {% for row in rows %}
+            <li>{{ row.username }}  <a href='/b_utente21/mvc/public/Users/doOneuser/?username={{ row.username }}'>Dettaglio</a></li>
+        {% endfor %}
+    </ol>
     <a href='/b_utente21/mvc/public/Home/index/'>Torna indietro</a>
 
 {% endblock %}
