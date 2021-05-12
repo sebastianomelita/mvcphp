@@ -35,7 +35,7 @@ Gli oggetti restituiti, essendo **dinamici**, sono accessibili come al solito, m
 Ad esempio:
 
 ```PHP 
-$result = $db ->query($sql);
+$result = $db->query($sql);
 ```
 restituisce un array associativo risultato di una qyery SQL, mentre
 
