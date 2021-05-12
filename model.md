@@ -25,7 +25,7 @@ Infatti tutti modelli ereditano dalla classe padre l’**accesso all'oggetto dat
 ```PHP 
 $db = static::getDB();
 ```
-Inoltre, utti i modelli ereditano dalla classe padre l’**accesso ad un oggetto client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
+Inoltre, tutti i modelli ereditano dalla classe padre l’**accesso ad un oggetto client HTTP** che nelle **classi figlie** è recuperabile con la chiamata:
 
 ```PHP 
 $rc = static::getRESTClient(); 
