@@ -74,7 +74,7 @@ Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction
 
 {% endblock %}
 ```
-Partendo da
+Partendo da array_push($rows,$row) che nel modello ha costruito un array di array associativi [[],[],[]...,[]]:
 ```html
 {% extends "base.html" %}
 
