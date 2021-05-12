@@ -75,7 +75,7 @@ Partendo da **```$row = $result->fetch_assoc();```** che nel **modello** ha cost
 
 {% endblock %}
 ```
-Esempio di view ```oneuser.html``` corrispondente alla action ```getAll()``` del controller ```Users```.
+Esempio di view ```allusers.html``` corrispondente alla action ```getAll()``` del controller ```Users```.
 
 Partendo da **```array_push($rows,$row)```** che nel **modello** ha costruito un **array di array associativi**, dove **ciascuno** contiene i **campi** di **una riga** ```[[],[],[]...,[]]```:
 
