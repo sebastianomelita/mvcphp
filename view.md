@@ -54,7 +54,7 @@ Nel template precedente viene definito il codice html della sola **parte modific
 
 **Esempio completo**
 
-Partendo da
+Partendo da ```$row = $result->fetch_assoc();``` che nel modello ha costruito un array associativo che contiene i campi di una riga []:
 
 Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction()``` del controller ```Users```:
 ```html
@@ -74,7 +74,7 @@ Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction
 
 {% endblock %}
 ```
-Partendo da array_push($rows,$row) che nel modello ha costruito un array di array associativi [[],[],[]...,[]]:
+Partendo da ```array_push($rows,$row)``` che nel modello ha costruito un array di array associativi, dove ciascuno contiene i campi di una riga ```[[],[],[]...,[]]```:
 ```html
 {% extends "base.html" %}
 
