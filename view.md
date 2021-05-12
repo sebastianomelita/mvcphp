@@ -59,8 +59,8 @@ Esempio di view ```oneuser.html``` corrispondente alla action ```doOneuserAction
 Partendo da **```$row = $result->fetch_assoc();```** che nel **modello** ha costruito un **array associativo** che **contiene** i campi di **una riga** []. E' chiamato nel controller con:
 ```PHP
  View::renderTemplate($path, [
-                	'row' => $row
-                  ]);  
+	'row' => $row
+  ]);  
 ```
 ```html
 {% extends "base.html" %}
@@ -84,8 +84,8 @@ Esempio di view ```allusers.html``` corrispondente alla action ```getAll()``` de
 Partendo da **```array_push($rows,$row)```** che nel **modello** ha costruito un **array di array associativi**, dove **ciascuno** contiene i **campi** di **una riga** ```[[],[],[]...,[]]```. E chiamato nel controller con:
 ```PHP
 View::renderTemplate($path, [
-			'rows' => $rows
-		  ]);  
+	'rows' => $rows
+  ]);  
 ```
 ```html
 {% extends "base.html" %}
