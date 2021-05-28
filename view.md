@@ -105,7 +105,7 @@ View::renderTemplate($path, [
 
 {% endblock %}
 ```
-In pratica l'**array associativo** da passare alla vista è organizzato secondo uno schema ad albero, in cui un array radice contiene una lista di campi etichettati con una stringa che, a loro volta, possono contenere o un valore finale (sono una foglia) o un lista di altri campi etichettati (sono nodi). 
+In pratica l'**array associativo** da passare alla vista è organizzato secondo uno **schema ad albero**, in cui un array radice contiene una lista di campi etichettati con una stringa che, a loro volta, possono contenere o un valore finale (sono una foglia) o un lista di altri campi etichettati (sono nodi). 
 
 Le struttura gerarchiche sono spesso adoperate dalle **applicazioni** per realizzare la loro rappresentazione ad oggetti della realtà. 
 Anche le **pagine HTML** posseggono una rappresentazione ad albero che rende conto degli annidamenti degli elementi che la compongono (il DOM). 
