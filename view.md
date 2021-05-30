@@ -108,9 +108,9 @@ View::renderTemplate($path, [
 In pratica l'**array associativo** da passare alla vista è organizzato secondo uno **schema ad albero**, in cui un array radice contiene una lista di campi etichettati con una stringa che, a loro volta, possono contenere o un valore finale (sono una foglia) o un lista di altri campi etichettati (sono nodi). 
 
 Le struttura gerarchiche sono spesso adoperate dalle **applicazioni** per realizzare la loro rappresentazione ad oggetti della realtà. 
-Anche le **pagine HTML** posseggono una rappresentazione ad albero che rende conto degli annidamenti degli elementi che la compongono (il DOM). 
+Anche le **pagine HTML** posseggono una rappresentazione ad albero che rende conto degli annidamenti degli elementi che le compongono (il DOM). 
 
-Un array associativo, organizzato con liste di array annidate una sull'altra, permette di recuperare facilmente il valore corrispondente al contenuto informativo dei vari elementi della pagina (tag e attributi). In genere basta costruire un array associativo con tanti livelli di annidamento quanti sono i livelli di annidamento degli elementi HTML da valorizzare e visualizzare della pagina. Mentre il **primo** viene iterato, da un livello all'altro, in **lettura**, la **seconda** viene iterata, lungo gli elementi corrispondenti al primo, in **scrittura**.
+Un array associativo, organizzato con liste di array annidate una sull'altra, permette di recuperare facilmente il valore corrispondente al contenuto informativo dei vari elementi della pagina (tag e attributi). In genere, basta costruire un array associativo con tanti livelli di annidamento quanti sono i livelli di inclusione, uno sull'altro, degli elementi HTML da valorizzare e visualizzare della pagina. Mentre il **l'array** viene iterato, da un livello all'altro, in **lettura**, la **pagina html** viene iterata, lungo gli elementi corrispondenti al primo, in **scrittura**.
 
 
 >[Torna a MVC](mvcindex.md) 
