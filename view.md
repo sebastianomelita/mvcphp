@@ -110,7 +110,7 @@ In pratica l'**array associativo** da passare alla vista è organizzato secondo 
 Le struttura gerarchiche sono spesso adoperate dalle **applicazioni** per realizzare la loro rappresentazione ad oggetti della realtà. 
 Anche le **pagine HTML** posseggono una rappresentazione ad albero che rende conto degli annidamenti degli elementi che le compongono (il DOM). 
 
-Un array associativo, organizzato con liste di array annidate una sull'altra, permette di recuperare facilmente il valore corrispondente al contenuto informativo dei vari elementi della pagina (tag e attributi). In genere, basta costruire un array associativo con tanti livelli di annidamento quanti sono i livelli di inclusione, uno sull'altro, degli elementi HTML da valorizzare e visualizzare della pagina. Mentre il **l'array** viene iterato, da un livello all'altro, in **lettura**, la **pagina html** viene iterata, lungo gli elementi corrispondenti al primo, in **scrittura**.
+Un array associativo, organizzato con liste di array annidate una sull'altra, permette di recuperare facilmente il valore corrispondente al contenuto informativo dei vari elementi della pagina (tag e attributi). In genere, basta costruire un array associativo con tanti livelli di annidamento quanti sono i livelli di inclusione, uno sull'altro, degli elementi HTML da valorizzare e visualizzare della pagina. Mentre **l'array** viene iterato, da un livello all'altro, in **lettura**, la **pagina html** viene iterata, lungo gli elementi corrispondenti al primo, in **scrittura**.
 
 
 >[Torna a MVC](mvcindex.md) 
