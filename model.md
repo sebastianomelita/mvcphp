@@ -54,7 +54,7 @@ La **rappresentazione** delle informazioni **nella vista** spesso ha una **strut
 
 Ad esempio un catalogo di pizze può essere visto come una lista di pizze dove ogni pizza contiene la lista degli ingredienti in essa contenuti.
 
-Le liste dei dati di un livello si possono ottenere con una query che recupera tutti i nodi con una certa proprietà che li lega al modo padre. Si potrebbero, ad esempio, recuperare tutte le pizze vegetariane.
+Le liste dei dati di un livello si possono ottenere con una query che recupera tutti i nodi con una certa proprietà che li lega al nodo padre. Si potrebbero, ad esempio, recuperare tutte le pizze vegetariane.
 
 Per ogni nodo, tutte le informazioni del livello inferiore si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una proprietà che le lega ad un nodo padre. Si potrebbero, ad esempio, recuperare tutti gli ingredienti di una certa pizza appartenente alla categoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, queata operazione va ripetuta per tutt  le pizze della categoria.
 
