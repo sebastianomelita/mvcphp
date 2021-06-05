@@ -58,7 +58,9 @@ Le liste dei dati di un livello si possono ottenere con una query che recupera t
 
 Per ogni nodo, tutte le informazioni del livello inferiore si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una proprietà che le lega ad un nodo padre. Si potrebbero, ad esempio, recuperare tutti gli ingredienti di una certa pizza appartenente alla cataegoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, queata operazione va ripetuta per tutt  le pizze della categoria.
 
-In sostanza, per ottenere le informazioni sui nodi di un certo livello, devo iterare su tutte le righe della query che le restituisce, inserirle nei campi di un oggetto o di un array associativo, poi, utilizzando come chiave l'identificativo del nodo in esame, eseguire una seconda query che ricava la lista delle informazioni che, a livello inferiore, dipendono da quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che correntemente si sta riempendo.
+In sostanza, per ottenere le informazioni sui nodi di un certo livello, devo iterare su tutte le righe della query che le restituisce, inserirle nei campi di un oggetto o di un array associativo, poi, utilizzando come chiave l'identificativo del nodo in esame, eseguire una seconda query che ricava la lista delle informazioni che, a livello inferiore, dipendono da quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che corrisponde al nodo in esame.
+
+Ad esempio con una query si possono ricavare le pizze con le informazioni che ad esse appartengono come nome, costo e cataegoria. Poi, noto l'id di ogni singola pizza si possono ricavare, con una query interna al cilco che esamina il risultato della prima, anche gli ingredienti con una query di cui si esaminano i risultati con un ciclo annidato al primo. 
 
 
 **Esempi completi**
