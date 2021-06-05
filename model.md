@@ -50,9 +50,16 @@ Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di u
 - **recupero dei dati** dal **database** o dalla rete (**webservice**), filtrando le informazioni di interesse
 - elaborazione della **logica applicativa** (ad esempio calcolo della contabilità)
 
-La rappresentazione delle informazioni nella vista spesso ha una **struttura ad albero** dove ogni **nodo** dell'albero è un **oggetto** o un **array associativo**, che, oltre alle informazioni proprie di quel livello, contiene la **lista dei nodi** del livello ad esso **inferiore**. 
+La **rappresentazione** delle informazioni **nella vista** spesso ha una **struttura ad albero** dove ogni **nodo** dell'albero è un **oggetto** o un **array associativo**, che, oltre alle informazioni proprie di quel livello, contiene la **lista dei nodi** del livello ad esso **inferiore**. 
 
 Ad esempio un catalogo di pizze può essere visto come una lista di pizze dove ogni pizza contiene la lista degli ingredienti in essa contenuti.
+
+Le liste dei dati di un livello si possono ottenere con una query che recupera tutti i nodi con una certa proprietà che li lega al modo padre. Si potrebbero, ad esempio, recuperare tutte le pizze vegetariane.
+
+Per ogni nodo, tutte le informazioni del livello inferiore si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una proprietà che le lega ad un nodo padre. Si potrebbero, ad esempio, recuperare tutti gli ingredienti di una certa pizza appartenente alla cataegoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, queata operazione va ripetuta per tutt  le pizze della categoria.
+
+In sostanza, per ottenere le informazioni sui nodi di un certo livello, devo iterare su tutte le righe della query che le restituisce, inserirle nei campi di un oggetto o di un array associativo, poi, utilizzando come chiave l'identificativo del nodo in esame, eseguire una seconda query che ricava la lista delle informazioni che, a livello inferiore, dipendono da quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che correntemente si sta riempendo.
+
 
 **Esempi completi**
 
