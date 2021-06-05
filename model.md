@@ -56,7 +56,7 @@ Ad esempio un catalogo di pizze può essere visto come una lista di pizze dove o
 
 Le liste dei dati di un livello si possono ottenere con una query che recupera tutti i nodi con una certa proprietà che li lega al modo padre. Si potrebbero, ad esempio, recuperare tutte le pizze vegetariane.
 
-Per ogni nodo, tutte le informazioni del livello inferiore si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una proprietà che le lega ad un nodo padre. Si potrebbero, ad esempio, recuperare tutti gli ingredienti di una certa pizza appartenente alla cataegoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, queata operazione va ripetuta per tutt  le pizze della categoria.
+Per ogni nodo, tutte le informazioni del livello inferiore si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una proprietà che le lega ad un nodo padre. Si potrebbero, ad esempio, recuperare tutti gli ingredienti di una certa pizza appartenente alla categoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, queata operazione va ripetuta per tutt  le pizze della categoria.
 
 In sostanza, per ottenere le informazioni sui nodi di un certo livello, devo iterare su tutte le righe della query che le restituisce, inserirle nei campi di un oggetto o di un array associativo, poi, utilizzando come chiave l'identificativo del nodo in esame, eseguire una seconda query che ricava la lista delle informazioni che, a livello inferiore, dipendono da quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che corrisponde al nodo in esame.
 
