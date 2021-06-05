@@ -60,7 +60,7 @@ Per ogni nodo, tutte le informazioni del livello inferiore si possono, di nuovo,
 
 In sostanza, per ottenere le informazioni sui nodi di un certo livello, devo iterare su tutte le righe della query che le restituisce, inserirle nei campi di un oggetto o di un array associativo, poi, utilizzando come chiave l'identificativo del nodo in esame, eseguire una seconda query che ricava la lista delle informazioni che, a livello inferiore, dipendono da quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che corrisponde al nodo in esame.
 
-Ad esempio con una query si possono ricavare le pizze con le informazioni che ad esse appartengono come nome, costo e categoria. Poi, noto l'id di ogni singola pizza si possono ricavare, con una query interna al cilco che esamina il risultato della prima, anche gli ingredienti con una query di cui si esaminano i risultati con un ciclo annidato al primo. 
+Ad esempio con una query si possono ricavare le pizze con le informazioni che ad esse appartengono come nome, costo e categoria. Poi, noto l'id di ogni singola pizza si possono ricavare, con una query interna al cilco che esamina il risultato della prima, anche gli ingredienti che vengono wsaminati uno per uno con un ciclo annidato al primo. 
 
 
 **Esempi completi**
