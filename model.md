@@ -56,7 +56,7 @@ Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di u
 
 I **dati da visualizzare** nella vista devono essere recuperati **tutti nel modello**. 
 
-La **rappresentazione** delle informazioni **nella vista** spesso ha una **struttura ad albero** che deve essere ricostruita nella **lista dei dati** che il modello passa alla vista. 
+La **rappresentazione** delle informazioni **nella vista** spesso ha una **struttura ad albero** (ad esempio quella del DOM HTML) che deve essere ricostruita nella **lista dei dati** che il modello passa alla vista. 
 
 Ogni **nodo** dell'albero è un **oggetto** o un **array associativo**, che, oltre alle informazioni proprie di quel livello, contiene la **lista con i nodi** del livello ad esso **inferiore**. 
 
