@@ -100,7 +100,8 @@ static function getPizze()
             
             // rappresentazione del nodo corrente
             $pizza = [
-                        'Id_Pizza' => $row['Id_Pizza'],
+                        // inserimento dei campi del nodo corrente
+			'Id_Pizza' => $row['Id_Pizza'],
                         'Nome_pizza' => $row['Nome_pizza'],
                         'Img' => $row['Img'],
                         'Costo' => $row['Costo'],
