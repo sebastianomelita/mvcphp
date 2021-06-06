@@ -144,7 +144,7 @@ Oppure se si sta realizzando un web service ed i parametri provengono da un **og
 2. se l'oggetto contiene uno o più oggetti figli iterare sulla lista che li contiene e passare il riferimento di ciascuno alla funzione del modello che si occupa della sua memorizzazione in forma persistente su una tabella collegata alla precedente.
 3. **eseguire una seconda query di inserimento** che, utilizzando come **chiave esterna** l'id del record precedentemente inserito, inserisce, uno ad uno, tutti gli oggetti correlati al record principale.
 
-In realtà, soprattutto nel caso del JSON, tutte le operazioni di composizione delle righe da inserire potevano essere fatte anche tutte nel **modello**.
+In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle righe da inserire potevano essere fatte anche tutte nel **modello**.
 
 **Esempi completi**
 - [Controller e modello DB](controllerdb.md)
