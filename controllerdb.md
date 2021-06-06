@@ -128,7 +128,7 @@ public function doInseriscipizza()
 		}
 		$this->inseriscipizzaAction();
 	    }
-  }
+  	}
 }
 ```
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
