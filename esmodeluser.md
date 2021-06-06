@@ -79,6 +79,8 @@ class User extends \Core\Model
     }
 }
 ```
+Esempio di codice PHP che recupera la lista delle pizze dalla tabella **Pizze** insieme agli ingredienti associati a ciascuna pizza contenuti nella tabella **Composizioni**:
+
 ```PHP 
 static function getPizze()
     {
@@ -110,5 +112,38 @@ static function getPizze()
         }
         return $pizze;  
     }
-    ```
+```
+Esempio di codice PHP che recupera gli ingredienti associati a ciascuna pizza contenuti nella tabella **Composizioni**:
+```PHP 
+static function getIngredientiPizza($id_pizza)
+    {
+	   $db = static::getDB();  //recuperiamo un riferimento al database
+	   
+	   // query preparata
+	   $sql = "SELECT I.Id_Ingrediente, I.Nome, I.Surgelato, C.Quantita, C.Id_Composizione FROM Composizioni AS C, Ingredienti AS I  WHERE C.Id_Pizza = ? AND C.Id_Ingrediente = I.Id_Ingrediente;"; //query da preparare
+	   $stmt = $db->prepare($sql);  //preparo la query
+	   
+	   $ingredienti = array(); // inizializzo un array vuoto
+	   if($stmt) // controllo se la stmt e' piena (true)
+	   {
+			$stmt->bind_param("i", $param_idpizza); //assoocio i parametri da input ai ? della query preparata
+			$param_idpizza = $id_pizza; //associo il valore del param al valore passato alla funzione $id_pizza
+			$stmt->execute();
+			if($stmt->error){
+                printf("Error: %s.\n", $stmt->error);
+            }
+			$result = $stmt -> get_result();
+			While($row = $result->fetch_assoc()) {
+			     array_push($ingredienti, $row);
+			}
+			$stmt->close(); //chiudo la connessione
+	   }else{
+	       echo "Errore sintassi SQL!!!";
+	   }
+	   return $ingredienti; 
+	}
+	
+```
+
+    
 >[Torna a Model](model.md) 
