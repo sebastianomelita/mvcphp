@@ -92,13 +92,14 @@ static function getPizze()
 	    
 	    $pizze = array(); // inizializzo un array vuoto
         While($row = $result->fetch_array(MYSQLI_ASSOC)){
+	    // recupero dei nodi figli
             $pingredienti = self::getIngredientipizza($row['Id_Pizza']);
             for($i=0; $i < count($pingredienti); $i++){
                 $pingredienti[$i]['SurgelatoStr'] = ($pingredienti[$i]['Surgelato'])? "Si": "No";
             }
             
             //array_shift($ingredienti); //elimina il primo elemento vuoto
-            // composizione array associativo della vista
+            // rappresentazione del nodo corrente
             $pizza = [
                         'Id_Pizza' => $row['Id_Pizza'],
                         'Nome_pizza' => $row['Nome_pizza'],
@@ -106,7 +107,7 @@ static function getPizze()
                         'Costo' => $row['Costo'],
                         'Adatta_Celiaci' => $row['Adatta_Celiaci'],
                         'Adatta_IntolleantiLattosio' => $row['Adatta_IntolleantiLattosio'],
-                        'ingredienti' => $pingredienti
+                        'ingredienti' => $pingredienti // inserimento della lista dei nodi figli
                     ];
             array_push($pizze, $pizza);
         }
