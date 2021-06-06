@@ -96,38 +96,39 @@ Esempio di funzione del controller che **inserisce** una Pizza (record principal
 ```PHP
 public function doInseriscipizza()
 {
-session_start();
-if($_SESSION['level'] == 0 || $_SESSION['level'] == 2) {
-    if(isset($_POST['Submit'])){// Controlla se il form è stato sottomesso
-	$pizza = array();
-	$pizza['Nome_pizza'] = Login::test_input($_POST['nome']);
-	$pizza['Costo'] = Login::test_input($_POST['costo']);
-	$pizza['PesoPizza'] = Login::test_input($_POST['peso']);
-	$pizza['Adatta_Celiaci'] = (isset($_POST['celiaci'])) ? 1: 0;
-	$pizza['Adatta_IntolleantiLattosio'] = (isset($_POST['lattosio'])) ? 1: 0;
-	$pizza['Img'] = $target_file2;
-	// inserimento record principale
-	$id_pizza = Pizza::addPizza($pizza);   // l'id è generato da mysql
-	if($id_pizza){ // se la pizza non è già in catalogo
-	    $ing = "ingrediente";
-	    $ingn = "ingrediente1";
-	    $i = 1;
-	    $ingredienti = array();
-	    //print_r($_POST);
-	    while(isset($_POST[$ingn]) && !empty($_POST[$ingn])){
-		// generazione del record da inserire in una seconda tabella collegata alla prima
-		$ingrediente = [
-		    'Id_Ingrediente' => Login::test_input($_POST[$ingn]),       //campo value del select
-		    'Quantita' => Login::test_input($_POST[$ingn."_quantita"])  //campo value dell'input
-		];
-		// inserimento del record secondario collegato mediante chiave esterna (associazione 1:N)
-		Pizza::addIngredientePizza($id_pizza, $ingrediente);
-		$i++;
-		$ingn = $ing.$i;
+	session_start();
+	if($_SESSION['level'] == 0 || $_SESSION['level'] == 2) {
+	    if(isset($_POST['Submit'])){// Controlla se il form è stato sottomesso
+		$pizza = array();
+		$pizza['Nome_pizza'] = Login::test_input($_POST['nome']);
+		$pizza['Costo'] = Login::test_input($_POST['costo']);
+		$pizza['PesoPizza'] = Login::test_input($_POST['peso']);
+		$pizza['Adatta_Celiaci'] = (isset($_POST['celiaci'])) ? 1: 0;
+		$pizza['Adatta_IntolleantiLattosio'] = (isset($_POST['lattosio'])) ? 1: 0;
+		$pizza['Img'] = $target_file2;
+		// inserimento record principale
+		$id_pizza = Pizza::addPizza($pizza);   // l'id è generato da mysql
+		if($id_pizza){ // se la pizza non è già in catalogo
+		    $ing = "ingrediente";
+		    $ingn = "ingrediente1";
+		    $i = 1;
+		    $ingredienti = array();
+		    //print_r($_POST);
+		    while(isset($_POST[$ingn]) && !empty($_POST[$ingn])){
+			// generazione del record da inserire in una seconda tabella collegata alla prima
+			$ingrediente = [
+			    'Id_Ingrediente' => Login::test_input($_POST[$ingn]),       //campo value del select
+			    'Quantita' => Login::test_input($_POST[$ingn."_quantita"])  //campo value dell'input
+			];
+			// inserimento del record secondario collegato mediante chiave esterna (associazione 1:N)
+			Pizza::addIngredientePizza($id_pizza, $ingrediente);
+			$i++;
+			$ingn = $ing.$i;
+		    }
+		}
+		$this->inseriscipizzaAction();
 	    }
-	}
-	$this->inseriscipizzaAction();
-    }
+  }
 }
 ```
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
