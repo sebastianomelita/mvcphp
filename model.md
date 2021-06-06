@@ -74,7 +74,7 @@ Ad esempio si prepara tramite un **array associativo** una lista di pizze **iniz
 1. **con una query più esterna** si possono selezionare le pizze di una certa categoria con le informazioni che ad esse appartengono come nome, costo e categoria
 2. **la lista delle righe viene scandita con un ciclo** che inserisce nome, costo e categoria nei campi dell'array associativo della pizza corrente
 3.  **all'interno del ciclo** viene eseguita anche **una seconda query** per recuperare la lista degli ingredienti corrispondenti a quell'id
-4. il risultato è **un'altra lista di righe** che può essere, a sua volta, inserita all'interno della rappresentazione del **nodo corrente** (array asociativo) 
+4. il risultato è **un'altra lista di righe** che può essere, a sua volta, inserita all'interno della rappresentazione del **nodo corrente** (array asociativo della pizza corrente) 
 5. l'array associativo che rappresenta la pizza corrente viene inserito all'interno della lista delle pizze completando le informazioni che devono essere raccolte riguardo una singola pizza.
 
 **Esempi completi**
