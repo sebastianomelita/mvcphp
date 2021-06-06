@@ -79,4 +79,36 @@ class User extends \Core\Model
     }
 }
 ```
+```PHP 
+static function getPizze()
+    {
+	    $db = static::getDB();  //recuperiamo un riferimento al database
+        
+        // query non preparata
+	    $sql = "SELECT * FROM Pizze AS P ORDER BY P.Nome_pizza"; 
+	    $result = $db -> query($sql);
+	    
+	    $pizze = array(); // inizializzo un array vuoto
+        While($row = $result->fetch_array(MYSQLI_ASSOC)){
+            $pingredienti = self::getIngredientipizza($row['Id_Pizza']);
+            for($i=0; $i < count($pingredienti); $i++){
+                $pingredienti[$i]['SurgelatoStr'] = ($pingredienti[$i]['Surgelato'])? "Si": "No";
+            }
+            
+            //array_shift($ingredienti); //elimina il primo elemento vuoto
+            // composizione array associativo della vista
+            $pizza = [
+                        'Id_Pizza' => $row['Id_Pizza'],
+                        'Nome_pizza' => $row['Nome_pizza'],
+                        'Img' => $row['Img'],
+                        'Costo' => $row['Costo'],
+                        'Adatta_Celiaci' => $row['Adatta_Celiaci'],
+                        'Adatta_IntolleantiLattosio' => $row['Adatta_IntolleantiLattosio'],
+                        'ingredienti' => $pingredienti
+                    ];
+            array_push($pizze, $pizza);
+        }
+        return $pizze;  
+    }
+    ```
 >[Torna a Model](model.md) 
