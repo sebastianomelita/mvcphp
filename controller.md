@@ -139,7 +139,7 @@ Ad esempio, gli ingredienti di una pizza potrebbero essere in  umero arbitrario 
 3. **iterare sulla lista dei parametri del form** GET o POST che devono essere memorizzati insieme su una tabella collegata alla precedente, inserirli nei campi di un oggetto o di un array associativo che **rappresenta il record secondario** da memorizzare (riga o tupla).
 4. **eseguire una seconda query di inserimento** che, utilizzando come **chiave esterna** l'id del record precedentemente inserito, inserisce, una ad una, tutte le informazioni correlate al record principale.
 
-Oppure se si sta realizzando un web service ed i parametri provengono da un **oggetto JSON**, normalmente, la stringa JSON viene trasformata in un oggetto PHP con il comando ```**json_decode($json_str)**```:
+Oppure se si sta realizzando un web service ed i parametri provengono da un **oggetto JSON**, normalmente, la stringa JSON viene trasformata in un oggetto PHP con il comando ``` **json_decode($json_str)** ```:
 1. l'oggetto json viene potrebbe essere passato alla funzione del modello che si occupa della sua memorizzazione in forma persistente  **eseguendo una query di inserimento** che restituisce l'id della **chiave primaria** eventualmente impostata come autoincrementante.
 2. se l'oggetto contiene uno o più oggetti figli iterare sulla lista che li contiene e passare il riferimento di ciascuno alla funzione del modello che si occupa della sua memorizzazione in forma persistente su una tabella collegata alla precedente.
 3. **eseguire una seconda query di inserimento** che, utilizzando come **chiave esterna** l'id del record precedentemente inserito, inserisce, uno ad uno, tutti gli oggetti correlati al record principale.
