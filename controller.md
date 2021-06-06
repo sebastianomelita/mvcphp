@@ -119,6 +119,10 @@ View::render ($path, [
 ```
 Si noti la la particolarità della **modalità dell’invocazione** dei metodi, tramite :: poiché render() e renderTempate() sono **metodi statici** della classe **View**.
 
+### **MAPPAGGIO DI UNA VISTA SU UN DATABASE RELAZIONALE**
+
+
+
 
 **Esempi completi**
 - [Controller e modello DB](controllerdb.md)
