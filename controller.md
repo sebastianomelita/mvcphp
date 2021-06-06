@@ -125,7 +125,7 @@ I **dati da visualizzare** nella vista devono essere inseriti **tutti nel modell
 
 La **rappresentazione** delle informazioni **nella vista** spesso ha una **struttura ad albero** (ad esempio quella del DOM HTML) che deve essere decostruita suddividendo le informazioni sulle varie tabelle del database relazionale. 
 
-Un **gruppo di informazioni** provenienti da un **form** in una vista possono essere raccolte in un **oggetto** o in un **array associativo** che viene passato come parametro alla funzione del modello che ha il compito di **renderle persistenti** memorizzandole in una certa **tabella** mediante una **query di insermento** (INSERT SWQL).
+Un **gruppo di informazioni** provenienti da un **form** in una vista possono essere raccolte in un **oggetto** o in un **array associativo** che viene passato come parametro alla funzione del modello che ha il compito di **renderle persistenti** memorizzandole in una certa **tabella** mediante una **query di insermento** (INSERT SQL).
 
 Ad esempio una pizza può essere vista come l'insieme di Nome, costo, proprietà nutrizionali che devono essere memorizzate nella tabella Pizze, piuttosto che in un'altra tabella.
 
