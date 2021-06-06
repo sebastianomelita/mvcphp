@@ -117,7 +117,7 @@ View::render ($path, [
      'drinkImg' => $drinkImg	              // stringa
 ]);  
 ```
-Se si sceglie l’opzione di utilizzare una pagina PHP senza template twig per stampare una stringa JSON invece di una pagina HTML si può ancora usare ```render()```:
+Se si sceglie l’opzione di utilizzare una pagina PHP senza template twig per stampare una stringa JSON invece di una pagina HTML si può ancora usare ```render()``` dopo aver trasformato  un oggetto PHP in una stringa JSON con il comando **```json_encode($json_obj)```**:
 ```PHP
 $path = 'Pub/index0.html';
 View::render ($path, [
