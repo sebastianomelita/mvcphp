@@ -77,7 +77,7 @@ class Users extends \Core\Controller
     {
         $path = 'Users/oneuserform.html';
         View::renderTemplate($path);
-	}
+    }
 	
     // richiesta pagina web
     public function detailAction()
@@ -86,8 +86,8 @@ class Users extends \Core\Controller
 	  
 	  $path = 'Users/alldetailed.html';  // rendering con template Twig
 	  View::renderTemplate($path, [
-			'rows' => $rows
-		  ]);  
+		'rows' => $rows
+          ]);  
     }
 }
 ```
