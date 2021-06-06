@@ -50,7 +50,7 @@ Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di u
 - **recupero dei dati** dal **database** o dalla rete (**webservice**), filtrando le informazioni di interesse
 - elaborazione della **logica applicativa** (ad esempio calcolo della contabilità)
 
-## **Creazione di una lbero di dati da un database relazionale**
+**Creazione di una albero di dati da un database relazionale**
 
 La **rappresentazione** delle informazioni **nella vista** spesso ha una **struttura ad albero** dove ogni **nodo** dell'albero è un **oggetto** o un **array associativo**, che, oltre alle informazioni proprie di quel livello, contiene la **lista dei nodi** del livello ad esso **inferiore**. 
 
