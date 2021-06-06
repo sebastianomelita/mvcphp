@@ -50,6 +50,8 @@ Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di u
 - **recupero dei dati** dal **database** o dalla rete (**webservice**), filtrando le informazioni di interesse
 - elaborazione della **logica applicativa** (ad esempio calcolo della contabilità)
 
+
+
 **Creazione di una albero di dati da un database relazionale**
 
 I dati da visualizzare nella vista devono essere recuperati tutti nel modello. 
