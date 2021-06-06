@@ -98,7 +98,6 @@ static function getPizze()
                 $pingredienti[$i]['SurgelatoStr'] = ($pingredienti[$i]['Surgelato'])? "Si": "No";
             }
             
-            //array_shift($ingredienti); //elimina il primo elemento vuoto
             // rappresentazione del nodo corrente
             $pizza = [
                         'Id_Pizza' => $row['Id_Pizza'],
