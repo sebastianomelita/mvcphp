@@ -121,7 +121,7 @@ Se si sceglie l’opzione di utilizzare una pagina PHP senza template twig per s
 ```PHP
 $path = 'Pub/index0.html';
 View::render ($path, [
-     'drink' => json_encode($drinkIngredients);
+     'drink' => json_encode($drink);
 ]);  
 ```
 Si noti la la particolarità della **modalità dell’invocazione** dei metodi, tramite :: poiché render() e renderTempate() sono **metodi statici** della classe **View**.
