@@ -66,14 +66,16 @@ Ad esempio un catalogo di pizze può essere visto come una **lista** di pizze do
 
 **In sostanza**, per ottenere le informazioni sui nodi di un certo livello si deve:
 1. **eseguire la query** che restituisce la lista dei nodi definendo come vincolo l'id dell'eventuale nodo padre comune 
-2. **iterare sulla lista delle righe** restituite, inserirle nei campi di un oggetto o di un array associativo
-3. **eseguire una seconda query**, utilizzando come chiave l'identificativo del nodo in esame, che ricava la lista delle informazioni correlate a quel nodo e salvarla in **ulteriore campo** dell'oggetto o dell'array associativo che corrisponde al nodo in esame.
+2. **iterare sulla lista delle righe** restituite, inserirle nei campi di un oggetto o di un array associativo che **rappresenta il nodo**
+3. **eseguire una seconda query**, utilizzando come chiave l'identificativo del nodo in esame, che ricava la lista delle informazioni correlate a quel nodo e salvarla in **ulteriore campo** dell'oggetto o dell'array associativo che rappresenta il nodo in esame.
+4. inserire l'oggetto o l'array associativo che rappresenta il nodo corrente nella lista dei nodi (un'altro array associativo)
 
 Ad esempio si prepara tramite un **array associativo** una lista di pizze **inizialmente vuota**:
 1. **con una query più esterna** si possono selezionare le pizze di una certa categoria con le informazioni che ad esse appartengono come nome, costo e categoria
-2. **la lista delle righe viene scandita con un ciclo** che inserisce nome, costo e categoria nei campi dell'array associativo
+2. **la lista delle righe viene scandita con un ciclo** che inserisce nome, costo e categoria nei campi dell'array associativo della pizza corrente
 3.  **all'interno del ciclo** viene eseguita anche **una seconda query** per recuperare la lista degli ingredienti corrispondenti a quell'id
-4. il risultato è **un'altra lista di righe** che può essere, a sua volta, **inserita all'interno della lista principale** delle pizze completando le informazioni che devono essere raccolte riguardo una singola pizza.
+4. il risultato è **un'altra lista di righe** che può essere, a sua volta, inserita all'interno della rappresentazione del **nodo corrente** (array asociativo) 
+5. l'array associativo che rappresenta ala pizza corrente viene insrito all'interno della lista delle pizze completando le informazioni che devono essere raccolte riguardo una singola pizza.
 
 **Esempi completi**
 
