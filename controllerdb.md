@@ -68,9 +68,9 @@ class Users extends \Core\Controller
 	  
 	  $path = 'Users/allusers.html';  // rendering con template Twig
 	  View::renderTemplate($path, [
-			'rows' => $rows
-		  ]);  
-	}
+		'rows' => $rows
+	  ]);  
+    }
 	
     // richiesta pagina di un form (metodo stub)
     public function oneuserAction()
