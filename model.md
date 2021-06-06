@@ -63,8 +63,11 @@ Le **liste dei dati di un livello** si possono ottenere con una query che recupe
 2. **iterare sulla lista delle righe** restituite, inserirle nei campi di un oggetto o di un array associativo
 3. **eseguire una seconda query**, utilizzando come chiave l'identificativo del nodo in esame, che ricava la lista delle informazioni correlate a quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che corrisponde al nodo in esame.
 
-Ad esempio con una query si può ricavare la lista delle pizze con le informazioni che ad esse appartengono come nome, costo e categoria. La lista può essere scandita con un ciclo che, letto l'id di ogni singola pizza, esegue al suo interno anche la query per recuperare la lista degli ingredienti corrispondenti a quell'id. Il risultato è un'altra lista che può essere iterata a sua volta, con un ciclo annidato a quello che recupera le singole pizze, per recuperare i singoli ingredienti che compongono la pizza corrente. 
-
+Ad esempio si prepara tramite un **array associativo** una lista **inizialmente vuota**:
+1. **con una query più esterna** si possono selezionare le pizze di una certa categoria con le informazioni che ad esse appartengono come nome, costo e categoria
+2. **la lista delle righe viene scandita con un ciclo** che inserisce nome, costo e categoria nei campi dell'array associativo
+3.  **all'interno del ciclo** viene eseguita anche **una seconda query** per recuperare la lista degli ingredienti corrispondenti a quell'id
+4. il risultato è **un'altra lista di righe** che può essere, a sua volta, **inserita all'interno della lista principale** delle pizze completando le informazioni che devono essere raccolte riguardo una singola pizza.
 
 **Esempi completi**
 
