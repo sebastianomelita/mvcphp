@@ -58,7 +58,10 @@ Le **liste dei dati di un livello** si possono ottenere con una query che recupe
 
 **Per ogni nodo**, tutte le informazioni del **livello inferiore** si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una **proprietà** che le lega ad un **nodo padre**. Si potrebbero, ad esempio, recuperare tutti gli ingredienti di una certa pizza appartenente alla categoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, questa operazione va ripetuta per tutte le pizze della categoria.
 
-**In sostanza**, per ottenere le informazioni sui nodi di un certo livello, devo **iterare sulla lista delle righe** della query che le restituisce, inserirle nei campi di un oggetto o di un array associativo, poi, utilizzando come chiave l'identificativo del nodo in esame, eseguire una seconda query che ricava la lista delle informazioni che, a livello inferiore, dipendono da quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che corrisponde al nodo in esame.
+**In sostanza**, per ottenere le informazioni sui nodi di un certo livello si deve:
+1 **eseguire la query** che restituisce la lista dei nodi definendo come vincolo l'id dell'eventuale nodo padre comune 
+2 **iterare sulla lista delle righe** restituite, inserirle nei campi di un oggetto o di un array associativo
+3 **eseguire una seconda query**, utilizzando come chiave l'identificativo del nodo in esame, che ricava la lista delle informazioni correlate a quel nodo e salvarla in ulteriore campo dell'oggetto o dell'array associativo che corrisponde al nodo in esame.
 
 Ad esempio con una query si può ricavare la lista delle pizze con le informazioni che ad esse appartengono come nome, costo e categoria. La lista può essere scandita con un ciclo che, letto l'id di ogni singola pizza, esegue al suo interno anche la query per recuperare la lista degli ingredienti corrispondenti a quell'id. Il risultato è un'altra lista che può essere iterata a sua volta, con un ciclo annidato a quello che recupera le singole pizze, per recuperare i singoli ingredienti che compongono la pizza corrente. 
 
