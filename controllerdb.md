@@ -92,7 +92,7 @@ class Users extends \Core\Controller
 }
 ```
 
-Esempio di funzione del controller che inserisce una Pizza (record principale) e tutti i suoi ingredienti (lista di record secondari):
+Esempio di funzione del controller che **inserisce** una Pizza (record principale) e tutti i suoi ingredienti (lista di record secondari):
 ```PHP
 public function doInseriscipizza()
 {
