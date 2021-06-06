@@ -117,6 +117,13 @@ View::render ($path, [
      'drinkImg' => $drinkImg	              // stringa
 ]);  
 ```
+Se si sceglie l’opzione di utilizzare una pagina PHP senza template twig per stampare una stringa JSON invece di una pagina HTML si può ancora usare ```render()```:
+```PHP
+$path = 'Pub/index0.html';
+View::render ($path, [
+     'drink' => json_encode($drinkIngredients);
+]);  
+```
 Si noti la la particolarità della **modalità dell’invocazione** dei metodi, tramite :: poiché render() e renderTempate() sono **metodi statici** della classe **View**.
 
 ### **Form di inserimento**
