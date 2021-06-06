@@ -77,6 +77,10 @@ Ad esempio si prepara tramite un **array associativo** una lista di pizze **iniz
 4. il risultato è **un'altra lista di righe** che può essere, a sua volta, inserita all'interno della rappresentazione del **nodo corrente** (array asociativo della pizza corrente) 
 5. l'**array associativo** che rappresenta la pizza corrente, cioè la rappresentazione del nodo corrente, viene inserito all'interno della lista delle pizze completando le informazioni che devono essere raccolte riguardo una singola pizza.
 
+In realtà il **processo di composizione** delle due query per recuperare le informazioni del nodo corrente e quelle sui figli del nodo corrente si sarebbe potuto realizzare, alternativamente, all'interno del controller. In questo caso il modello avrebbe fornito due liste separate che andavano composte nel controller. Si è preferito l'approccio di fare la composizione nel modello perchè, essendo il punto più vicino alla sorgente dei dati, si evitano passaggi in più con duplicazione delle informazioni.
+
+Per quanto riguarda le **operazioni di inserimento**, invece, il punto più vicino alla fonte dei dati (il form di inserimento) è il controller e la composizione si è preferita eseguirla lì.
+
 **Esempi completi**
 
 - [Modello per gestione accesso ad un DB](esmodeluser.md)
