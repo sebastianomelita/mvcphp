@@ -52,7 +52,11 @@ Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di u
 
 **Creazione di una albero di dati da un database relazionale**
 
-La **rappresentazione** delle informazioni **nella vista** spesso ha una **struttura ad albero** dove ogni **nodo** dell'albero è un **oggetto** o un **array associativo**, che, oltre alle informazioni proprie di quel livello, contiene la **lista dei nodi** del livello ad esso **inferiore**. 
+I dati da visualizzare nella vista devono essere recuperati tutti nel modello. 
+
+La **rappresentazione** delle informazioni **nella vista** spesso ha una **struttura ad albero** che deve essere ricostruita nella lista dei dati che il modello passa alla vista. 
+
+Ogni **nodo** dell'albero è un **oggetto** o un **array associativo**, che, oltre alle informazioni proprie di quel livello, contiene la **lista dei nodi** del livello ad esso **inferiore**. 
 
 Ad esempio un catalogo di pizze può essere visto come una **lista** di pizze dove ogni pizza contiene la **lista** degli ingredienti in essa contenuti. La lista, sotto forma di **array associativo**, è proprio il modo con cui vengono restituite le righe (tuple) di una generica query.
 
