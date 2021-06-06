@@ -130,7 +130,7 @@ if($_SESSION['level'] == 0 || $_SESSION['level'] == 2) {
     }
 }
 ```
-Esempio di funzione del controller che inserisce un oggeto JSON proveniente da un metodo POST:
+Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
 ```PHP
 public function doInseriscimisura()
 {
