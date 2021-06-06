@@ -88,7 +88,7 @@ class Users extends \Core\Controller
 	  View::renderTemplate($path, [
 			'rows' => $rows
 		  ]);  
-	}
+    }
 }
 ```
 
