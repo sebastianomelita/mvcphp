@@ -62,7 +62,7 @@ Ad esempio un catalogo di pizze può essere visto come una **lista** di pizze do
 
 Le **liste dei dati di un livello** si possono ottenere con una query che recupera tutti i nodi con una certa proprietà che li lega al **nodo padre**. Si potrebbero, ad esempio, recuperare tutte le pizze vegetariane.
 
-**Per ogni nodo**, tutte le informazioni del **livello inferiore** si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una **proprietà** che le lega ad un **nodo padre**. Si potrebbero, ad esempio, recuperare tutti gli ingredienti di una certa pizza appartenente alla categoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, questa operazione va ripetuta per tutte le pizze della categoria.
+**Per ogni nodo**, tutte le informazioni del **livello inferiore** si possono, di nuovo, recuperare con una seconda query che seleziona tutte quelle che posseggono una **proprietà** che le lega ad un **nodo padre**. Si potrebbero, ad esempio, recuperare tutti **gli ingredienti** di una certa pizza appartenente alla categoria delle pizze vegetariane. Se si vuole il catalogo delle pizze vegetariane, questa operazione va ripetuta per tutte le pizze della categoria.
 
 **In sostanza**, per ottenere le informazioni sui nodi di un certo livello si deve:
 1. **eseguire la query** che restituisce la lista dei nodi definendo come vincolo l'id dell'eventuale nodo padre comune 
