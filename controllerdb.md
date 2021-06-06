@@ -26,15 +26,15 @@ class Users extends \Core\Controller
      */
     protected function before()
     {
-		$logged = false;
-		session_start();
-		if (isset($_SESSION['username'])) {
-			$logged = true;
-		}else{
-			//Redirect to login page
-			View::renderTemplate('Login/login.html');
-		}
-		return $logged;
+	$logged = false;
+	session_start();
+	if (isset($_SESSION['username'])) {
+		$logged = true;
+	}else{
+		//Redirect to login page
+		View::renderTemplate('Login/login.html');
+	}
+	return $logged;
     }
     
     protected function after()
@@ -51,9 +51,9 @@ class Users extends \Core\Controller
     		$row = User::getOneUser($user);
     		if(!empty($row)){
     		    $path = 'Users/oneuser.html';  // rendering con template Twig
-                View::renderTemplate($path, [
+               	    View::renderTemplate($path, [
                 	'row' => $row
-                  ]);  
+                    ]);  
     		}else{
     		     $path = 'Home/index'.$_SESSION['level'].'.html';
     		     View::renderTemplate($path);
