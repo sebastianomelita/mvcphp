@@ -52,7 +52,7 @@ Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di u
 
 
 
-**Creazione di una albero di dati da un database relazionale**
+### **Creazione di una albero di dati da un database relazionale**
 
 I **dati da visualizzare** nella vista devono essere recuperati **tutti nel modello**. 
 
