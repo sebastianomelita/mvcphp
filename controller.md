@@ -126,8 +126,8 @@ View::render ($path, [
 ```
 Si noti la la particolarità della **modalità dell’invocazione** dei metodi, tramite :: poiché render() e renderTempate() sono **metodi statici** della classe **View**.
 
-- [Form di inserimento](inserimento.md) 
-- [Form di aggiornamento](aggiornamento.md) 
+- [Form di inserimentodb](inserimento.md) 
+- [Form di aggiornamentodb](aggiornamento.md) 
 
 **Esempi completi**
 - [Controller e modello DB](controllerdb.md)
