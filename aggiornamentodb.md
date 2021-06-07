@@ -47,7 +47,7 @@ public function aggiornapizzaAction(){
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
 ```PHP
 public function doAggiornapizza()
-    {
+{
         session_start();
         if($_SESSION['level'] == 0 || $_SESSION['level'] == 2) {
             if(isset($_POST['Submit'])){// Controlla se il form è stato sottomesso
@@ -92,7 +92,7 @@ public function doAggiornapizza()
                 $this->listapizzeAction();
             }
         }
-	}
+}
 ```
 
 >[Torna a Controller](controller.md) 
