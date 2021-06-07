@@ -138,7 +138,7 @@ Ad esempio una pizza può essere vista come l'insieme di Nome, costo, proprietà
 
 Altra informazioni di dettaglio, magari fornibili in numero variabile, potrebbero invece finire in un'altra tabella collegata a quella principale.
 
-Ad esempio, gli ingredienti di una pizza potrebbero essere in  umero arbitrario e, pur essendo collegati ad una certa pizza, devono essere memorizzati in maniera persistente sulla tabella Composizioni attraverso una **seconda query** di inserimento.
+Ad esempio, gli ingredienti di una pizza potrebbero essere in numero arbitrario e, pur essendo collegati ad una certa pizza, devono essere memorizzati in maniera persistente sulla tabella Composizioni attraverso una **seconda query** di inserimento.
 
 **In sostanza**, per memorizzare sul modello le informazioni sugli elementi HTML di un certo livello di un form si deve:
 1. **iterare sulla lista dei parametri del form** GET o POST che devono essere memorizzati insieme, inserirli nei campi di un oggetto o di un array associativo che **rappresenta il record principale** da memorizzare (riga o tupla).
