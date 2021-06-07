@@ -46,7 +46,10 @@ public function aggiornapizzaAction(){
 ```
 la funzione ```getIngredientickecked()``` restituisce l'albero completo degli annidamenti dei valori relativi agli ingredienti:
 
-```PHP [[value, quantita, 'ingredienti'=>[[Id_Ingrediente, Nome, Surgelato, SurgelatoStr, Checked], [...]], [...]] ```
+```PHP
+[[value, quantita, 'ingredienti'=>[[Id_Ingrediente, Nome, Surgelato, SurgelatoStr, Checked], [...]], [...]] 
+
+```
 
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
 ```PHP
