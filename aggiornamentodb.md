@@ -44,7 +44,7 @@ public function aggiornapizzaAction(){
 	]); 
 }
 ```
-La funzione **```getIngredientickecked()```** del modello Pizza restituisce **l'albero completo degli annidamenti** dei valori relativi agli ingredienti **da modificare** pronto per essere **iterato** con i cicli for nella vista:
+La funzione **```getIngredientickecked()```** del modello Pizza restituisce **l'albero completo** dei valori degli elementi HTML relativi agli ingredienti **da modificare**, già pronto per essere **iterato** con i cicli for nella vista:
 
 ```PHP
 [[value, quantita, 'ingredienti'=>[[Id_Ingrediente, Nome, Surgelato, SurgelatoStr, Checked], [...]], [...]] 
