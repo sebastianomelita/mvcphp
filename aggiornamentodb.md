@@ -30,18 +30,18 @@ In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle r
 Esempio di funzione del controller che **inserisce** una Pizza (record principale) e tutti i suoi ingredienti (lista di record secondari):
 ```PHP
 public function aggiornapizzaAction(){
-    $id_pizza = $this->route_params['id'];
+	$id_pizza = $this->route_params['id'];
 
-    $pizza = Pizza::getPizza($id_pizza);
-    $param = "ingrediente";
-    $params =  Pizza::getIngredientickecked($id_pizza,$param,10);
+	$pizza = Pizza::getPizza($id_pizza);
+	$param = "ingrediente";
+	$params =  Pizza::getIngredientickecked($id_pizza,$param,10);
 
-    $path = 'Pizza/form_pizza_update.html';
-    View::renderTemplate($path, [
-	    'pizza' => $pizza,
-	'params' => $params,
-	'base' => $param
-    ]); 
+	$path = 'Pizza/form_pizza_update.html';
+	View::renderTemplate($path, [
+	    	'pizza' => $pizza,
+		'params' => $params,
+		'base' => $param
+	]); 
 }
 ```
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
