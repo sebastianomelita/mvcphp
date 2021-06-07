@@ -128,10 +128,8 @@ Si noti la la particolarità della **modalità dell’invocazione** dei metodi, 
 
 - [Form di inserimento in un database](inserimentodb.md) 
 - [Form di aggiornamento di un database](aggiornamentodb.md) 
-
-**Esempi completi**
-- [Controller e modello DB](controllerdb.md)
-- [Controller e modello webservice](controllerws.md)
+- [Report da DB](controllerdb.md)
+- [Report da webservice](controllerws.md)
 
 >[Torna a MVC](mvcindex.md) 
 
