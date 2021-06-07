@@ -1,6 +1,6 @@
 >[Torna a Controller](controller.md) 
 
-### **Form di inserimento**
+### **Form di aggiornamento**
 
 I **dati da visualizzare** nella vista devono essere inseriti **tutti nel modello**. 
 
