@@ -113,7 +113,7 @@ In realtà nel'esempio, per semplificare le operazioni, si è scelto di non eseg
 
 Si poteva procedere facendo delle query di aggiornamento applicate a tutti gli ingredienti, cioè sia ai record modificati che a quelli modificati.
 
-Oppure si poteva procedere conforntando i valori ricevuti dal form con quelli corrispondenti originali recuprati dal database e decidere di eseguire l'aggiornamento solo se questi sono diversi.
+Oppure si poteva procedere conforntando i valori ricevuti dal form con quelli corrispondenti originali recuperati dal database e decidere di eseguire l'aggiornamento solo se questi sono diversi.
 
 Oppure si poteva procedere in maniera analoga conforntando i valori ricevuti dal form con quelli corrispondenti originali conservati in  cache in memoria ottenuta, per esempio, salvandoli, al caricamento del form da sottomettere, in una variabile di sessione. A quel punto si può decidere di eseguire l'aggiornamento solo se quelli in cache e quelli modificati dall'utente sono diversi.
 
