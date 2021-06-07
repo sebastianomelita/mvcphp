@@ -44,7 +44,7 @@ public function aggiornapizzaAction(){
 	]); 
 }
 ```
-la funzione ```getIngredientickecked()``` restituisce l'albero completo degli annidamenti dei valori relativi agli ingredienti:
+la funzione **```getIngredientickecked()```** restituisce **l'albero completo degli annidamenti** dei valori relativi agli ingredienti pronto per essere **iterato** con i cicli for nella vista:
 
 ```PHP
 [[value, quantita, 'ingredienti'=>[[Id_Ingrediente, Nome, Surgelato, SurgelatoStr, Checked], [...]], [...]] 
