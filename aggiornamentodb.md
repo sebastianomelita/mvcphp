@@ -29,11 +29,70 @@ In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle r
 
 Esempio di funzione del controller che **inserisce** una Pizza (record principale) e tutti i suoi ingredienti (lista di record secondari):
 ```PHP
-
+public function aggiornapizzaAction(){
+	    $id_pizza = $this->route_params['id'];
+	    
+	    $pizza = Pizza::getPizza($id_pizza);
+	    $param = "ingrediente";
+	    $params =  Pizza::getIngredientickecked($id_pizza,$param,10);
+	 
+	    $path = 'Pizza/form_pizza_update.html';
+	    View::renderTemplate($path, [
+	            'pizza' => $pizza,
+                'params' => $params,
+                'base' => $param
+            ]); 
+	}
 ```
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
 ```PHP
-
+public function doAggiornapizza()
+    {
+        session_start();
+        if($_SESSION['level'] == 0 || $_SESSION['level'] == 2) {
+            if(isset($_POST['Submit'])){// Controlla se il form è stato sottomesso
+                $target_file = "";
+                if(isset($_FILES["pizzaimg"])){
+                    $target_dir = "/var/www/html/b_utente21/mvc/public/Immagini/";
+                    $target_dir2 = "/b_utente21/mvc/public/Immagini/";
+                    $target_file = $target_dir . basename($_FILES["pizzaimg"]["name"]);
+                    $target_file2 = $target_dir2 . basename($_FILES["pizzaimg"]["name"]);
+                    $this->checkImage("pizzaimg", $target_file);
+                }
+                $id_pizza = Login::test_input($_POST['id_pizza']);  // l'id o arriva da un campo hidden o da una sessione
+                $img = Login::test_input($_POST['img']);
+                $pizza = array();
+                $pizza['Nome_pizza'] = Login::test_input($_POST['nome']);
+                $pizza['Costo'] = Login::test_input($_POST['costo']);
+                $pizza['PesoPizza'] = Login::test_input($_POST['peso']);
+                $pizza['Adatta_Celiaci'] = (isset($_POST['celiaci'])) ? 1: 0;
+                $pizza['Adatta_IntolleantiLattosio'] = (isset($_POST['lattosio'])) ? 1: 0;
+                $pizza['Img'] = $target_file2;
+                if($pizza['Img']==$target_dir2){
+                    $pizza['Img'] = $img;
+                }
+                Pizza::updatePizza($id_pizza, $pizza);
+                $ing = "ingrediente";
+                $ingn = "ingrediente1";
+                $i = 1;
+                $ingredienti = array();
+                //print_r($_POST);
+                Pizza::removeIngredientiPizza($id_pizza);
+                while(isset($_POST[$ingn]) && !empty($_POST[$ingn])){
+                    $ingrediente = [
+                        'Id_Ingrediente' => Login::test_input($_POST[$ingn]),       //campo value del select
+                        'Quantita' => Login::test_input($_POST[$ingn."_quantita"])  //campo value dell'input
+                    ];
+                    //print_r($ingrediente);
+                    Pizza::addIngredientePizza($id_pizza, $ingrediente);
+                    $i++;
+                    $ingn = $ing.$i;
+                }
+                //$this->route_params['id'] = $id_pizza;
+                $this->listapizzeAction();
+            }
+        }
+	}
 ```
 
 >[Torna a Controller](controller.md) 
