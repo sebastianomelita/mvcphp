@@ -27,7 +27,7 @@ Oppure se si sta realizzando un web service ed i parametri provengono da un **og
 
 In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle righe da inserire potevano essere fatte anche tutte nel **modello**.
 
-Esempio di funzione del controller che **inserisce** una Pizza (record principale) e tutti i suoi ingredienti (lista di record secondari):
+Esempio di funzione del controller che **aggiorna** una Pizza e tutti i suoi ingredienti:
 ```PHP
 public function aggiornapizzaAction(){
 	$id_pizza = $this->route_params['id'];
@@ -44,6 +44,8 @@ public function aggiornapizzaAction(){
 	]); 
 }
 ```
+la funzione ```getIngredientickecked()``` restituisce l'albero completo degli annidamenti dei valori relativi agli ingredienti:
+``` [[value, quantita, 'ingredienti'=>[[Id_Ingrediente, Nome, Surgelato, SurgelatoStr, Checked], [...]], [...]] ```
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
 ```PHP
 public function doAggiornapizza()
