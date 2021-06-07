@@ -44,14 +44,14 @@ public function aggiornapizzaAction(){
 	]); 
 }
 ```
-la funzione **```getIngredientickecked()```** del modello Pizza restituisce **l'albero completo degli annidamenti** dei valori relativi agli ingredienti pronto per essere **iterato** con i cicli for nella vista:
+La funzione **```getIngredientickecked()```** del modello Pizza restituisce **l'albero completo degli annidamenti** dei valori relativi agli ingredienti pronto per essere **iterato** con i cicli for nella vista:
 
 ```PHP
 [[value, quantita, 'ingredienti'=>[[Id_Ingrediente, Nome, Surgelato, SurgelatoStr, Checked], [...]], [...]] 
 
 ```
 
-Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
+Esempio di funzione del controller che **aggiorna** un oggeto JSON proveniente da un metodo POST:
 ```PHP
 public function doAggiornapizza()
 {
