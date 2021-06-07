@@ -56,7 +56,7 @@ Il form aveva mostrato all'utente i campi value preimpostati con i vecchi valori
 
 Il campo Id_Pizza, è stato aggiunto dinamicamente lato server come campo nascosto. Non viene visualizzato all'utente ma è trasferito come un ulteriore parametro del form. Sarà utilizzato dalla action che serve il form per effettuare l'aggiornamento del record con quell'id utilizzando i valori POST del form. Si tratta di un metodo alternativo alle sessioni per mantenere una informazione di stato tra una richiesta HTTP e l'altra.
 
-```PHP
+```HTML
 	<input type="text" name="id_pizza" id="id_pizza" value="{{ pizza.Id_Pizza }}" hidden>
 ```
 ```PHP
