@@ -1,4 +1,6 @@
 
+>[Torna a Controller](controller.md) 
+
 ### **Form di inserimento**
 
 I **dati da visualizzare** nella vista devono essere inseriti **tutti nel modello**. 
@@ -25,3 +27,5 @@ Oppure se si sta realizzando un web service ed i parametri provengono da un **og
 3. la funzione esegue nel modello **una seconda query di inserimento** che, utilizzando come **chiave esterna** l'id del record precedentemente inserito, inserisce, uno ad uno, tutti gli oggetti correlati al record principale.
 
 In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle righe da inserire potevano essere fatte anche tutte nel **modello**.
+
+>[Torna a Controller](controller.md) 
