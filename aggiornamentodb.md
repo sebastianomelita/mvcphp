@@ -27,7 +27,7 @@ Oppure se si sta realizzando un web service ed i parametri provengono da un **og
 
 In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle righe da inserire potevano essere fatte anche tutte nel **modello**.
 
-Esempio di funzione del controller che **aggiorna** una Pizza e tutti i suoi ingredienti:
+Esempio di funzione del controller che **carica il form di aggiornamento** dei valori di una Pizza e di tutti i suoi ingredienti:
 ```PHP
 public function aggiornapizzaAction(){
 	$id_pizza = $this->route_params['id'];
@@ -44,7 +44,7 @@ public function aggiornapizzaAction(){
 	]); 
 }
 ```
-La funzione **```getIngredientickecked()```** del modello Pizza restituisce **l'albero completo degli annidamenti** dei valori relativi agli ingredienti pronto per essere **iterato** con i cicli for nella vista:
+La funzione **```getIngredientickecked()```** del modello Pizza restituisce **l'albero completo degli annidamenti** dei valori relativi agli ingredienti **da modificare** pronto per essere **iterato** con i cicli for nella vista:
 
 ```PHP
 [[value, quantita, 'ingredienti'=>[[Id_Ingrediente, Nome, Surgelato, SurgelatoStr, Checked], [...]], [...]] 
