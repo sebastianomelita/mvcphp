@@ -51,7 +51,14 @@ La funzione **```getIngredientickecked()```** del modello Pizza restituisce **l'
 
 ```
 
-Esempio di funzione del controller che **aggiorna** un oggeto JSON proveniente da un metodo POST:
+Esempio di funzione del controller che **aggiorna** valori e ingredienti di una pizza con i parametri proveniente dal metodo POST di un form.
+Il form aveva mostrato all'utente i campi value preimpostati con i vecchi valori recuperati dal database e vengono rimandati, eventualmente modificati, come parametri POST del form. 
+
+Il campo Id_Pizza, è stato aggiunto dinamicamente lato server come campo nascosto. Non viene visualizzato all'utente ma è trasferito come un ulteriore parametro del form. Sarà utilizzato dalla action che serve il form per effettuare l'aggiornamento del record con quell'id utilizzando i valori POST del form.
+
+```PHP
+	<input type="text" name="id_pizza" id="id_pizza" value="{{ pizza.Id_Pizza }}" hidden>
+```
 ```PHP
 public function doAggiornapizza()
 {
