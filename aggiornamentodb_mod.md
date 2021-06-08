@@ -3,7 +3,7 @@
 ```PHP
 static function updatePizza($id_pizza, $pizza)
 {
-	      $db = static::getDB();  //recuperiamo un riferimento al database
+	$db = static::getDB();  //recuperiamo un riferimento al database
 	   
         $stmt = $db->prepare("UPDATE Pizze SET Nome_pizza = ?, Costo = ?, PesoPizza = ?, Adatta_Celiaci = ?, Adatta_IntolleantiLattosio = ?, Img = ? WHERE Id_Pizza = ?");
         $stmt->bind_param("sdiiisi", $nome_pizza_param, $costo_param, $peso_param, $adatta_Celiaci_param, $adatta_IntolleantiLattosio_param, $img_param, $id_pizza_param);
