@@ -2,7 +2,7 @@
 
 ```PHP
 static function removePizza($id_pizza)
-    {
+{
 	$db = static::getDB();  //recuperiamo un riferimento al database
 	   
         $stmt = $db->prepare("DELETE FROM Pizze WHERE Id_Pizza = ?");
@@ -14,7 +14,7 @@ static function removePizza($id_pizza)
             printf("Error: %s.\n", $stmt->error);
         }
         $stmt->close();
-	}
+}
 ```
 
 ```PHP
