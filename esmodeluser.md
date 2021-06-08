@@ -98,7 +98,7 @@ class User extends \Core\Model
     		$param_username = $username; 
     		$stmt->execute();
     		$result = $stmt->get_result(); 
-    	    if(!empty($result)){ 
+    	    	if(!empty($result)){ 
     			$row = $result->fetch_assoc();
     		}
     		$stmt->close();
@@ -112,36 +112,36 @@ Esempio di codice PHP che recupera la lista delle pizze dalla tabella **Pizze** 
 
 ```PHP 
 static function getPizze()
-    {
+{
 	    $db = static::getDB();  //recuperiamo un riferimento al database
-        
-        // query non preparata
+
+	    // query non preparata
 	    $sql = "SELECT * FROM Pizze AS P ORDER BY P.Nome_pizza"; 
 	    $result = $db -> query($sql);
-	    
+
 	    $pizze = array(); // inizializzo un array vuoto
-        While($row = $result->fetch_array(MYSQLI_ASSOC)){
-	    // recupero dei nodi figli
-            $pingredienti = self::getIngredientipizza($row['Id_Pizza']);
-            for($i=0; $i < count($pingredienti); $i++){
-                $pingredienti[$i]['SurgelatoStr'] = ($pingredienti[$i]['Surgelato'])? "Si": "No";
-            }
-            
-            // rappresentazione del nodo corrente
-            $pizza = [
-                        // inserimento dei campi del nodo corrente
-			'Id_Pizza' => $row['Id_Pizza'],
-                        'Nome_pizza' => $row['Nome_pizza'],
-                        'Img' => $row['Img'],
-                        'Costo' => $row['Costo'],
-                        'Adatta_Celiaci' => $row['Adatta_Celiaci'],
-                        'Adatta_IntolleantiLattosio' => $row['Adatta_IntolleantiLattosio'],
-                        'ingredienti' => $pingredienti // inserimento della lista dei nodi figli
-                    ];
-            array_push($pizze, $pizza);
-        }
-        return $pizze;  
-    }
+	    While($row = $result->fetch_array(MYSQLI_ASSOC)){
+		    // recupero dei nodi figli
+		    $pingredienti = self::getIngredientipizza($row['Id_Pizza']);
+		    for($i=0; $i < count($pingredienti); $i++){
+			$pingredienti[$i]['SurgelatoStr'] = ($pingredienti[$i]['Surgelato'])? "Si": "No";
+		    }
+
+		    // rappresentazione del nodo corrente
+		    $pizza = [
+				// inserimento dei campi del nodo corrente
+				'Id_Pizza' => $row['Id_Pizza'],
+				'Nome_pizza' => $row['Nome_pizza'],
+				'Img' => $row['Img'],
+				'Costo' => $row['Costo'],
+				'Adatta_Celiaci' => $row['Adatta_Celiaci'],
+				'Adatta_IntolleantiLattosio' => $row['Adatta_IntolleantiLattosio'],
+				'ingredienti' => $pingredienti // inserimento della lista dei nodi figli
+			    ];
+		    array_push($pizze, $pizza);
+	     }
+	     return $pizze; 
+}
 ```
 Esempio di codice PHP che recupera gli ingredienti associati a ciascuna pizza contenuti nella tabella **Composizioni**:
 ```PHP 
@@ -160,8 +160,8 @@ static function getIngredientiPizza($id_pizza)
 			$param_idpizza = $id_pizza; //associo il valore del param al valore passato alla funzione $id_pizza
 			$stmt->execute();
 			if($stmt->error){
-                printf("Error: %s.\n", $stmt->error);
-            }
+                		printf("Error: %s.\n", $stmt->error);
+           		}
 			$result = $stmt -> get_result();
 			While($row = $result->fetch_assoc()) {
 			     array_push($ingredienti, $row);
