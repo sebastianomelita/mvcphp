@@ -22,7 +22,7 @@
 			<input type="checkbox" name="celiaci" value="no"/><br/>
 			<label for="lattosio" >E' per intolleranti al lattosio: </label>
 			<input type="checkbox" name="lattosio" value="no"/><br/>
-		    <label for="fileToUpload" >Seleziona l'immagine da caricare: </label>
+		        <label for="fileToUpload" >Seleziona l'immagine da caricare: </label>
 			<input type="file" name="pizzaimg" id="pizzaimg"><br/>
 		</div>
 		</br>
