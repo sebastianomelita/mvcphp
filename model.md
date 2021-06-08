@@ -83,6 +83,9 @@ Per quanto riguarda le **operazioni di inserimento**, invece, il punto più vici
 
 **Esempi completi**
 
+- [Modello di inserimento in un database](inserimentodb_mod.md) 
+- [Modello di aggiornamento in un database](aggiornamentodb_mod.md) 
+- [Modello di cancellazione in un database](cancellazioneodb_mod.md) 
 - [Modello per gestione accesso ad un DB](esmodeluser.md)
 - [Modello per gestione accesso ad un webservice](eswebservice.md)
 
