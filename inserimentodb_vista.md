@@ -26,19 +26,18 @@
 			<input type="file" name="pizzaimg" id="pizzaimg"><br/>
 		</div>
 		</br>
-		<div>
-	    {% for param in params %}
-	        <div name="{{ param }}_div" id="{{ param }}_div" hidden>
-			    <label for="{{ param }}" >{{ param }}: </label>
-    			<select name="{{ param }}" id="{{ param }}" >
-    			    {% for ingrediente in ingredienti %} 
-                        <option value="{{ ingrediente.Id_Ingrediente }}">{{ ingrediente.Nome }}</option>
-                    {% endfor %}
-                </select><br>
-                <label  for="{{ param }}_quantita" >Quantità: </label >
-                <input name="{{ param }}_quantita" type="text" id="{{ param }}_quantita" >
-                <input name="{{ param }}_add" type="button" id="{{ param }}_add" value="+" >
-            </div>
+	   	{% for param in params %}
+			<div name="{{ param }}_div" id="{{ param }}_div" hidden>
+				<label for="{{ param }}" >{{ param }}: </label>
+				<select name="{{ param }}" id="{{ param }}" >
+				{% for ingrediente in ingredienti %} 
+					<option value="{{ ingrediente.Id_Ingrediente }}">{{ ingrediente.Nome }}</option>
+			    	{% endfor %}
+				</select><br>
+				<label  for="{{ param }}_quantita" >Quantità: </label >
+				<input name="{{ param }}_quantita" type="text" id="{{ param }}_quantita" >
+				<input name="{{ param }}_add" type="button" id="{{ param }}_add" value="+" >
+			</div>
 		{% endfor %}
 		<br/>
 		<button name="Submit" value="Login"  type="submit">Submit</button>
