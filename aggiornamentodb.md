@@ -65,14 +65,6 @@ public function doAggiornapizza()
         session_start();
         if($_SESSION['level'] == 0 || $_SESSION['level'] == 2) {
             if(isset($_POST['Submit'])){// Controlla se il form è stato sottomesso
-                $target_file = "";
-                if(isset($_FILES["pizzaimg"])){
-                    $target_dir = "/var/www/html/b_utente21/mvc/public/Immagini/";
-                    $target_dir2 = "/b_utente21/mvc/public/Immagini/";
-                    $target_file = $target_dir . basename($_FILES["pizzaimg"]["name"]);
-                    $target_file2 = $target_dir2 . basename($_FILES["pizzaimg"]["name"]);
-                    $this->checkImage("pizzaimg", $target_file);
-                }
                 $id_pizza = Login::test_input($_POST['id_pizza']);  // l'id o arriva da un campo hidden o da una sessione
                 $img = Login::test_input($_POST['img']);
                 $pizza = array();
