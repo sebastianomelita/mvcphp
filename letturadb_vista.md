@@ -1,5 +1,5 @@
 
-
+```HTML
 {% extends "base.html" %}
 
 {% block title %}Drinks per nome{% endblock %}
@@ -22,8 +22,9 @@
     <br>
     <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
 {% endblock %}
+```
 
-
+```HTML
 {% extends "base.html" %}
 
 {% block title %}Drinks per nome{% endblock %}
