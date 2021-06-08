@@ -56,7 +56,7 @@
 	    }
 	    var act = document.getElementById("ingrediente1_add");
 	    plus();
-	 	act.addEventListener('click', plus, false);
+	    act.addEventListener('click', plus, false);
 	</script>
 	<br>
 	<a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
