@@ -112,5 +112,10 @@ Anche le **pagine HTML** posseggono una rappresentazione ad albero che rende con
 
 Un array associativo, organizzato con liste di array annidate una sull'altra, permette di recuperare facilmente il valore corrispondente al contenuto informativo dei vari elementi della pagina (tag e attributi). In genere, basta costruire un array associativo con tanti livelli di annidamento quanti sono i livelli di inclusione, uno sull'altro, degli elementi HTML da valorizzare e visualizzare della pagina. Mentre **l'array** viene iterato, da un livello all'altro, in **lettura**, la **pagina html** viene iterata, lungo gli elementi corrispondenti al primo, in **scrittura**.
 
+- [Vista di inserimento in un database](inserimentodb_vista.md) 
+- [Vista di aggiornamento in un database](aggiornamentodb_vista.md) 
+- [Vista di cancellazione in un database](cancelladb_vista.md) 
+- [Vista di lettura da un database](esmodeluser.md)
+- [Vista di lettura da un webservice](eswebservice.md)
 
 >[Torna a MVC](mvcindex.md) 
