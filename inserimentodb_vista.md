@@ -1,3 +1,7 @@
+>[Torna a vista](vista.md) 
+
+```PHP
+
 {% extends "base.html" %}
 
 {% block title %}Pizze{% endblock %}
@@ -58,3 +62,7 @@
 	<br>
 	<a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
 {% endblock %}
+
+
+```
+>[Torna a vista](vista.md) 
