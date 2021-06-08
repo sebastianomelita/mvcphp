@@ -1,6 +1,6 @@
 >[Torna a modello](model.md) 
 
-'''PHP
+```PHP
 
 static function addPizza($pizza)
     {
@@ -28,5 +28,5 @@ static function addPizza($pizza)
 	    }
         return $id;
 	}
-'''
+```
 >[Torna a modello](model.md) 
