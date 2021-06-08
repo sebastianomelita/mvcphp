@@ -22,25 +22,25 @@
 			<input type="checkbox" name="celiaci" value="{{ pizza.Adatta_Celiaci }}"/><br/>
 			<label for="lattosio" >E' per intolleranti al lattosio: </label>
 			<input type="checkbox" name="lattosio" value="{{ pizza.Adatta_IntolleantiLattosio }}"/><br/>
-		    <label for="fileToUpload" >Seleziona l'immagine da caricare: </label>
+		        <label for="fileToUpload" >Seleziona l'immagine da caricare: </label>
 			<input type="file" name="pizzaimg" id="pizzaimg" value="{{ pizza.Img }}"><br/>
 			<input type="text" name="id_pizza" id="id_pizza" value="{{ pizza.Id_Pizza }}" hidden>
 			<input type="text" name="img" id="img" value="{{ pizza.Img }}" hidden>
 		</div>
 		</br>
 		<div>
-	    {% for param in params %}
-	        <div name="{{ param.value }}_div" id="{{ param.value }}_div" hidden>
-			    <label for="{{ param.value }}" >{{ param.value }}: </label>
-    			<select name="{{ param.value }}" id="{{ param.value }}" >
-    			    {% for ingrediente in param.ingredienti %} 
-                        <option value="{{ ingrediente.Id_Ingrediente }}" {{ ingrediente.Checked }}>{{ ingrediente.Nome }}</option>
-                    {% endfor %}
-                </select><br>
-                <label  for="{{ param.value }}_quantita" >Quantità: </label >
-                <input name="{{ param.value }}_quantita" type="text" id="{{ param.value }}_quantita" value="{{ param.quantita }}">
-                <input name="{{ param.value }}_add" type="button" id="{{ param.value }}_add" value="+" >
-            </div>
+	        {% for param in params %}
+			<div name="{{ param.value }}_div" id="{{ param.value }}_div" hidden>
+				<label for="{{ param.value }}" >{{ param.value }}: </label>
+				<select name="{{ param.value }}" id="{{ param.value }}" >
+				{% for ingrediente in param.ingredienti %} 
+				    <option value="{{ ingrediente.Id_Ingrediente }}" {{ ingrediente.Checked }}>{{ ingrediente.Nome }}</option>
+				{% endfor %}
+			</select><br>
+			<label  for="{{ param.value }}_quantita" >Quantità: </label >
+			<input name="{{ param.value }}_quantita" type="text" id="{{ param.value }}_quantita" value="{{ param.quantita }}">
+			<input name="{{ param.value }}_add" type="button" id="{{ param.value }}_add" value="+" >
+			</div>
 		{% endfor %}
 		<br/>
 		<button name="Submit" value="Login"  type="submit">Submit</button>
@@ -61,7 +61,7 @@
 	    }
 	    var act = document.getElementById("ingrediente1_add");
 	    while(plus());
-	 	act.addEventListener('click', plus, false);
+	    act.addEventListener('click', plus, false);
 	</script>
 	<br>
 	<a href='/b_utente21/mvc/public/pizze/listapizze/'>Torna indietro</a>
