@@ -10,7 +10,7 @@
 ```
 E' possibile costruire, con il costrutto ```foreach()``` e un ```if()```, un **ciclo di selezione** che scandisce tutte le celle dell'array associativo $_POST alla ricerca di quelle con il nome che contiene il prefisso 'pizza'. Per ciascuna cella, il contenuto è l'id della pizza da cancellare per cui questo valore viene passato come argomento del metodo del modello ```Pizza::removePizza($value)``` che provvede a rimuovere la pizza con quell'id. 
 
-Nella tabella è stato impostato in SQL il **vincolo di integrità referenziale** ```ON DELETE CASCADE``` per cui, alla cancellazione di un record lato ad uno, la pizza, avvien in cascata la cancellazione di tutti i record lato a molti relativi agli ingredienti della pizza cancellata.
+Nella tabella è stato impostato in SQL il **vincolo di integrità referenziale** ```ON DELETE CASCADE``` per cui, alla cancellazione di un record lato ad uno, la pizza, avviene in cascata la cancellazione di tutti i record lato a molti relativi agli ingredienti della pizza cancellata.
 
 ```PHP
 
