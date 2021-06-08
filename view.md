@@ -114,7 +114,6 @@ Un array associativo, organizzato con liste di array annidate una sull'altra, pe
 
 - [Vista di inserimento in un database](inserimentodb_vista.md) 
 - [Vista di aggiornamento in un database](aggiornamentodb_vista.md) 
-- [Vista di cancellazione in un database](cancelladb_vista.md) 
 - [Vista di lettura da un database](letturadb_vista.md)
 
 >[Torna a MVC](mvcindex.md) 
