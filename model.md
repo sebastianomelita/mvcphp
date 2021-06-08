@@ -55,7 +55,7 @@ Eventuali **eleborazioni sui dati**, ad esempio statistiche come il calcolo di u
 
 - [Modello di inserimento in un database](inserimentodb_mod.md) 
 - [Modello di aggiornamento in un database](aggiornamentodb_mod.md) 
-- [Modello di cancellazione in un database](cancellazioneodb_mod.md) 
+- [Modello di cancellazione in un database](cancellazionedb_mod.md) 
 - [Modello di lettura da un database](esmodeluser.md)
 - [Modello di lettura da un webservice](eswebservice.md)
 
