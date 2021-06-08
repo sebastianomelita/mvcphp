@@ -1,8 +1,8 @@
 >[Torna a modello](model.md) 
 
 ```PHP
-	static function updatePizza($id_pizza, $pizza)
-    {
+static function updatePizza($id_pizza, $pizza)
+{
 	      $db = static::getDB();  //recuperiamo un riferimento al database
 	   
         $stmt = $db->prepare("UPDATE Pizze SET Nome_pizza = ?, Costo = ?, PesoPizza = ?, Adatta_Celiaci = ?, Adatta_IntolleantiLattosio = ?, Img = ? WHERE Id_Pizza = ?");
@@ -21,7 +21,7 @@
             printf("Error: %s.\n", $stmt->error);
         }
         $stmt->close();
-	}
+}
 ```
 >[Torna a modello](model.md) 
 
