@@ -1,5 +1,5 @@
 
->[Torna a Controller](model.md) 
+>[Torna a modello](model.md) 
 
 
->[Torna a Controller](model.md) 
+>[Torna a modello](model.md) 
