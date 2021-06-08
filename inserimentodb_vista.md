@@ -1,6 +1,6 @@
 >[Torna a vista](vista.md) 
 
-```PHP
+```HTML
 
 {% extends "base.html" %}
 
