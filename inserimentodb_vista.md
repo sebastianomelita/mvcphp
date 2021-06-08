@@ -1,4 +1,4 @@
->[Torna a vista](vista.md) 
+>[Torna a vista](view.md) 
 
 ```HTML
 
@@ -64,4 +64,4 @@
 
 
 ```
->[Torna a vista](vista.md) 
+>[Torna a vista](view.md) 
