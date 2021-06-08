@@ -18,8 +18,8 @@ static function removePizza($id_pizza)
 ```
 
 ```PHP
-	static function removeIngredientiPizza($id_pizza)
-    {
+static function removeIngredientiPizza($id_pizza)
+{
 	      $db = static::getDB();  //recuperiamo un riferimento al database
 	   
         $stmt = $db->prepare("DELETE FROM Composizioni WHERE Id_Pizza = ?");
@@ -33,7 +33,7 @@ static function removePizza($id_pizza)
         }
 
         $stmt->close();
-	}
+}
 ```
 >[Torna a modello](model.md) 
 
