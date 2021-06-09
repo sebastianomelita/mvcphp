@@ -36,21 +36,21 @@ for($i=1; $i<11;$i++){
 ```
 costruisce un array associativo con il nome di ciascun input degli ingredienti. Si è scelto **lato server** di inserire nel form un numero fisso di 10 campi di selezione testo di input, inizialmente nascosti, ma che poi sono visualizzati uno alla volta mediante CSS e javascript eseguito **lato client**.
 ```PHP
-	public function inseriscipizzaAction(){
-	    $param = "ingrediente";
-	    $params = array();
-	    for($i=1; $i<11;$i++){
-	         $params[$i] = $param.$i;
-	    }
-	    $ingredienti = Pizza::getIngredienti();
-	    
-	    $path = 'Pizza/form_pizza.html';
-	    View::renderTemplate($path, [
-                'params' => $params,
-                'ingredienti' => $ingredienti,
-                'base' => $param
-            ]); 
+public function inseriscipizzaAction(){
+	$param = "ingrediente";
+	$params = array();
+	for($i=1; $i<11;$i++){
+	 	$params[$i] = $param.$i;
 	}
+	$ingredienti = Pizza::getIngredienti();
+
+	$path = 'Pizza/form_pizza.html';
+	View::renderTemplate($path, [
+		'params' => $params,
+		'ingredienti' => $ingredienti,
+		'base' => $param
+	]); 
+}
 ```
 Una alternativa efficace praticabile sarebbe potuta essere quella di costruire dinamicamente i nodi HTML dei campi di selezione nel **lato client** (con codice javascript) lasciando, **lato server**, un form privo di campi di selezione degli ingredienti. 
 
