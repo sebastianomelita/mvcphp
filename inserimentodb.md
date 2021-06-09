@@ -67,7 +67,7 @@ public function doInseriscipizza()
   	}
 }
 ```
-E' possibile inserire fino ad un numero di ingredienti fissato nel form. Tutti gli input degli ingredienti hanno il prefisso comune 'ingrediente' e si distinguono per il numero posto dopo (ad es. ingrediente1, ingrediente2...ingrediente10). Un ciclo esamina gli input con numerazione crescente fino a che questi sono istanziati e non vuoti, altrimnti esce.
+E' possibile inserire fino ad un numero di ingredienti fissato nel form. Tutti gli input degli ingredienti hanno il prefisso comune 'ingrediente' e si distinguono per il numero posto dopo (ad es. ingrediente1, ingrediente2...ingrediente10). Un ciclo esamina gli input con numerazione crescente fino a che questi sono istanziati e non vuoti, altrimenti esce.
 
 Esempio di funzione del controller che **inserisce** un oggeto JSON proveniente da un metodo POST:
 ```PHP
