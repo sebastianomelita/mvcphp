@@ -1,6 +1,10 @@
 
 >[Torna a vista](view.md) 
 
+Esempio di vista che realizza il form di aggiornamento di valori e ingredienti di una pizza inviando parametri attraverso il metodo POST. Il form mostra all'utente i campi value preimpostati con i vecchi valori recuperati dal database che vengono rimandati, eventualmente modificati, come parametri POST del form.
+
+Il campo Id_Pizza, è stato aggiunto dinamicamente lato server come campo nascosto. Non viene visualizzato all'utente ma è trasferito come un ulteriore parametro del form. Sarà utilizzato dalla action che serve il form per effettuare l'aggiornamento del record con quell'id utilizzando i valori POST del form. Si tratta di un metodo alternativo alle sessioni per mantenere una informazione di stato tra una richiesta HTTP e l'altra.
+
 ```HTML
 {% extends "base.html" %}
 
