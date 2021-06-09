@@ -1,9 +1,11 @@
 >[Torna a vista](view.md) 
 
+Lettura dell'elenco delle pizze per utenti non registrati che non hanno diritti di modifica o cancellazione:
+
 ```HTML
 {% extends "base.html" %}
 
-{% block title %}Drinks per nome{% endblock %}
+{% block title %}Pizza per nome{% endblock %}
 
 {% block body %}
     <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
@@ -24,7 +26,7 @@
     <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
 {% endblock %}
 ```
-
+Lettura dell'elenco delle pizze per utenti non registrati che posseggono diritti di modifica o cancellazione:
 ```HTML
 {% extends "base.html" %}
 
@@ -55,4 +57,12 @@
     <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
 {% endblock %}
 ```
+Notare l'update ottenuto con un'ancora che si può trasformare esteticamente in un pulsante via CSS. L'ancora richiama la action 
+```PHP 
+/aggiornapizza/{{ pizza.Id_Pizza }}/ 
+``` 
+che prende un parametro in formato REST che rappresenta l'id della pizza da modificare.
+
+Le pizze da cancellare sono selezionate via checkbox. Gli id delle pizze da cancellare sono inviati come parametri POST del form. La action di gestione del form li riconosce tramite il prefisso comune 'pizza'.
+
 >[Torna a vista](view.md) 
