@@ -1,6 +1,6 @@
 
 
-Il **file dell'immagine** viene caricato in una cartella Immagini, scelta da noi, resa raggiungibile dall'estrno mettendola all'interno della **cartella public**.
+Il **file dell'immagine** viene caricato in una cartella Immagini, scelta da noi, resa raggiungibile dall'esterno mettendola all'interno della **cartella public**.
 
 Nel **controller** il file viene letto dal form e caricato nel database:
 ```PHP
