@@ -79,7 +79,7 @@ Nel **controller**, oltre a spostare il **file dell'immagine** nella **cartella 
 	}
 	$id_pizza = Pizza::addPizza($pizza);   // l'id è generato da mysql
 ```	
-La ```loadAndCheckImage()``` se non riesce a caricare il file restituisce stampa un messaggio di errore e rende la stringa nulla.
+La ```loadAndCheckImage()``` se non riesce a caricare il file stampa un messaggio di errore e restituisce false.
 
 Nel **modello** il file viene successivamente letto, al momento della **stampa dell'elenco delle pizze**, quando
 recuperata una riga dal database mediante **```$row = $result->fetch_array(MYSQLI_ASSOC)``**, si compone il dato da visualizzare:
