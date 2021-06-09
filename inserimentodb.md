@@ -1,7 +1,7 @@
 
 >[Torna a Controller](controller.md) 
 
-### **Form di inserimento**
+### **Interpretazione del form di inserimento**
 
 I **dati da visualizzare** nella vista devono essere inseriti **tutti nel modello**. 
 
@@ -28,6 +28,33 @@ Oppure se si sta realizzando un web service ed i parametri provengono da un **og
 
 In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle righe da inserire potevano essere fatte anche tutte nel **modello**.
 
+Esempio di acion che richiama il form di inserimento di una pizza con i suoi ingredienti. Il ciclo 
+```PHP
+for($i=1; $i<11;$i++){
+	$params[$i] = $param.$i;
+}
+```
+costruisce un array associativo con il nome di ciascun input degli ingredienti. Si è scelto **lato server** di inserire nel form un numero fisso di 10 campi di selezione testo di input, inizialmente nascosti, ma che poi sono visualizzati uno alla volta mediante CSS e javascript eseguito **lato client**.
+
+Una alternativa efficace praticabile sarebbe potuta essere quella di costruire dinamicamente i nodi HTML dei campi di selezione nel **lato client** (con codice javascript) lasciando, **lato server**, un form privo di campi di selezione degli ingredienti. 
+
+```PHP
+	public function inseriscipizzaAction(){
+	    $param = "ingrediente";
+	    $params = array();
+	    for($i=1; $i<11;$i++){
+	         $params[$i] = $param.$i;
+	    }
+	    $ingredienti = Pizza::getIngredienti();
+	    
+	    $path = 'Pizza/form_pizza.html';
+	    View::renderTemplate($path, [
+                'params' => $params,
+                'ingredienti' => $ingredienti,
+                'base' => $param
+            ]); 
+	}
+```
 Esempio di funzione del controller che **inserisce** una Pizza (record principale) e tutti i suoi ingredienti (lista di record secondari):
 ```PHP
 public function doInseriscipizza()
