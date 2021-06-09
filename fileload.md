@@ -1,4 +1,10 @@
 
+>[Torna a Controller](controller.md) 
+
+### **Caricamento di un file e suo inserimento nel database**
+
+In realtà il **file** è **caricato** in una **cartella pubblica** mentre **nel database** è inserito il **path** per raggiungerlo dall'esterno.
+
 Dal controller, mediante **inseriscipizzaAction()** viene richiamato dalla vista il form di inserimento dei dati della pizza che, tra gli altri input, contiene quello specifico per realizzare **l'upload di un file**:
 
 ```HTML
