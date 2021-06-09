@@ -28,7 +28,7 @@ Oppure se si sta realizzando un web service ed i parametri provengono da un **og
 
 In realtà, soprattutto nel caso del JSON, le operazioni di composizione delle righe da inserire potevano essere fatte anche tutte nel **modello**.
 
-Esempio di acion che richiama il form di inserimento di una pizza con i suoi ingredienti. Il ciclo 
+Esempio di **action che richiama il form** di inserimento di una pizza con i suoi ingredienti. Il ciclo 
 ```PHP
 for($i=1; $i<11;$i++){
 	$params[$i] = $param.$i;
