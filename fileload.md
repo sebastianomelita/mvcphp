@@ -16,12 +16,12 @@ Nel modello:
 ```PHP
 	// composizione array associativo della vista
 	$pizza = [
-				'Id_Pizza' => $row['Id_Pizza'],
-				'Nome_pizza' => $row['Nome_pizza'],
-				'Img' => $row['Img'],
-				'Costo' => $row['Costo'],
-				'ingredienti' => $pingredienti
-			];
+		'Id_Pizza' => $row['Id_Pizza'],
+		'Nome_pizza' => $row['Nome_pizza'],
+		'Img' => $row['Img'],
+		'Costo' => $row['Costo'],
+		'ingredienti' => $pingredienti
+	];
 ```	
 
 Nella vista:
