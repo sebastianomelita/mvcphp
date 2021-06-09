@@ -63,6 +63,6 @@ Notare l'update ottenuto con un'ancora che si può trasformare esteticamente in 
 ``` 
 che prende un parametro in formato REST che rappresenta l'id della pizza da modificare.
 
-Le pizze da cancellare sono selezionate via checkbox. Gli id delle pizze da cancellare sono inviati come parametri POST del form. La action di gestione del form li riconosce tramite il prefisso comune 'pizza'.
+Le pizze da cancellare si impostano con una selezione multipla via checkbox. Gli id delle pizze da cancellare sono inviati come parametri POST del form. La action di gestione del form li riconosce tramite il prefisso comune 'pizza'.
 
 >[Torna a vista](view.md) 
