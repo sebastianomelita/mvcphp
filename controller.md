@@ -131,7 +131,6 @@ Si noti la la particolarità della **modalità dell’invocazione** dei metodi, 
 - [Form di cancellazione in un database](cancelladb.md) 
 - [Report da DB](controllerdb.md)
 - [Report da webservice](controllerws.md)
-
 - [Form di inserimento con caricamento file](fileload.md)
 
 >[Torna a MVC](mvcindex.md) 
