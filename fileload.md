@@ -82,7 +82,7 @@ Nel **controller**, oltre a spostare il **file dell'immagine** nella **cartella 
 La ```loadAndCheckImage()``` se non riesce a caricare il file stampa un messaggio di errore e restituisce false.
 
 Nel **modello** il file viene successivamente letto, al momento della **stampa dell'elenco delle pizze**, quando
-recuperata una riga dal database mediante **```$row = $result->fetch_array(MYSQLI_ASSOC)``**, si compone il dato da visualizzare:
+recuperata una riga dal database mediante **```$row = $result->fetch_array(MYSQLI_ASSOC)```**, si compone il dato da visualizzare:
 ```PHP
 	// composizione array associativo della vista
 	$pizza = [
