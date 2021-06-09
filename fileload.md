@@ -86,3 +86,5 @@ Nella **vista** viene scritta recuperando il campo del path del file dall'**arra
 ```HTML	
 	<p><img src="{{ pizza.Img }}" width="500"></p>
 ```
+
+Il tag img carica l'immagine direttamente nel client adoperando il path inserito nel segnaposto al momento della creazione della pagina sul server. Il **path** permette di raggiungere, **a partire dal client**, la **risorsa remota sul server** perchè questa è **accessibile** direttamente dall'esterno essendo conservata in una **cartella pubblica**.
