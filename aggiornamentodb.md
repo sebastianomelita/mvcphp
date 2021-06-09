@@ -18,7 +18,7 @@ Ad esempio, gli ingredienti di una pizza potrebbero essere in numero arbitrario 
 1. **iterare sulla lista dei parametri del form** GET o POST che devono essere memorizzati insieme, inserirli nei campi di un oggetto o di un array associativo che **rappresenta il record principale** da memorizzare (riga o tupla).
 2. passare l'array o l'oggetto che rappresentano il record da inserire ad una **funzione del modello** che esegue la **query di aggiornamento** che restituisce l'id della **chiave primaria** eventualmente impostata come autoincrementante.
 3. **iterare sulla lista dei parametri del form** GET o POST che devono essere memorizzati insieme su una tabella collegata alla precedente, inserirli nei campi di un oggetto o di un array associativo che **rappresenta il record secondario** da memorizzare (riga o tupla).
-4. la funzione esegue nel modello una **seconda query di aggiornamento** che, utilizzando come **chiave esterna** l'id del record precedentemente inserito, inserisce, uno ad uno, tutti i record secondari.
+4. una funzione esegue nel modello una **seconda query di aggiornamento** che, utilizzando come **chiave esterna** l'id del record precedentemente inserito, inserisce, uno ad uno, tutti i record secondari.
 
 Oppure se si sta realizzando un web service ed i parametri provengono da un **oggetto JSON**, normalmente, la stringa JSON viene trasformata in un oggetto PHP con il comando **```json_decode($json_str)```**:
 1. l'oggetto json viene potrebbe essere passato alla **funzione del modello** che si occupa della sua memorizzazione in forma persistente  **eseguendo una query di aggiornamento** che restituisce l'id della **chiave primaria** eventualmente impostata come autoincrementante.
