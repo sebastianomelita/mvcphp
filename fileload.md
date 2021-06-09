@@ -2,7 +2,7 @@
 
 Il **file dell'immagine** viene caricato in una cartella Immagini, scelta da noi, resa raggiungibile dall'esterno mettendola all'interno della **cartella public**.
 
-Nel **controller** il file viene letto dal form e caricato nel database:
+Nel **controller** il file viene letto dal form e **caricato nel database**:
 ```PHP
 	$target_file = "";
 	if(isset($_FILES["pizzaimg"])){
@@ -13,8 +13,8 @@ Nel **controller** il file viene letto dal form e caricato nel database:
 	$id_pizza = Pizza::addPizza($pizza);   // l'id è generato da mysql
 ```	
 
-Nel **modello** il file viene successivamente letta, al momento della stampa dell'elenco delle pizze quando
-recuperata una riga dal database mediante ```$row = $result->fetch_array(MYSQLI_ASSOC);``` si compone il dato da visualizzare:
+Nel **modello** il file viene successivamente letto, al momento della **stampa dell'elenco delle pizze**, quando
+recuperata una riga dal database mediante ```$row = $result->fetch_array(MYSQLI_ASSOC)```, si compone il dato da visualizzare:
 ```PHP
 	// composizione array associativo della vista
 	$pizza = [
