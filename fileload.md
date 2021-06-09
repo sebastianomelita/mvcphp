@@ -1,6 +1,6 @@
 
 
-Il **file dell'immagine** viene caricato in una cartella Immagini, scelta da noi, resa raggiungibile dall'esterno mettendola all'interno della **cartella public**.
+Il **file dell'immagine** viene caricato in una cartella Immagini, scelta da noi, reso raggiungibile dall'esterno mettendolo all'interno della **cartella public**.
 
 Nel **controller** la funzione seguente controlla il formato del file e lo carica da una directory temporanea alla destinazione definitiva nella **cartella Immagini** mediante l'istruzione **```move_uploaded_file($_FILES[$fileToUpload]["tmp_name"], $target_file)```**:
 
