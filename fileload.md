@@ -43,7 +43,7 @@ public function loadAndCheckImage($fileToUpload, $target_file)
     }
 ```
 
-Nel **controller** il file viene letto dal form e **caricato nel database**:
+Nel **controller**, oltre a spostare il **file dell'immagine** nella **cartella di pubblicazione**, il **link del file** viene **caricato nel database**:
 ```PHP
 	$target_file = "";
 	if(isset($_FILES["pizzaimg"])){
