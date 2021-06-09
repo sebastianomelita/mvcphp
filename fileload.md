@@ -67,13 +67,19 @@ Nel **controller**, oltre a spostare il **file dell'immagine** nella **cartella 
 ```PHP
 	$target_file = "";
 	if(isset($_FILES["pizzaimg"])){
-		$target_dir = "/b_utente21/mvc/public/Immagini/";
-		$target_file = $target_dir . basename($_FILES["pizzaimg"]["name"]);
-		$this->loadAndCheckImage("pizzaimg", $target_file);
+	    $target_dir = "/var/www/html/b_utente21/mvc/public/Immagini/";
+	    $target_dir2 = "/b_utente21/mvc/public/Immagini/";
+	    $target_file = $target_dir . basename($_FILES["pizzaimg"]["name"]);
+	    $target_file2 = $target_dir2 . basename($_FILES["pizzaimg"]["name"]);
+	    if($this->loadAndCheckImage("pizzaimg", $target_file)){
+		$pizza['Img'] = $target_file2;
+	    }else{
+		 $pizza['Img'] = "";
+	    }
 	}
-	$pizza['Img'] = $target_file;
 	$id_pizza = Pizza::addPizza($pizza);   // l'id è generato da mysql
 ```	
+La ```loadAndCheckImage()``` se non riesce a caricare il file restituisce stampa un messaggio di errore e rende la stringa nulla.
 
 Nel **modello** il file viene successivamente letto, al momento della **stampa dell'elenco delle pizze**, quando
 recuperata una riga dal database mediante **```$row = $result->fetch_array(MYSQLI_ASSOC)``**, si compone il dato da visualizzare:
