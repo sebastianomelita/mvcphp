@@ -8,6 +8,7 @@ Il campo Id_Pizza, è stato aggiunto dinamicamente lato server come campo nascos
 ```HTML
 	<input type="text" name="id_pizza" id="id_pizza" value="{{ pizza.Id_Pizza }}" hidden>
 ```
+Di seguito è riportato il form completo:
 
 ```HTML
 {% extends "base.html" %}
