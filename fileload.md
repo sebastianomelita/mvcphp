@@ -1,4 +1,18 @@
 
+Dal controller, mediante **inseriscipizzaAction()** viene richiamato dalla vista il form di inserimento dei dati della pizza che, tra gli altri input, contiene quello specifico per realizzare **l'upload di un file**:
+
+```HTML
+ <form action="/b_utente21/mvc/public/pizze/do-inseriscipizza/" name="Pizze_Form" method="post" enctype="multipart/form-data">
+	<div>
+		<label for="nome" >Nome: </label>
+		<input name="nome" type="text" id="nome"><br>
+		<label for="costo" >Costo: </label>
+		<input name="costo" type="text" id="costo"><br>
+		<label for="fileToUpload" >Seleziona l'immagine da caricare: </label>
+		<input type="file" name="pizzaimg" id="pizzaimg"><br/>
+	</div>
+
+```
 
 Il **file dell'immagine** viene caricato in una cartella Immagini, scelta da noi, reso raggiungibile dall'esterno mettendolo all'interno della **cartella public**.
 
