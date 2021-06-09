@@ -35,9 +35,6 @@ for($i=1; $i<11;$i++){
 }
 ```
 costruisce un array associativo con il nome di ciascun input degli ingredienti. Si è scelto **lato server** di inserire nel form un numero fisso di 10 campi di selezione testo di input, inizialmente nascosti, ma che poi sono visualizzati uno alla volta mediante CSS e javascript eseguito **lato client**.
-
-Una alternativa efficace praticabile sarebbe potuta essere quella di costruire dinamicamente i nodi HTML dei campi di selezione nel **lato client** (con codice javascript) lasciando, **lato server**, un form privo di campi di selezione degli ingredienti. 
-
 ```PHP
 	public function inseriscipizzaAction(){
 	    $param = "ingrediente";
@@ -55,6 +52,8 @@ Una alternativa efficace praticabile sarebbe potuta essere quella di costruire d
             ]); 
 	}
 ```
+Una alternativa efficace praticabile sarebbe potuta essere quella di costruire dinamicamente i nodi HTML dei campi di selezione nel **lato client** (con codice javascript) lasciando, **lato server**, un form privo di campi di selezione degli ingredienti. 
+
 Esempio di funzione del controller che **inserisce** una Pizza (record principale) e tutti i suoi ingredienti (lista di record secondari):
 ```PHP
 public function doInseriscipizza()
