@@ -11,6 +11,7 @@ $target_file = "";
 ```	
 
 Nel modello:
+recuperata una riga dal database mediante ```$row = $result->fetch_array(MYSQLI_ASSOC);```:
 ```PHP
 	// composizione array associativo della vista
 	$pizza = [
