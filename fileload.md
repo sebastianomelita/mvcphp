@@ -1,13 +1,11 @@
 
+
 Nel controller:
 ```PHP
 $target_file = "";
 	if(isset($_FILES["pizzaimg"])){
-		$target_dir = "/var/www/html/b_utente21/mvc/public/Immagini/";
 		$target_dir2 = "/b_utente21/mvc/public/Immagini/";
-		$target_file = $target_dir . basename($_FILES["pizzaimg"]["name"]);
 		$target_file2 = $target_dir2 . basename($_FILES["pizzaimg"]["name"]);
-		$this->checkImage("pizzaimg", $target_file);
 	}
 	$pizza['Img'] = $target_file2;
 ```	
