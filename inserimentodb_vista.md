@@ -72,7 +72,6 @@ che costruisce un array associativo con il nome di ciascun input degli ingredien
 	<a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
 {% endblock %}
 
-Inizialmente il listener è sul select numero 1 ma poi, ad ogni pressione del pulsante '+' dell'ultimo select, viene reso visibile il select successivo e l'evento lettura pressione pulsante viene trasferito su di esso.
-
 ```
+Inizialmente il listener è sul select numero 1 ma poi, ad ogni pressione del pulsante '+' dell'ultimo select, viene reso visibile il select successivo e l'evento lettura pressione pulsante viene trasferito su di esso.
 >[Torna a vista](view.md) 
