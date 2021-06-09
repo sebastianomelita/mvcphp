@@ -8,10 +8,11 @@ Nel controller:
 		$target_file = $target_dir . basename($_FILES["pizzaimg"]["name"]);
 	}
 	$pizza['Img'] = $target_file;
+	$id_pizza = Pizza::addPizza($pizza);   // l'id è generato da mysql
 ```	
 
-Nel modello:
-recuperata una riga dal database mediante ```$row = $result->fetch_array(MYSQLI_ASSOC);```:
+Nel modello viene successivamente letta, al momento della stampa dell'elenco delle pizze quando
+recuperata una riga dal database mediante ```$row = $result->fetch_array(MYSQLI_ASSOC);``` si compone il dato da visualizzare:
 ```PHP
 	// composizione array associativo della vista
 	$pizza = [
@@ -23,7 +24,7 @@ recuperata una riga dal database mediante ```$row = $result->fetch_array(MYSQLI_
 	];
 ```	
 
-Nella vista:
+Nella vista viene scritta recuperando il campo dell'array associativo nel template Twig:
 ```HTML	
 	<p><img src="{{ pizza.Img }}" width="500"></p>
 ```
