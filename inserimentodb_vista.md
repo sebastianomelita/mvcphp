@@ -7,7 +7,7 @@ for($i=1; $i<11;$i++){
 	$params[$i] = $param.$i;
 }
 ```
-che costruisce un array associativo con il nome di ciascun input degli ingredienti. Si è scelto **lato server** di inserire nel form un numero fisso di 10 campi di selezione testo di input, inizialmente nascosti, ma che poi sono visualizzati uno alla volta mediante CSS e javascript eseguito **lato client**.
+che costruisce un array associativo con il nome di ciascun input degli ingredienti. Si è scelto **lato server** di inserire nel form un numero fisso di campi di selezione testo di input, inizialmente nascosti, ma che poi sono visualizzati uno alla volta mediante CSS e javascript eseguito **lato client**.
 
 ```HTML
 
