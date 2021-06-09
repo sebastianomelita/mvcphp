@@ -8,6 +8,7 @@ Nel **controller** il file viene letto dal form e **caricato nel database**:
 	if(isset($_FILES["pizzaimg"])){
 		$target_dir = "/b_utente21/mvc/public/Immagini/";
 		$target_file = $target_dir . basename($_FILES["pizzaimg"]["name"]);
+		$this->loadAndCheckImage("pizzaimg", $target_file);
 	}
 	$pizza['Img'] = $target_file;
 	$id_pizza = Pizza::addPizza($pizza);   // l'id è generato da mysql
