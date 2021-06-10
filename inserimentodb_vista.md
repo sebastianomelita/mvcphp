@@ -74,4 +74,28 @@ che costruisce un array associativo con il nome di ciascun input degli ingredien
 
 ```
 Inizialmente il listener è sul select numero 1 ma poi, ad ogni pressione del pulsante '+' dell'ultimo select, viene reso visibile il select successivo e l'evento lettura pressione pulsante viene trasferito su di esso.
+
+Di seguito è riportato il form di inserimento di un singolo ingrediente. Ogni inserimento allunga la lista degli ingredienti che è possibile selezionare dal menù a tendina del form di inserimento delle pizze alla voce ingredienti.
+```PHP
+{% extends "base.html" %}
+
+{% block title %}Pizze{% endblock %}
+
+{% block body %}
+    <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
+    <h2>Inserisci ingredienti</h2>
+    <form action="/b_utente21/mvc/public/pizze/do-inserisciingrediente/" method="post" name="ingredienti_Form">
+			<div>
+				<label for="nome" >Nome: </label>
+				<input name="nome" type="text" id="nome"><br>
+				<label for="surgelato" >E' surgelato: </label>
+				<input type="checkbox" name="surgelato" value=0/><br/>
+			</div>
+			<br/>
+			<button name="submit" value="submit"  type="Submit">Submit</button>
+		</form>
+		<a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
+{% endblock %}
+```
+
 >[Torna a vista](view.md) 
