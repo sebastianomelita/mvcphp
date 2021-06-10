@@ -112,25 +112,5 @@ static function validate_ingrediente(&$err,$ingrediente){
    return $ok;
 }
 ```
-```PHP
-{% extends "base.html" %}
 
-{% block title %}Pizze{% endblock %}
-
-{% block body %}
-    <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
-    <h2>Inserisci ingredienti</h2>
-    <form action="/b_utente21/mvc/public/pizze/do-inserisciingrediente/" method="post" name="ingredienti_Form">
-			<div>
-				<label for="nome" >Nome: </label>
-				<input name="nome" type="text" id="nome"><br>
-				<label for="surgelato" >E' surgelato: </label>
-				<input type="checkbox" name="surgelato" value=0/><br/>
-			</div>
-			<br/>
-			<button name="submit" value="submit"  type="Submit">Submit</button>
-		</form>
-		<a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
-{% endblock %}
-```
 >[Torna a modello](model.md) 
