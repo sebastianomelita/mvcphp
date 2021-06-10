@@ -27,7 +27,9 @@ static function addPizza($pizza)
 	}
 	return $id;
 }
-	
+```
+Prima di effettuare l'inserimento è meglio vedere se già c'è un record con lo stesso nome per evitare duplicati. Non è sempre necessario ma, in questo caso, il nome della pizza è effettivamente una **chiave candidata**.
+```PHP
 static function validate_pizza(&$err,$pizza){
 	$ok=false;
 	$db = static::getDB();
@@ -79,7 +81,9 @@ static function addIngredientePizza($id_pizza, $ing)
         $stmt->close();
         return $id;
 }
-	
+```
+Prima di effettuare l'inserimento è meglio vedere se già c'è un record con lo stesso nome per evitare duplicati. Non è sempre necessario ma, in questo caso, il nome dell'ingrediente è anche in questo caso una **chiave candidata**.
+```PHP	
 static function validate_ingrediente(&$err,$ingrediente){
 	$ok=false;
 	$db = static::getDB();
