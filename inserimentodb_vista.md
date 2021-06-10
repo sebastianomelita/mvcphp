@@ -76,7 +76,7 @@ che costruisce un array associativo con il nome di ciascun input degli ingredien
 Inizialmente il listener è sul select numero 1 ma poi, ad ogni pressione del pulsante '+' dell'ultimo select, viene reso visibile il select successivo e l'evento lettura pressione pulsante viene trasferito su di esso.
 
 Di seguito è riportato il form di inserimento di un singolo ingrediente. Ogni inserimento allunga la lista degli ingredienti che è possibile selezionare dal menù a tendina del form di inserimento delle pizze alla voce ingredienti.
-```PHP
+```HTML
 {% extends "base.html" %}
 
 {% block title %}Pizze{% endblock %}
