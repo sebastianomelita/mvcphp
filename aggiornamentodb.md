@@ -101,7 +101,7 @@ public function doAggiornapizza()
 }
 ```
 
-In realtà nel'esempio, per semplificare le operazioni, si è scelto di non eseguire l'aggiornamento selettivo dei soli ingredienti modificati ma di procedere, in maniera più drastica, alla loro cancellazione prima di reinserire quelli contenuti nel form.
+In realtà nel'esempio, per semplificare le operazioni, si è scelto di non eseguire l'aggiornamento selettivo dei soli ingredienti modificati ma di procedere, in maniera più drastica, alla cancellazione di **tutti** quelli di una certa pizza prima di reinserire quelli aggiornati contenuti nel form.
 
 Si poteva procedere facendo delle query di aggiornamento applicate a tutti gli ingredienti, cioè sia ai record modificati che a quelli modificati.
 
