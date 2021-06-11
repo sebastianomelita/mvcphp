@@ -103,8 +103,12 @@ public function listapizzeAction()
         ]);  
 }
 ```
-Il risultato è una pagina HTML che stampa l'elenco di tutte le pizze con nome, foto, dettagli della pizza e lista degli ingredienti di ciascuna.
+Il risultato è una pagina HTML che stampa l'elenco di tutte le pizze con nome, foto, dettagli della pizza e lista degli ingredienti di ciascuna. La lista dei dati è recuperata **dal modello** con ```Pizza::getPizze()``` ed è passata al template nel formato richiesto per il passaggio, cioè  includendola nell'array associativo 
 ```PHP 
-
+[
+    'pizze' => $pizze
+]
 ```
+L'array associativo possiede una **struttura ad albero** che combacia con quella del DOM della pagina da visualizzare, in maniera tale che, leggendo nodo per nodo l'array, si riempie, elemento per elemento, il template HTML della pagina.
+
 >[Torna a Controller](controller.md)
