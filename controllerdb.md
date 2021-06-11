@@ -91,5 +91,16 @@ class Users extends \Core\Controller
     }
 }
 ```
+la **rotta** ```pizze/listapizze/```, individuata nella richiesta HTTP, invoca il **metodo** ```listapizzeAction()``` dell'**oggetto** ```Pizze``` instanziato al volo (dinamicamente) al momento dell'arrivo della richiesta:
 
+```PHP 
+public function listapizzeAction()
+{
+	$pizze = Pizza::getPizze();
+        $path = 'Pizza/listapizze'.$_SESSION['level'].'.html';
+        View::renderTemplate($path, [
+            'pizze' => $pizze
+        ]);  
+}
+```
 >[Torna a Controller](controller.md)
