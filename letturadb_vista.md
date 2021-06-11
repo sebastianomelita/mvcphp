@@ -8,7 +8,7 @@ La lista dei dati Ã¨ recuperata **dal modello** con ```Pizza::getPizze()``` ed Ã
     'pizze' => $pizze
 ]
 ```
-L'array associativo possiede una **struttura ad albero** che combacia con quella del DOM della pagina da visualizzare, in maniera tale che, leggendo nodo per nodo l'array, si riempie, elemento per elemento, il template HTML della pagina.
+L'array associativo possiede una **struttura ad albero** che combacia con quella del DOM della pagina da visualizzare, in maniera tale che, leggendo nodo per nodo l'array, si riempie, elemento per elemento, il template HTML della pagina:
 
 ```HTML
 {% extends "base.html" %}
