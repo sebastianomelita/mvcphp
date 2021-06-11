@@ -91,7 +91,7 @@ class Users extends \Core\Controller
     }
 }
 ```
-la **rotta** ```pizze/listapizze/```, individuata nella richiesta HTTP, invoca il **metodo** ```listapizzeAction()``` dell'**oggetto** ```Pizze``` instanziato al volo (dinamicamente) al momento dell'arrivo della richiesta:
+La **rotta** ```pizze/listapizze/```, individuata nella richiesta HTTP, invoca il **metodo** ```listapizzeAction()``` dell'**oggetto** ```Pizze``` instanziato al volo (dinamicamente) al momento dell'arrivo della richiesta:
 
 ```PHP 
 public function listapizzeAction()
@@ -102,5 +102,9 @@ public function listapizzeAction()
             'pizze' => $pizze
         ]);  
 }
+```
+Il risultato è una pagina HTML che stampa l'elencodi tutte le pizze con nome, foto, dettagli della pizza e lista degli ingredienti di ciascuna.
+```PHP 
+
 ```
 >[Torna a Controller](controller.md)
