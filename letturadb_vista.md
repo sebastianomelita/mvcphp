@@ -1,6 +1,14 @@
 >[Torna a vista](view.md) 
 
-Lettura dell'elenco delle pizze per utenti non registrati che non hanno diritti di modifica o cancellazione:
+Lettura dell'elenco delle pizze per utenti non registrati che non hanno diritti di modifica o cancellazione.
+
+La lista dei dati è recuperata **dal modello** con ```Pizza::getPizze()``` ed è passata al template nel formato richiesto per il passaggio, cioè  includendola nell'array associativo 
+```PHP 
+[
+    'pizze' => $pizze
+]
+```
+L'array associativo possiede una **struttura ad albero** che combacia con quella del DOM della pagina da visualizzare, in maniera tale che, leggendo nodo per nodo l'array, si riempie, elemento per elemento, il template HTML della pagina.
 
 ```HTML
 {% extends "base.html" %}
