@@ -29,7 +29,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 ![redis](redis.jpg)
 
-Il **tracciamento** degli accessi non sempre ha una connotazione negativa. Esso è necessario per realizzare la gestione dello stato di una navigazione tra pagine che sono correlate in qualche modo, cioè la gestione della cosiddetta sessione di una **applicazione web** (client/server). 
+Il **tracciamento** degli accessi non sempre ha una connotazione negativa. Esso è necessario per realizzare la gestione dello **stato della navigazione** tra pagine che sono correlate in qualche modo, cioè la gestione della cosiddetta sessione di una **applicazione web** (client/server). 
 
 Il nodo cruciale è la **privatezza** di queste informazioni.
 Nella gestione delle **sessioni propriamente dette** essa è abbastanza elevata perché le associazioni tra clientID e risorse utilizzate sono su un file all’interno del server che crea le pagine web dinamiche e sono di norma direttamente accessibili solo da quelle pagine che accedono alla risorsa. Un accesso indiretto, da parte di altre pagine dinamiche, o da parte da altre applicazioni, comporta in qualche modo la **violazione** delle **misure di sicurezza** a protezione del **server**.
