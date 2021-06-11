@@ -103,7 +103,7 @@ public function listapizzeAction()
         ]);  
 }
 ```
-Il risultato è una pagina HTML che stampa l'elencodi tutte le pizze con nome, foto, dettagli della pizza e lista degli ingredienti di ciascuna.
+Il risultato è una pagina HTML che stampa l'elenco di tutte le pizze con nome, foto, dettagli della pizza e lista degli ingredienti di ciascuna.
 ```PHP 
 
 ```
