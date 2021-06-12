@@ -65,7 +65,7 @@ Lettura dell'elenco delle pizze per utenti non registrati che posseggono diritti
     <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
 {% endblock %}
 ```
-Notare l'update ottenuto con un'ancora che si può trasformare esteticamente in un pulsante via CSS. L'ancora richiama la action 
+Notare che l'**update** è ottenuto con un'ancora che si può trasformare esteticamente in un **pulsante** via CSS. L'ancora richiama la action 
 ```PHP 
 /aggiornapizza/{{ pizza.Id_Pizza }}/ 
 ``` 
