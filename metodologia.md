@@ -28,8 +28,8 @@ Una volta stabiliti i requisiti funzionali si può pensare di progettare un’in
 Una volta sottomessi **il modello di interazione** con cui si possono scambiare i dati è generalmente di **due tipi**:
 
    -	**Richiesta/risposta**. Viene inviata una richiesta http in seguito alla quale viene ricevuta dal server una risposta che può essere o un’altra pagina web o una informazione in formato JSON da utilizzare in seno alla pagina aggiornandola (mediante azione del javascript sul DOM della pagina).
-   -	**Pubblicazione/Sottoscrizione**. Sono possibili due ruoli per la pagina di essere un client (spesso assunti insieme):
-        -	**Publisher**. Pubblica informazioni che devono aggiornare lo stato del server in particolare ma di tutti i client subscriber in generale.
+   -	**Pubblicazione/Sottoscrizione**. Sono possibili due ruoli per una pagina client (spesso assunti insieme):
+        -	**Publisher**. Colui che pubblica informazioni che devono essere smistate a tutti client subscriber.
         - **Subscriber**. Riceve notifica asincrona (in istanti non prevedibili) di dati che possono modificare lo stato o il contenuto delle informazioni visualizzate dalla pagina.
      
 Entrambi i **modelli di interazione web** possono essere svolti in modalità SPA (Single Page Application) utilizzando plugins Javascript e protocolli opportuni.
