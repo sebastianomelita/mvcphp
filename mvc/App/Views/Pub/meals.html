@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Piatti per nome{% endblock %}
+
+{% block body %}
+    <h1>Il pub di Alex</h1>
+    <a href='/b_utente21/mvc/public/pubs/mealsmenu/'>Torna indietro</a>
+    {% for meal in meals %}
+        <h2>{{ meal.mealTitle }}</h2>
+        <p><img src="{{ meal.mealImg }}" width="500"></p>
+        <ol>
+            {% for mealIngredient in meal.mealIngredients %}
+                <li>{{ mealIngredient }}</li>
+            {% endfor %}
+        </ol>  
+    {% endfor %}
+    <a href='/b_utente21/mvc/public/pubs/mealsmenu/'>Torna indietro</a>
+{% endblock %}

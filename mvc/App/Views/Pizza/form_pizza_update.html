@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Pizze{% endblock %}
+
+{% block body %}
+    <a href='/b_utente21/mvc/public/pizze/listapizze/'>Torna indietro</a>
+    <br>
+    <h2>Modifica pizza</h2>
+    <form action="/b_utente21/mvc/public/pizze/do-aggiornapizza/" name="Pizze_Form" method="post" enctype="multipart/form-data">
+		<div>
+			<label for="nome" >Nome: </label>
+			<input name="nome" type="text" id="nome" value="{{ pizza.Nome_pizza }}"><br>
+			<label for="costo" >Costo: </label>
+			<input name="costo" type="text" id="costo" value="{{ pizza.Costo }}"><br>
+			<label for="peso" >Peso: </label>
+			<input name="peso" type="text" id="peso" value="{{ pizza.PesoPizza }}"><br>
+			<label for="celiaci" >E' per celiaci: </label>
+			<input type="checkbox" name="celiaci" value="{{ pizza.Adatta_Celiaci }}"/><br/>
+			<label for="lattosio" >E' per intolleranti al lattosio: </label>
+			<input type="checkbox" name="lattosio" value="{{ pizza.Adatta_IntolleantiLattosio }}"/><br/>
+		    <label for="fileToUpload" >Seleziona l'immagine da caricare: </label>
+			<input type="file" name="pizzaimg" id="pizzaimg" value="{{ pizza.Img }}"><br/>
+			<input type="text" name="id_pizza" id="id_pizza" value="{{ pizza.Id_Pizza }}" hidden>
+			<input type="text" name="img" id="img" value="{{ pizza.Img }}" hidden>
+		</div>
+		</br>
+		<div>
+	    {% for param in params %}
+	        <div name="{{ param.value }}_div" id="{{ param.value }}_div" hidden>
+			    <label for="{{ param.value }}" >{{ param.value }}: </label>
+    			<select name="{{ param.value }}" id="{{ param.value }}" >
+    			    {% for ingrediente in param.ingredienti %} 
+                        <option value="{{ ingrediente.Id_Ingrediente }}" {{ ingrediente.Checked }}>{{ ingrediente.Nome }}</option>
+                    {% endfor %}
+                </select><br>
+                <label  for="{{ param.value }}_quantita" >Quantità: </label >
+                <input name="{{ param.value }}_quantita" type="text" id="{{ param.value }}_quantita" value="{{ param.quantita }}">
+                <input name="{{ param.value }}_add" type="button" id="{{ param.value }}_add" value="+" >
+            </div>
+		{% endfor %}
+		<br/>
+		<button name="Submit" value="Login"  type="submit">Submit</button>
+	</form>
+	<script>
+	    var i = 0;
+	    function plus(){
+	        i++;
+	        var ing = '{{ base }}';
+	        var str = ing+String(i);
+	        var str2 = str+"_add";
+	        var str3 = str+"_quantita";
+	        document.getElementById(str+"_div").removeAttribute("hidden");
+	        act.removeEventListener('click', plus);
+	        act = document.getElementById(str2);
+	        act.addEventListener('click', plus, false);
+	        return document.getElementById(str3).value > 0; 
+	    }
+	    var act = document.getElementById("ingrediente1_add");
+	    while(plus());
+	 	act.addEventListener('click', plus, false);
+	</script>
+	<br>
+	<a href='/b_utente21/mvc/public/pizze/listapizze/'>Torna indietro</a>
+{% endblock %}

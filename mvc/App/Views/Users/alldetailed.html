@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Dettaglio utente {% endblock %}
+
+{% block body %}
+
+    <h2>Dettaglio utente <?php echo $username ?></h2> 
+	<table>
+        {% for row in rows %}
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.username }}</td>
+                <td>{{ row.password }}</td>
+                <td>{{ row.created_at }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href='/b_utente21/mvc/public/Home/index/'>Torna indietro</a>
+
+{% endblock %}

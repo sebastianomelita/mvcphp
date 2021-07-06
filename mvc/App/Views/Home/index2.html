@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Pagina 1{% endblock %}
+
+{% block body %}
+
+    <h1>Lista utenti</h1>
+    <p>Livello completo, {{ name }}!</p>
+    
+    <h2>Gestione utenti</h2>
+    <ul>
+        <li><a href='/b_utente21/mvc/public/Users/allusers/'>Lista utenti</a></li>
+        <li><a href='/b_utente21/mvc/public/Users/oneuser/'>Dettaglio utente</a></li>
+        <li><a href='/b_utente21/mvc/public/Users/detail/'>Tutto su utenti</a></li>
+    </ul>
+    <h2>Servizi offerti</h2>
+    <ul>
+        <li><a href='/b_utente21/mvc/public/animals/zoo/'>Animali</a></li>
+        <li><a href='/b_utente21/mvc/public/pubs/portatedelgiorno/'>Portata del giorno</a></li>
+        <li><a href='/b_utente21/mvc/public/pubs/drinksmenu/'>Drink per nome</a></li>
+        <li><a href='/b_utente21/mvc/public/pubs/mealsmenu/'>Pasto per nome</a></li>
+    </ul>
+    <h2>Pizzeria di Alex</h2>
+    <ul>
+        <li><a href='/b_utente21/mvc/public/pizze/inserisciingrediente/'>Inserisci un nuovo ingrediente</a></li>
+        <li><a href='/b_utente21/mvc/public/pizze/inseriscipizza/'>Inserisci una nuova pizza</a></li>
+        <li><a href='/b_utente21/mvc/public/pizze/listapizze/'>Vedi catalogo delle pizze</a></li>
+    </ul>
+    <a href='/b_utente21/mvc/public/logins/logout/'>Logout</a>
+{% endblock %}

@@ -1,0 +1,22 @@
+<html>
+<head>    
+<title>Register</title></head>
+<body>
+<form action='/b_utente21/mvc/public/logins/do-register/' method="post" name="Login_Form">
+        <h2 >Please Register</h2>
+        <label for="username" >Username</label>
+        <input name="username" type="username" id= " username"  placeholder="username" required autofocus>
+        <label for="password">Password</label>
+        <input name="password" type="password" id="password"  placeholder="password" required>
+		<label for="confirmPassword">Confirm password</label>
+		<input name="confirm_password" type="password" id="confirm_password"  placeholder="Confirm password" required></br>
+		<label for="authlevel">Auth level</label>
+        <select name="authlevel" id="authlevel">
+          <option value="0">Livello base</option>
+          <option value="1">Livello medio</option>
+          <option value="2">Livello alto</option>
+        </select>
+        <button name="submit" value="Login"  type="submit">Sign in</button>
+</form>
+</body>
+</html>

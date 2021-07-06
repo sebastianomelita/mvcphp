@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Dettaglio utente {% endblock %}
+
+{% block body %}
+
+    <h2>Dettaglio utente {{ row.username }}</h2> 
+    <p>{{ row.id }}</p>
+    <p>{{ row.username }}</p>
+    <p>{{ row.password }}</p>
+    <p>{{ row.created_at }}</p>
+    
+    <a href='/b_utente21/mvc/public/Home/index/'>Torna indietro</a>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Piatti per nome{% endblock %}
+
+{% block body %}
+    <h1>Scegli i piatti</h1>
+
+    <p>
+        {% for letter in range %}
+            <a href='/b_utente21/mvc/public/Pubs/meal/{{letter}}/'>[{{ letter}}]</a>
+        {% endfor %}
+    </p>
+    <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
+{% endblock %}

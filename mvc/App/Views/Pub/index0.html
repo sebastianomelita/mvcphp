@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Portata del giorno{% endblock %}
+
+{% block body %}
+    <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
+    <h1>Il pub di Alex</h1>
+    <h2>{{ drink.drinkTitle }}</h2>
+    <p><img src="{{ drink.drinkImg }}" width="500"></p>
+    <ol>
+        {% for drinkIngredient in drink.drinkIngredients %}
+            <li>{{ drinkIngredient }}</li>
+        {% endfor %}
+    </ol>  
+    <a href='/b_utente21/mvc/public/home/index/'>Torna indietro</a>
+{% endblock %}

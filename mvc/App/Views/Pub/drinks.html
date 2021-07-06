@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Drinks per nome{% endblock %}
+
+{% block body %}
+    <h1>Il pub di Alex</h1>
+    <a href='/b_utente21/mvc/public/pubs/drinksmenu/'>Torna indietro</a>
+    {% for drink in drinks %}
+        <h2>{{ drink.drinkTitle }}</h2>
+        <p><img src="{{ drink.drinkImg }}" width="500"></p>
+        <ol>
+            {% for drinkIngredient in drink.drinkIngredients %}
+                <li>{{ drinkIngredient }}</li>
+            {% endfor %}
+        </ol>  
+    {% endfor %}
+    <a href='/b_utente21/mvc/public/pubs/drinksmenu/'>Torna indietro</a>
+{% endblock %}
