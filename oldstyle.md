@@ -11,7 +11,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 <img src="cookie.png" width="500">
 
 **L’associazione** tra clientID e la risorsa può essere **memorizzata**:
-1.	Sul **client**, in questo caso viene memorizzata **insieme al cookie** che identifica il browser dell’utente. Ad esempio, in javacript ciò si può fare con la funzione **window.localStorage**.
+1.	Sul **client**, in questo caso viene memorizzata **insieme al cookie** che identifica il browser dell’utente. Ad esempio, in javascript ciò si può fare con la funzione **window.localStorage**.
 2.	Sul **server** dell’applicazione, in questo caso viene memorizzata **su un file** del modulo che genera le pagine lato server (PHP, Python, ecc.). Sono le **sessioni** propriamente dette.
 
 ![session](session-php.gif)
