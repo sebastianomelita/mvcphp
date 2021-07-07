@@ -15,7 +15,7 @@ Un **microservizio** restituisce il **risultato** sotto forma di stringa **JSON*
 I servizi vengono **aggregati sul client**: 
 -	la **selezione** delle informazioni provenienti dai vari JSON che la realizzazione del loro inserimento all’interno della pagina HTML avviene sul client.
 -	Esiste il **vincolo** che i servizi devono provenire dallo stesso dominio per evitare attacchi XSS
--	Anche se si possono aggregare tutte, le informazioni che servono in genere sono poche.  Le altre informazioni devono comunque essere caricate determinando una **maggior lentezza** dell’applicazione.
+-	Anche quando le informazioni si **aggregano tutte**, le informazioni che realmente servono in genere sono poche. Le altre informazioni **non necessarie**, dovendo essere caricate comunque, determinano una **maggior lentezza** dell’applicazione.
 -	E’ un approccio **fat client** che può fornire supporto soltanto ad applicazioni mobili o web di tipo SPA (Single Page Application)
  
  ![gatewaymicro](gatewaymicro.png)
