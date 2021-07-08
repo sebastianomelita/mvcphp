@@ -50,7 +50,7 @@ Ciò può accadere durante una **stessa sessione** di navigazione perchè:
 
 Occorre rimarcare che, **in generale**, gestire una **autorizzazione** rilasciata dal server per accedere ad una risorsa da lui offerta usando una **soluzione memorizzata sul client** quale, ad esempio, i **localstorage** o i **campi hidden** non ha lo stesso **livello di sicurezza** delle **sessioni** o di una qualsivoglia **memorizzazione sul server** (tipo redis o memcached). 
 
-Il server può essere protetto **direttamente dall'azienda** con un livello di protezione scalabile a piacimento e **commisurato** all'importanza delle autorizzazioni concesse. Un **browser aggiornato** garantisce un livello di isolamento dei dati elevato ma è un luogo comunque **esterno** al perimetro aziendale. 
+Il **server** può essere protetto **direttamente dall'azienda** con un livello di protezione scalabile a piacimento e **commisurato** all'importanza delle autorizzazioni concesse. Un **browser aggiornato** garantisce un livello di isolamento dei dati elevato ma è un luogo comunque **esterno** al perimetro aziendale. 
 
 Un possibile **problema di sicurezza** potrebbe consistere nella **modifica o la falsificazione** di una autorizzazione memorizzata sul client. Una **possibile soluzione** potrebbe essere salvare l'autorizzazione sul client sotto forma di **ticket**, ossia una informazione **firmata o cifrata dal server**: al momento della richiesta di accesso alla risorsa da parte del client (mediante un webservice), il server **controlla la firma** e, se la riconosce, autorizza l'accesso alla risorsa. 
 
