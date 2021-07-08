@@ -52,7 +52,7 @@ Occorre rimarcare che, **in generale**, gestire una autorizzazione rilasciata da
 
 Il server può essere protetto **direttamente dall'azienda** con un livello di protezione scalabile a piacimento e **commisurato** all'importanza delle autorizzazioni concesse. Un **browser aggiornato** garantisce un livello di isolamento dei dati elevato ma è un luogo comunque **esterno** al perimetro aziendale. 
 
-Un possibile **problema di sicurezza** potrebbe consistere nella **modifica o la falsificazione** di una autorizzazione memorizzata sul client. Una **possibile soluzione** potrebbe essere salvare l'autorizzazione sul client sotto forma di **ticket**, ossia una informazione **firmata o cifrata dal server**. Al momento della richiesta di accesso alla risorsa da parte del client (mediante un webservice), il server **controlla la firma** e, se la riconosce, autorizza l'accesso alla risorsa. 
+Un possibile **problema di sicurezza** potrebbe consistere nella **modifica o la falsificazione** di una autorizzazione memorizzata sul client. Una **possibile soluzione** potrebbe essere salvare l'autorizzazione sul client sotto forma di **ticket**, ossia una informazione **firmata o cifrata dal server**: al momento della richiesta di accesso alla risorsa da parte del client (mediante un webservice), il server **controlla la firma** e, se la riconosce, autorizza l'accesso alla risorsa. 
 
 **Ad esempio**, Nonostante l'elaborazione di un dato cifrato sul client sia **più onerosa** in termini di velocità a quella di un dato in chiaro sul server,  questa è comunque la strategia adottata dal protocollo di autenticazione per webservice **JWT**.
 
