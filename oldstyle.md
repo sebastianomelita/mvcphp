@@ -10,7 +10,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 <img src="cookie.png" width="500">
 
-**L’associazione** tra clientID e la risorsa rappresenta l'**autorizzazione all'accesso** concessa del server al client e può essere **memorizzata**:
+**L’associazione** tra clientID e la risorsa rappresenta l'**autorizzazione** concessa del server al client per accedere alla risorsa e può essere **memorizzata**:
 1.	Sul **client**, in questo caso viene memorizzata **insieme al cookie** che identifica il browser dell’utente. Ad esempio, con un comando **lato client** in javascript ciò può essere fatto con la funzione **window.localStorage**, con un comando **lato server** in PHP ciò può essere fatto con la funzione **setcookie()**.
 2.	Sul **server** dell’applicazione, in questo caso viene memorizzata **su un file** del modulo che genera le pagine lato server (PHP, Python, ecc.). Sono le **sessioni** propriamente dette. **Il clientID**, analogo al bigliettino di un guaradaroa, è sempre memorizzato in un **cookie** sul browser del client. L'**autorizzazione**, con il **livello** associato a quell'iD, è invece memorizzata  in una **struttura dati sul server** in cui la **chiave di ricerca** è proprio il ClientID che viene **ricevuto** dal server insieme al cookie contenuto nella **richiesta HTTP** della risorsa.
 
