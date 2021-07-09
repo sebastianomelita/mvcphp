@@ -52,6 +52,8 @@ Ciò può accadere durante una **stessa sessione** di navigazione perchè:
 
 ## **Sicurezza delle varie tecniche**
 
+Dal punto di vista della **sicurezza** memorizzare un'**autorizzazione di accesso** ad una risorsa sensibile (al limte la stessa autenticazione al sito) non è la stessa cosa che memorizzare **dati provvisori di navigazione**, anche se la loro **privacy** va comunque attentamente valutata.
+
 Occorre rimarcare che, **in generale**, gestire una **autorizzazione** rilasciata dal server per accedere ad una risorsa da lui offerta usando una **soluzione memorizzata sul client** quale, ad esempio, i **localstorage** o i **campi hidden** non ha lo stesso **livello di sicurezza** delle **sessioni** o di una qualsivoglia **memorizzazione sul server** (tipo redis o memcached). 
 
 Il **server** può essere protetto **direttamente dall'azienda** con un livello di protezione scalabile a piacimento e **commisurato** all'importanza delle autorizzazioni concesse. Un **browser aggiornato** garantisce un livello di isolamento dei dati elevato ma è un luogo comunque **esterno** al perimetro aziendale. 
