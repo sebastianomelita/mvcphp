@@ -62,6 +62,6 @@ Un possibile **problema di sicurezza** potrebbe consistere nella **modifica o la
 
 **Ad esempio**, nonostante l'elaborazione di un dato cifrato sul client sia **più onerosa** in termini di velocità a quella di un dato in chiaro sul server,  questa è comunque la strategia adottata dal protocollo di autenticazione per webservice **JWT**.
 
-In una logica **fat client** invece memorizzare **i dati provvisori di navigazione** sul client ad esempio, mediante una localstorage javascript, non comporta particolari problemi di sicurezza, tuttalpiù un'attenzione alla privacy potrebbe essere realizzata utilizzando l'alternativa sessionstorage.
+In una logica **fat client** invece memorizzare **i dati provvisori di navigazione** sul client ad esempio, mediante una localstorage javascript, non comporta particolari problemi di sicurezza, tutt'al più un'**attenzione alla privacy** potrebbe essere realizzata utilizzando l'istruzione alternativa sessionstorage.
 
 >[Torna a stato](state.md)
