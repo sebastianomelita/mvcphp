@@ -11,7 +11,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 <img src="cookie.png" width="500">
 
 **L’associazione** tra clientID e la risorsa può rappresentare:
-- l'**autorizzazione** concessa del server al client per accedere alla risorsa
+- l'**autorizzazione** concessa del server al client per **accedere ad una risorsa**
 - una **struttura dati provvisoria** che contiene dati non degni di essere persistenti in un database perchè soggetti a manipolazioni o ad **aggiornamenti iterattivi**  da parte dell'utente (carrello della spesa di un e-commerce)
 
 L'**associazione** può essere **memorizzata**:
