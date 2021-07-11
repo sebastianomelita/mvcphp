@@ -12,7 +12,7 @@ Le **pagine web tradizionali** si possono dividere in pagine **scorrelate** e pa
 
 **L’associazione** tra clientID e la risorsa può rappresentare:
 - l'**autorizzazione** concessa dal server al client per **accedere ad una risorsa**
-- una **struttura dati provvisoria** che contiene dati non degni di essere persistenti in un database perchè soggetti a manipolazioni o ad **aggiornamenti iterattivi**  da parte dell'utente (carrello della spesa di un e-commerce)
+- una **struttura dati provvisoria** che contiene dati di servizio non degni di diventare persistenti in un database perchè soggetti a manipolazioni o ad **aggiornamenti iterattivi**  da parte dell'utente (carrello della spesa di un e-commerce)
 
 L'**associazione** può essere **memorizzata**:
 1.	Sul **client**, in questo caso viene memorizzata **insieme al cookie** che identifica il browser dell’utente. Ad esempio, con un comando **lato client** in javascript ciò può essere fatto con la funzione **window.localStorage**, con un comando **lato server** in PHP ciò può essere fatto con la funzione **setcookie()**.
