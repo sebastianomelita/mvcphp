@@ -58,10 +58,12 @@ Occorre rimarcare che, **in generale**, gestire una **autorizzazione** rilasciat
 
 Il **server** può essere protetto **direttamente dall'azienda** con un livello di protezione scalabile a piacimento e **commisurato** all'importanza delle autorizzazioni concesse. Un **browser aggiornato** garantisce un livello di isolamento dei dati elevato ma è un luogo comunque **esterno** al perimetro aziendale. 
 
-Un possibile **problema di sicurezza** potrebbe consistere nella **modifica o la falsificazione** di una autorizzazione memorizzata sul client. Una **possibile soluzione** potrebbe essere salvare l'autorizzazione sul client sotto forma di **ticket**, ossia una informazione **firmata o cifrata dal server**: al momento della richiesta di accesso alla risorsa da parte del client (mediante un webservice), il server **controlla la firma** e, se la riconosce, autorizza l'accesso alla risorsa. 
+Un possibile **problema di sicurezza** potrebbe consistere nella **modifica o la falsificazione** di una autorizzazione memorizzata sul client. Una **possibile soluzione** potrebbe essere salvare l'autorizzazione sul client sotto forma di **ticket**,
 
-**Ad esempio**, nonostante l'elaborazione di un dato cifrato sul client sia **più onerosa** in termini di velocità a quella di un dato in chiaro sul server,  questa è comunque la strategia adottata dal protocollo di autenticazione per webservice **JWT**.
+cioè una informazione **firmata o cifrata dal server**: al momento della richiesta di accesso alla risorsa da parte del client (mediante un webservice), il server **controlla la firma** e, se la riconosce, autorizza l'accesso alla risorsa. 
 
-In una logica **fat client** invece memorizzare **i dati provvisori di navigazione** sul client ad esempio, mediante una localstorage javascript, non comporta particolari problemi di sicurezza, tutt'al più un'**attenzione alla privacy** aggiuntiva potrebbe essere realizzata utilizzando l'istruzione alternativa sessionstorage.
+Nonostante l'elaborazione di un dato cifrato sul client sia **più onerosa** in termini di velocità a quella di un dato in chiaro sul server, questa è la strategia adottata dal protocollo di autenticazione per webservice **JWT**.
+
+In una logica **fat client** invece memorizzare **i dati provvisori di navigazione** sul client ad esempio, mediante una localstorage javascript, non comporta particolari problemi di sicurezza. Se necessario, un'**attenzione alla privacy** aggiuntiva potrebbe essere realizzata utilizzando l'istruzione alternativa sessionstorage.
 
 >[Torna a stato](state.md)
