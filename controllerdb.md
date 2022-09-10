@@ -43,7 +43,7 @@ class Users extends \Core\Controller
     }
 
     // Action di un form
-    // metodo HTTP POST FORM ACTION
+    // metodo HTTP GET FORM ACTION
     public function doOneuserAction()
     {
         if(isset($_GET['username'])){			 // Controlla se il form è stato sottomesso
