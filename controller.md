@@ -9,7 +9,9 @@ Un controller è un collettore di metodi ai quali corrispondono altrettante invo
 
  <img src="controller.png" width="600">
 
- Un **modulo**, grossomodo, corrisponde ad una **classe** del liguaggio di programmazione usato (PHP in questo caso), mentre una **azione** corrisponde ad un **metodo** di una certa classe. In sostanza, una applicazione MVC è una architettura di classi di vista e modello i cui metodi vengono, di volta in volta, richiamati da un certo metodo del controller per eseguire quella azione che è indicata all'interno del path dell'indirizzo URL della richiesta HTTP:
+Un **modulo**, grossomodo, corrisponde ad una **classe** del liguaggio di programmazione usato (PHP in questo caso), mentre una **azione** corrisponde ad un **metodo** di una certa classe. 
+ 
+In sostanza, una applicazione MVC è una **architettura di classi** di **vista** e **modello** i cui **metodi** vengono, di volta in volta, **richiamati** da un certo metodo del **controlle**r per eseguire proprio **quella azione** che è indicata all'interno del **path** dell'indirizzo URL della richiesta HTTP:
  
 Il **framework** che adoperiamo non fa differenza tra i vari metodi http (GET,PUT,POST,DELETE) dato che sono trattati tutti allo stesso modo e possono essere mappati su un qualunque metodo di un qualsiasi controller. 
 La **differenza** tra i vari metodi è concentrata nei parametri delle richieste che, in un caso o nell’altro, devono essere recuperati da **array associativi globali** diversi. 
