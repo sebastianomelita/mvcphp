@@ -28,10 +28,10 @@ mentre, per recuperare all’interno di un metodo **un parametro GET**, si adope
 $_GET["nomeParametro1"]
 ```
 
- Un metodo del **controller** essenzialmente realizza le seguenti operazioni:
- - recuperare i **parametri** della richiesta HTTP (GET o POST) tramite un array associativo.
- - utilizzare i parametri della richiesta per **recuperare** i dati da inserire nella vista. I dati vengono restituiti invocando un metodo del modello che esegue una **query** su un database oppure esegue una **richiesta http** presso un **webservice remoto**.
- - inserire i dati ottenuti dal modello all'interno del **template** della vista. E' possibile inserirli con dei **linguagggi di templating** che evitano di dover adoperare il linguaggio di scripting dentro la lista (PHP in questo caso) che, a questo punto, diventa uno schema completamente **statico** (a meno delle iterazioni). All'interno del **template** la **struttura** non cambia ma cambia solo il **valore** dei dati inseriti in una collezione di **segnaposti** disseminati lungo la struttura della pagina. I motori di templating permettono anche di rendere parzialmente dinamica la struttura della pagina per adattarla alla quantità dei dati da mostrare (per esempio cambiando il numero di righe di una tabella). I **segnaposto** e le **iterazioni** del codice HTML da ripetere sono gestiti mediante la **mustache notation** [https://en.wikipedia.org/wiki/Mustache_(template_system)].
+ Un metodo del **controller** essenzialmente realizza le seguenti **operazioni**:
+ 1. recuperare i **parametri** della richiesta HTTP (GET o POST) tramite un array associativo.
+ 2. utilizzare i parametri della richiesta per **recuperare** i dati da inserire nella vista. I dati vengono restituiti invocando un metodo del modello che esegue una **query** su un database oppure esegue una **richiesta http** presso un **webservice remoto**.
+ 3. inserire i dati ottenuti dal modello all'interno del **template** della vista. E' possibile inserirli con dei **linguagggi di templating** che evitano di dover adoperare il linguaggio di scripting dentro la lista (PHP in questo caso) che, a questo punto, diventa uno schema completamente **statico** (a meno delle iterazioni). All'interno del **template** la **struttura** non cambia ma cambia solo il **valore** dei dati inseriti in una collezione di **segnaposti** disseminati lungo la struttura della pagina. I motori di templating permettono anche di rendere parzialmente dinamica la struttura della pagina per adattarla alla quantità dei dati da mostrare (per esempio cambiando il numero di righe di una tabella). I **segnaposto** e le **iterazioni** del codice HTML da ripetere sono gestiti mediante la **mustache notation** [https://en.wikipedia.org/wiki/Mustache_(template_system)].
 
 **Oggetti del controller**
 
