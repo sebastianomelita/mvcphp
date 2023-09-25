@@ -10,7 +10,7 @@ Un controller è un collettore di metodi ai quali corrispondono altrettante invo
  <img src="controller.png" width="600">
 
  Un **modulo**, grossomodo, corrisponde ad una **classe** del liguaggio di programmazione usato (PHP in questo caso), mentre una **azione** corrisponde ad un **metodo** di una certa classe. In sostanza, una applicazione MVC è una architettura di classi con compiti diversi.
- 
+
 Il **framework** che adoperiamo non fa differenza tra i vari metodi http (GET,PUT,POST,DELETE) dato che sono trattati tutti allo stesso modo e possono essere mappati su un qualunque metodo di un qualsiasi controller. 
 La **differenza** tra i vari metodi è concentrata nei parametri delle richieste che, in un caso o nell’altro, devono essere recuperati da **array associativi globali** diversi. 
 
@@ -25,6 +25,11 @@ mentre, per recuperare all’interno di un metodo **un parametro GET**, si adope
 ```PHP
 $_GET["nomeParametro1"]
 ```
+
+ Un metodo del **controller** essenzialmente realizza le seguenti operazioni:
+ - recuperare i parametri della richiesta HTTP (GET o POST) tramite un array associativo.
+ - utilizzare i parametri della richiesta per invocare un metodo del modello per eseguire una **query** su un database oppure una richiesta http verso un **webservice remoto**.
+ - 
 
 **Oggetti del controller**
 
