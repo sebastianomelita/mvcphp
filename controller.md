@@ -7,7 +7,7 @@ Un controller è un collettore di metodi ai quali corrispondono altrettante invo
 
  <img src="controller.png" width="600">
  
-Il **framework** che adoperiamo non fa differenza tra i vari metodi http (GET,PUT,POST,DELETE) dato che sono trattati tuti allo stesso modo e possono essere mappati su un qualunque metodo di un qualsiasi controller. 
+Il **framework** che adoperiamo non fa differenza tra i vari metodi http (GET,PUT,POST,DELETE) dato che sono trattati tutti allo stesso modo e possono essere mappati su un qualunque metodo di un qualsiasi controller. 
 La **differenza** tra i vari metodi è concentrata nei parametri delle richieste che, in un caso o nell’altro, devono essere recuperati da **array associativi globali** diversi. 
 
 Ad esempio, per **recuperare**, all’interno di un **metodo** del controller, un **parametro POST**, si adopera la **variabile globale** php:
