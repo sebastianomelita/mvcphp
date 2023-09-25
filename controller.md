@@ -28,7 +28,7 @@ $_GET["nomeParametro1"]
 
  Un metodo del **controller** essenzialmente realizza le seguenti operazioni:
  - recuperare i **parametri** della richiesta HTTP (GET o POST) tramite un array associativo.
- - utilizzare i parametri della richiesta per **recuperare** i dati da inserire nella vista. I dati vengono restituiti invocando un metodo del modello che esegue una **query** su un database oppure una **richiesta http** verso un **webservice remoto**.
+ - utilizzare i parametri della richiesta per **recuperare** i dati da inserire nella vista. I dati vengono restituiti invocando un metodo del modello che esegue una **query** su un database oppure esegue una **richiesta http** presso un **webservice remoto**.
  - inserire i dati ottenuti dal modello all'interno del template della vista. E' possibile inserirli con dei linguagggi di templating che evitano di dover adoperare il linguaggio di scripting dentro la lista (PHP in questo caso) che a questo punto diventa uno schema completamente **statico**. All'interno del **template** la **struttura** non cambia ma cambia sol il **valore** dei dati inseriti in una collezione di **segnaposti** disseminati lungo la struttura della pagina.
 
 **Oggetti del controller**
