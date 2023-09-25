@@ -2,7 +2,7 @@
 
 ## **Controller**
 
-Mediante l'architettura MVC è possibile suddividere una singola grande applicazione lato server (in questo caso in PHP) in una collezione di **moduli** indipendenti. In questo modo uno stesso modulo potrebbe essere riutilizzato in più applicazioni e inoltre, la modifica di un modulo non comporta necessariamente la modifica a cascata di tutti gli altri. 
+Mediante l'architettura MVC è possibile suddividere una singola grande applicazione lato server (in questo caso in PHP) in una collezione di **moduli** indipendenti. In questo modo uno stesso modulo potrebbe essere riutilizzato in più applicazioni e, inoltre, la modifica di un modulo non comporta necessariamente la modifica a cascata di tutti gli altri. 
 
 Un controller è un collettore di metodi ai quali corrispondono altrettante invocazioni via HTTP realizzabili mediante un client. Ogni qual volta arriva una richiesta http, questa viene esaminata (fase di store) e inoltrata verso il metodo di un certo controller (fase di **dispaching**). Il comportamento adesso descritto è quello tipico di un router. La **direzione** dell’inoltro **è decisa** in base alla lettura di un **indirizzo** di livello **applicativo** che consiste in una **porzione specifica del path** della risorsa richiesta che d’ora in poi chiameremo **prefisso di routing**:**```../nome_controller/nome_azione/```** dove con i puntini indichiamo, per semplicità, la parte dell’url prima del prefisso di routing, cioè **il percorso del progetto**.  In base al **prefisso di routing**, stabilito nella tabella delle **rotte**, viene scelto il **metodo** di quel
 **controller** che dovrà gestire la richiesta. 
