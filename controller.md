@@ -89,7 +89,7 @@ use App\Models\RESTClient;
 use \Core\Error;
 ```
 
-**Parametri delle richieste http**
+###  **Parametri delle richieste http**
 
 I **parametri** si possono richiedere sostanzialmente in due modi: 
 -	**nel path della action** che deve essere costruita così: ```../ controller/azione/parametro```. In questo caso il valore del parametro si recupera da una variabile di istanza del controller con il nome "id":  ```$param = $this->route_params["id"]```
@@ -116,7 +116,7 @@ protected function before()
     }
 ```
 
-**Invocazione delle viste**
+### **Invocazione delle viste**
 
 Il controller invoca anche i modelli per comandare la visualizzazione dei dati che lui ha elaborato/raccolto dal modello.
 
