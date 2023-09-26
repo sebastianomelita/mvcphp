@@ -5,7 +5,7 @@
 
 Normalmente i microservizi sono utilizzati da: 
 - client web che realizzano una pagina singola  **SPA** (Single Page Application) con modalità di utilizzo simile alle **applicazioni desktop** dei sistemi operativi tradizionali o all'esperienza d'uso di una **app** dello smartphone.
-- client http SW che eseguolno il prelievo (fetch) dal microservizio dei dati da incorporare all'interno del codice HTML di una pagina web tradizionale per opera di un motore di scripting (PHP, Java, Python, Node.JS, ...) posto su un dispositivo server.
+- client http SW, incorporati sul server, che eseguoono il prelievo (fetch) dal microservizio dei dati da incorporare all'interno del codice HTML di una pagina web tradizionale per opera di un motore di scripting (PHP, Java, Python, Node.JS, ...) posto su un dispositivo server.
 
 Nell’ambito dei microservizi si sono affermate due **architetture**:
 -	Direct to client
