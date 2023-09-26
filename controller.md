@@ -4,6 +4,7 @@ no >[Torna a MVC](mvcindex.md)
 
 Mediante l'architettura MVC è possibile suddividere una singola grande applicazione lato server (in questo caso in PHP) in una collezione di **moduli** indipendenti. In questo modo uno stesso modulo potrebbe essere riutilizzato in più applicazioni e, inoltre, la modifica di un modulo non comporta necessariamente la modifica a cascata di tutti gli altri. 
 
+### **Controller come router**
 Un controller è un collettore di metodi ai quali corrispondono altrettante invocazioni via HTTP realizzabili mediante un client. Ogni qual volta arriva una richiesta http, questa viene esaminata (fase di store) e inoltrata verso il metodo di un certo controller (fase di **dispaching**). Il comportamento adesso descritto è quello tipico di un router. La **direzione** dell’inoltro **è decisa** in base alla lettura di un **indirizzo** di livello **applicativo** che consiste in una **porzione specifica del path** della risorsa richiesta che d’ora in poi chiameremo **prefisso di routing**:**```../nome_controller/nome_azione/```** dove con i puntini indichiamo, per semplicità, la parte dell’url prima del prefisso di routing, cioè **il percorso del progetto**. 
 
 In base al **prefisso di routing**, stabilito nella tabella delle **rotte**, viene scelto il **metodo** di un certo controller che dovrà gestire la richiesta. Il **percorso completo** del progetto è, come sempre, definito da: ```protocollo (http) + dominio (www.miosito.it) + path_locale (cartella1/cartella2/mia_applicazione)```. 
@@ -18,7 +19,9 @@ Tutte le **parti canoniche** di un indirizzo URL sono normalmente separate in **
 
  <img src="controller.png" width="600">
 
-Un **modulo**, grossomodo, corrisponde ad una **classe** del liguaggio di programmazione usato (PHP in questo caso), mentre una **azione** corrisponde ad un **metodo** di una certa classe. 
+### **Operazioni del controller**
+
+Un **modulo** del **controller**, grossomodo, corrisponde ad una **classe** del liguaggio di programmazione usato (PHP in questo caso), mentre una **azione** corrisponde ad un **metodo** di una certa classe. 
  
 In sostanza, una applicazione MVC è una **architettura di classi** di **vista** e **modello** i cui **metodi** vengono, di volta in volta, **richiamati** da un certo **metodo** di una certa classe **controller** per eseguire proprio **quella azione** che era indicata all'interno del **path** dell'indirizzo URL della richiesta HTTP al server.
  
