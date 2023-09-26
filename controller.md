@@ -13,7 +13,7 @@ Tutte le **parti canoniche** di un indirizzo URL, normalmente separate in **nota
 - il **path_locale** indica il percorso dell'applicazione server all'interno del filesytem della macchina (generalmente all'interno della cartella www di pubblicazione)
 - il **nome_controller** indica il nome della classe del controller che si occuperà di quel **tipo** di azioni
 - il **nome_azione** indica il nome del **metodo** della classe del controller che si occupa di realizzare quella azione
-- opzionalmente, uno o più **parametri** dell'azione utili, ad esempio, per indicare da dove leggere o dove scrivere.
+- opzionalmente, uno o più **parametri** dell'azione utili, ad esempio, per indicare da dove una certa azione deve andare leggere o dove deve andare a scrivere.
 
  <img src="controller.png" width="600">
 
