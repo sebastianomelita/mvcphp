@@ -95,7 +95,7 @@ I **parametri** si possono richiedere sostanzialmente in due modi:
 -	**nel path della action** che deve essere costruita così: ```../ controller/azione/parametro```. In questo caso il valore del parametro si recupera da una variabile di istanza del controller con il nome "id":  ```$param = $this->route_params["id"]```
 -	**con una query string**, metto cioè il parametri dopo il punto interrogativo con coppie nome valore del tipo ?```param1=val1&param2=val2```. Questo metodo è usato dalle action dei form, e può essere usato anche da un tag ancora. I valori si recuperano nel controller dalle variabili blobali standard del php ```$_POST["param1"] o $_GET["param2"]```
 
-**Check delle sessioni**
+### **Check delle sessioni**
 
 Le variabili di **sessione**, accessibili attraverso la variabile globale ```$SESSION["nome_variabile"] ```, possono essere controllate **prima** del caricamento di una action in maniera tale da consentire il **filtro** di quelle richieste HTTP che provengono da una applicazione con uno stato della navigazione non consentito. Il metodo per far ciò si chiama ```before()``` e deve restituire ```true``` per **continuare** e ```false```e per **bloccare**.
 
