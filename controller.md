@@ -8,7 +8,7 @@ Un controller è un collettore di metodi ai quali corrispondono altrettante invo
 
 In base al **prefisso di routing**, stabilito nella tabella delle **rotte**, viene scelto il **metodo** di un certo controller che dovrà gestire la richiesta. Il **percorso completo** del progetto è, come sempre, definito da: ```protocollo (http) + dominio (www.miosito.it) + path_locale (cartella1/cartella2/mia_applicazione)```. 
 
-Tutte le **parti canoniche** di un indirizzo URL, normalmente separate in **notazione REST**, cioè solamente con uno **```/```** come carattere di separazione, hanno la seguente **semantica** (significato):
+Tutte le **parti canoniche** di un indirizzo URL sono normalmente separate in **notazione REST**, cioè solamente con uno **```/```** come carattere di separazione e hanno la seguente **semantica** (significato):
 - il **protocollo** indica come viene recuperata la risorsa ma anche l'indirizzo di porta (ben noto) L4 del server.
 - il **dominio**, mappandosi 1:1 su un indirizzo IP, individua nel mondo la macchina fisica che contiene la risorsa.
 - il **path_locale** indica il percorso dell'applicazione server (progetto) all'interno del filesytem della macchina (generalmente all'interno della cartella www di pubblicazione)
