@@ -9,7 +9,7 @@ Un controller è un collettore di metodi ai quali corrispondono altrettante invo
 
 Tutte le **parti canoniche** di un indirizzo URL, normalmente separate in **notazione REST**, cioè solamente con uno **```/```** come carattere di separazione, hanno la seguente **semantica** (significato):
 - il **protocollo** indica come viene recuperata la risorsa ma anche l'indirizzo di porta (ben noto) L4 del server.
-- il **dominio**, mappandosi 1:1 su un indirizzo IP individua nel mondo la macchina fisica che contiene la risorsa.
+- il **dominio**, mappandosi 1:1 su un indirizzo IP, individua nel mondo la macchina fisica che contiene la risorsa.
 - il **path_locale** indica il percorso dell'applicazione server all'interno del filesytem della macchina (generalmente all'interno della cartella www di pubblicazione)
 - il **nome_controller** indica il nome della classe del controller che si occuperà di quel **tipo** di azioni
 - il **nome_azione** indica il nome del **metodo** della classe del controller che si occupa di realizzare quella azione
