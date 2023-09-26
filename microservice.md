@@ -1,7 +1,9 @@
 >[Torna all'indice generale](main.md)
 ## **MICROSERVIZI**
 
-**Microservizi**: un'**applicazione** organizzata come una **raccolta di servizi** debolmente accoppiati tra loro (praticamente indipendenti). I servizi sono forniti da **webservice** che realizzano un set molto limitato di funzioni che possono essere realizzate in **tempi** molto brevi e che sono solitamente **mantenute** da un gruppo ristretto di persone (da 3 a 7). Essendo parte di una medesima applicazione in genere sono all’interno di uno **stesso dominio DNS**. 
+**Microservizi**: un'**applicazione server** organizzata come una **raccolta di servizi** debolmente accoppiati tra loro (praticamente indipendenti). I servizi sono forniti da **webservice** che realizzano un set molto limitato di funzioni che possono essere realizzate in **tempi** molto brevi e che sono solitamente **mantenute** da un gruppo ristretto di persone (da 3 a 7). Essendo parte di una medesima applicazione in genere sono all’interno di uno **stesso dominio DNS**. 
+
+Normalmente le applicazioni client che utilizzano i microservizi sono client web che realizzano una pagina singola  **SPA** (Single Page Application) con modalità di utilizzo simile alle **applicazioni desktop** dei sistemi operativi tradizionali o all'esperienza d'uso di una **app** dello smartphone.
 
 Nell’ambito dei microservizi si sono affermate due **architetture**:
 -	Direct to client
